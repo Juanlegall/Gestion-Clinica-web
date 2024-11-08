@@ -1,0 +1,11 @@
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\bin\Debug\Negocio.dll
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\bin\Debug\DATOS.dll
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\bin\Debug\Entidades.dll
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\bin\Debug\DATOS.pdb
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\bin\Debug\Entidades.pdb
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\obj\Debug\Negocio.dll
+C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\obj\Debug\Negocio.pdb

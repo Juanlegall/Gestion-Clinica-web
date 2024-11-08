@@ -1,0 +1,598 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\editarformulariomedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\editarformulariomedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\administracionmedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\administracionmedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\editarformulariomedicos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\editarformulariomedicos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\datos\\datosusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|solutionrelative:datos\\datosusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\negocio\\negociousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociousuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\administracionmedicos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\administracionmedicos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|solutionrelative:datos\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\homeadministradores.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\homeadministradores.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\homeadministradores.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\homeadministradores.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\homemedicos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\homemedicos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\vistas\\homemedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3449A266-F33D-47DC-AE03-8C9CDC39A9EA}|Vistas\\Vistas.csproj|solutionrelative:vistas\\homemedicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|solutionrelative:entidades\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\datos\\datosespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|solutionrelative:datos\\datosespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\entidades\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|solutionrelative:entidades\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\entidades\\provincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|solutionrelative:entidades\\provincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\entidades\\turnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|solutionrelative:entidades\\turnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\entidades\\pacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|solutionrelative:entidades\\pacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\entidades\\localidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|solutionrelative:entidades\\localidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\entidades\\horariosmedicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|solutionrelative:entidades\\horariosmedicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\entidades\\especialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C83D2CA-B218-427A-A70B-C54091167068}|Entidades\\Entidades.csproj|solutionrelative:entidades\\especialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\negocio\\negociorolesxusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociorolesxusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\negocio\\negociohorariosmedicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociohorariosmedicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\negocio\\negocioespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioespecialidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\negocio\\negocioprovincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioprovincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\negocio\\negociolocalidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociolocalidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\negocio\\negocioturnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negocioturnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\negocio\\negociopacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03103DCF-9146-4348-A32D-608944F330C4}|Negocio\\Negocio.csproj|solutionrelative:negocio\\negociopacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\datos\\datoshorariosmedicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|solutionrelative:datos\\datoshorariosmedicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\datos\\datosprovincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|solutionrelative:datos\\datosprovincias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\datos\\datoslocalidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|solutionrelative:datos\\datoslocalidades.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\datos\\datosturnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|solutionrelative:datos\\datosturnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|c:\\users\\usuario\\desktop\\tpintegradorfinal\\datos\\datospacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D28B566-7D2E-4AB5-A2A2-4006B6574855}|DATOS\\DATOS.csproj|solutionrelative:datos\\datospacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatosUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosUsuarios.cs",
+              "RelativeDocumentMoniker": "DATOS\\DatosUsuarios.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosUsuarios.cs",
+              "RelativeToolTip": "DATOS\\DatosUsuarios.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAgwE0AAAA6AQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:34:19.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NegocioUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioUsuarios.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioUsuarios.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioUsuarios.cs",
+              "RelativeToolTip": "Negocio\\NegocioUsuarios.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAIwDYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:47:38.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdministracionMedicos.aspx",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\AdministracionMedicos.aspx",
+              "RelativeDocumentMoniker": "Vistas\\AdministracionMedicos.aspx",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\AdministracionMedicos.aspx",
+              "RelativeToolTip": "Vistas\\AdministracionMedicos.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-06T23:19:51.595Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditarFormularioMedicos.aspx",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\EditarFormularioMedicos.aspx",
+              "RelativeDocumentMoniker": "Vistas\\EditarFormularioMedicos.aspx",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\EditarFormularioMedicos.aspx",
+              "RelativeToolTip": "Vistas\\EditarFormularioMedicos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-07T21:17:25.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditarFormularioMedicos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\EditarFormularioMedicos.aspx.cs",
+              "RelativeDocumentMoniker": "Vistas\\EditarFormularioMedicos.aspx.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\EditarFormularioMedicos.aspx.cs",
+              "RelativeToolTip": "Vistas\\EditarFormularioMedicos.aspx.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwD8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T22:18:59.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdministracionMedicos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\AdministracionMedicos.aspx.cs",
+              "RelativeDocumentMoniker": "Vistas\\AdministracionMedicos.aspx.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\AdministracionMedicos.aspx.cs",
+              "RelativeToolTip": "Vistas\\AdministracionMedicos.aspx.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAwC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T00:51:59.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\Conexion.cs",
+              "RelativeDocumentMoniker": "DATOS\\Conexion.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\Conexion.cs",
+              "RelativeToolTip": "DATOS\\Conexion.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAiwF0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:16:58.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeAdministradores.aspx",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\HomeAdministradores.aspx",
+              "RelativeDocumentMoniker": "Vistas\\HomeAdministradores.aspx",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\HomeAdministradores.aspx",
+              "RelativeToolTip": "Vistas\\HomeAdministradores.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-06T21:16:47.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "Vistas\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\Login.aspx.cs",
+              "RelativeToolTip": "Vistas\\Login.aspx.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAcwCMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T20:56:31.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\Login.aspx",
+              "RelativeDocumentMoniker": "Vistas\\Login.aspx",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\Login.aspx",
+              "RelativeToolTip": "Vistas\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-27T23:50:22.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeAdministradores.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\HomeAdministradores.aspx.cs",
+              "RelativeDocumentMoniker": "Vistas\\HomeAdministradores.aspx.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\HomeAdministradores.aspx.cs",
+              "RelativeToolTip": "Vistas\\HomeAdministradores.aspx.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T21:19:45.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeMedicos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\HomeMedicos.aspx.cs",
+              "RelativeDocumentMoniker": "Vistas\\HomeMedicos.aspx.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\HomeMedicos.aspx.cs",
+              "RelativeToolTip": "Vistas\\HomeMedicos.aspx.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T00:45:34.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeMedicos.aspx",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\HomeMedicos.aspx",
+              "RelativeDocumentMoniker": "Vistas\\HomeMedicos.aspx",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Vistas\\HomeMedicos.aspx",
+              "RelativeToolTip": "Vistas\\HomeMedicos.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-05T00:45:27.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Usuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Usuarios.cs",
+              "RelativeDocumentMoniker": "Entidades\\Usuarios.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Usuarios.cs",
+              "RelativeToolTip": "Entidades\\Usuarios.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAAAHMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:18:01.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DatosEspecialidades.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosEspecialidades.cs",
+              "RelativeDocumentMoniker": "DATOS\\DatosEspecialidades.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosEspecialidades.cs",
+              "RelativeToolTip": "DATOS\\DatosEspecialidades.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:37:14.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Roles.cs",
+              "RelativeDocumentMoniker": "Entidades\\Roles.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Roles.cs",
+              "RelativeToolTip": "Entidades\\Roles.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T21:20:46.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Provincias.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Provincias.cs",
+              "RelativeDocumentMoniker": "Entidades\\Provincias.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Provincias.cs",
+              "RelativeToolTip": "Entidades\\Provincias.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAACQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:43:38.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Turnos.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Turnos.cs",
+              "RelativeDocumentMoniker": "Entidades\\Turnos.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Turnos.cs",
+              "RelativeToolTip": "Entidades\\Turnos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEwAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:42:44.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Pacientes.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Pacientes.cs",
+              "RelativeDocumentMoniker": "Entidades\\Pacientes.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Pacientes.cs",
+              "RelativeToolTip": "Entidades\\Pacientes.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAowHEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:42:13.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Localidades.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Localidades.cs",
+              "RelativeDocumentMoniker": "Entidades\\Localidades.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Localidades.cs",
+              "RelativeToolTip": "Entidades\\Localidades.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:43:14.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "HorariosMedicos.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\HorariosMedicos.cs",
+              "RelativeDocumentMoniker": "Entidades\\HorariosMedicos.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\HorariosMedicos.cs",
+              "RelativeToolTip": "Entidades\\HorariosMedicos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:44:40.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Especialidades.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Especialidades.cs",
+              "RelativeDocumentMoniker": "Entidades\\Especialidades.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Entidades\\Especialidades.cs",
+              "RelativeToolTip": "Entidades\\Especialidades.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:44:54.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "NegocioRolesxUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioRolesxUsuarios.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioRolesxUsuarios.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioRolesxUsuarios.cs",
+              "RelativeToolTip": "Negocio\\NegocioRolesxUsuarios.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:49:37.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "NegocioHorariosMedicos.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioHorariosMedicos.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioHorariosMedicos.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioHorariosMedicos.cs",
+              "RelativeToolTip": "Negocio\\NegocioHorariosMedicos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:48:42.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NegocioEspecialidades.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioEspecialidades.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioEspecialidades.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioEspecialidades.cs",
+              "RelativeToolTip": "Negocio\\NegocioEspecialidades.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:49:01.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "NegocioProvincias.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioProvincias.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioProvincias.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioProvincias.cs",
+              "RelativeToolTip": "Negocio\\NegocioProvincias.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:48:27.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "NegocioLocalidades.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioLocalidades.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioLocalidades.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioLocalidades.cs",
+              "RelativeToolTip": "Negocio\\NegocioLocalidades.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:48:14.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "NegocioTurnos.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioTurnos.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioTurnos.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioTurnos.cs",
+              "RelativeToolTip": "Negocio\\NegocioTurnos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:47:55.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "NegocioPacientes.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioPacientes.cs",
+              "RelativeDocumentMoniker": "Negocio\\NegocioPacientes.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\Negocio\\NegocioPacientes.cs",
+              "RelativeToolTip": "Negocio\\NegocioPacientes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:46:23.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DatosHorariosMedicos.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosHorariosMedicos.cs",
+              "RelativeDocumentMoniker": "DATOS\\DatosHorariosMedicos.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosHorariosMedicos.cs",
+              "RelativeToolTip": "DATOS\\DatosHorariosMedicos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:36:42.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DatosProvincias.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosProvincias.cs",
+              "RelativeDocumentMoniker": "DATOS\\DatosProvincias.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosProvincias.cs",
+              "RelativeToolTip": "DATOS\\DatosProvincias.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:36:25.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DatosLocalidades.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosLocalidades.cs",
+              "RelativeDocumentMoniker": "DATOS\\DatosLocalidades.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosLocalidades.cs",
+              "RelativeToolTip": "DATOS\\DatosLocalidades.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:36:09.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "DatosTurnos.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosTurnos.cs",
+              "RelativeDocumentMoniker": "DATOS\\DatosTurnos.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosTurnos.cs",
+              "RelativeToolTip": "DATOS\\DatosTurnos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:35:46.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "DatosPacientes.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosPacientes.cs",
+              "RelativeDocumentMoniker": "DATOS\\DatosPacientes.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\TPINTEGRADORFINAL\\DATOS\\DatosPacientes.cs",
+              "RelativeToolTip": "DATOS\\DatosPacientes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T23:35:13.69Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
