@@ -67,14 +67,17 @@
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:TemplateField HeaderText="Fec Nacimiento">
-                            <ItemTemplate>
-                                <asp:Label ID="lbl_fechaNac" runat="server" Text='<%# Bind("fechaNacimiento") %>'></asp:Label>
-                            </ItemTemplate>
                              <ItemTemplate>
-     <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CommandArgument='<%# Eval("idPaciente") %>' />
-     &nbsp;  <!-- Espacio entre los botones -->
-     <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%# Eval("idPaciente") %>' OnClientClick="return confirm('¿Estás seguro que deseas eliminar este paciente?');" />
+                                 <asp:Label ID="lbl_fecNacimiento" runat="server" Text='<%# Bind ("fechaNacimiento") %>'></asp:Label>
  </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:Button ID="btnEditar" runat="server" CommandArgument='<%# Eval("idPaciente") %>' CommandName="Editar" Text="Editar" />
+                                &nbsp;
+                                <!-- Espacio entre los botones -->
+                                <asp:Button ID="btnEliminar" runat="server" CommandArgument='<%# Eval("idPaciente") %>' CommandName="Eliminar" OnClientClick="return confirm('¿Estás seguro que deseas eliminar este paciente?');" Text="Eliminar" />
+                            </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />
