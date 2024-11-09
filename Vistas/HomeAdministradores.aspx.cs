@@ -23,5 +23,12 @@ namespace Vistas
             }
 
         }
+        protected void cmdRedireccion(object sender, CommandEventArgs e)
+        {
+            string ventana = e.CommandArgument.ToString();
+            //Agregarle al CommandArgument el nombre de la ventana que corresponde por ejemplo la ventana del abml de medicos ABMLmedicos.aspx o como le pongan jajaj
+            Response.Redirect(ventana);
+
+        }
     }
 }

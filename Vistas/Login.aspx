@@ -27,22 +27,24 @@
         }
     </style>
 
-    <div class="login-container">
-        <div class="login-box text-center">
-            <h3 class="mb-4">Ingresar a mi cuenta</h3>
-                <div class="form-group" style="padding:10px">
-                    <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server" placeholder="Usuario" />
-                </div>
-                <div class="form-group" style="padding:10px">
-                    <asp:TextBox ID="txtContraseña" CssClass="form-control" TextMode="Password" runat="server" placeholder="Contraseña" />
-                </div>
-                 <div>
-                <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" class="btn btn-dark btn-block font-weight-bold" style="width: 140px;padding: 10px;margin-top: 10px; margin-bottom:10px" OnClick="btnIngresar_Click"/>
-                </div>
+   <div class="login-container">
+    <div class="login-box text-center">
+        <h3 class="mb-4">Ingresar a mi cuenta</h3>
+            <div class="form-group" style="padding:10px">
+                <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server" placeholder="Usuario" />
+                <asp:RequiredFieldValidator ID="rfvUsuario" runat="server" ControlToValidate="txtUsuario" ErrorMessage="Debe introducir un usuario." ForeColor="Red"></asp:RequiredFieldValidator>
+            </div>
+            <div class="form-group" style="padding:10px">
+                <asp:TextBox ID="txtContraseña" CssClass="form-control" TextMode="Password" runat="server" placeholder="Contraseña" />
+                <asp:RequiredFieldValidator ID="rfvContraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="Por favor complete la contraseña." ForeColor="Red"></asp:RequiredFieldValidator>
+            </div>
+             <div>
+            <asp:Button ID="btnIngresar" runat="server" Text="Ingresar" class="btn btn-dark btn-block font-weight-bold" style="width: 140px;padding: 10px;margin-top: 10px; margin-bottom:10px" OnClick="btnIngresar_Click"/>
+            </div>
 
-                 <asp:Label ID="lblMensaje" runat="server"  style="color: red;" ></asp:Label>
-        </div>
+             <asp:Label ID="lblMensaje" runat="server"  style="color: red;" ></asp:Label>
     </div>
+</div>
     </form>
 </body>
 </html>

@@ -21,7 +21,7 @@ namespace DATOS
 
         public Boolean verificarContraseña(string usuario , string contraseña)
         {
-            string consulta = $"Select * from usuarios where nombre_usuario = '{usuario}' and contraseña = '{contraseña}'";
+            string consulta = $"Select * from usuarios where nombre_usuario = '{usuario}' and contraseña COLLATE Latin1_General_CS_AS == '{contraseña}'";
             return accesoDatos.existe(consulta);
 
 
@@ -31,12 +31,12 @@ namespace DATOS
         public (string nombre, int id) traerNombre_Rol(string usuario, string contraseña)
         {
             DataSet ds = new DataSet();
-            string consulta = $"Select nombre,id_rol from usuarios where nombre_usuario = '{usuario}' and contraseña = '{contraseña}'";
+            string consulta = $"Select nombre,id_rol_us from usuarios where nombre_usuario = '{usuario}' and contraseña COLLATE Latin1_General_CS_AS == '{contraseña}'";
             ds = accesoDatos.getData(consulta);
             if (ds.Tables[0].Rows.Count > 0)
             {
                 string nombre = ds.Tables[0].Rows[0]["nombre"].ToString();
-                int id = Convert.ToInt32(ds.Tables[0].Rows[0]["id_rol"]);
+                int id = Convert.ToInt32(ds.Tables[0].Rows[0]["id_rol_us"]);
                 return (nombre, id);
             }
             else
