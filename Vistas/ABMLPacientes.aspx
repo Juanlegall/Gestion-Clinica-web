@@ -17,7 +17,8 @@
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
 &nbsp; </h4>
             <p>
-                <asp:GridView ID="grdVPacientes" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+                <asp:GridView ID="grdVPacientes" runat="server" AutoGenerateColumns="False" OnRowCommand="grdVPacientes_RowCommand" DataKeyNames="idPaciente" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1019px"> 
+
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:TemplateField HeaderText="DNI">
@@ -69,6 +70,11 @@
                             <ItemTemplate>
                                 <asp:Label ID="lbl_fechaNac" runat="server" Text='<%# Bind("fechaNacimiento") %>'></asp:Label>
                             </ItemTemplate>
+                             <ItemTemplate>
+     <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CommandArgument='<%# Eval("idPaciente") %>' />
+     &nbsp;  <!-- Espacio entre los botones -->
+     <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%# Eval("idPaciente") %>' OnClientClick="return confirm('¿Estás seguro que deseas eliminar este paciente?');" />
+ </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>
                     <EditRowStyle BackColor="#2461BF" />

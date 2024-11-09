@@ -10,3 +10,9 @@ C:\facu\Prog III\TPFINALPROGRAMACION\Entidades\obj\Debug\Entidades.dll
 C:\facu\Prog III\TPFINALPROGRAMACION\Entidades\obj\Debug\Entidades.pdb
 C:\facu\Prog III\TPFINALPROGRAMACION\Entidades\bin\Debug\Entidades.dll
 C:\facu\Prog III\TPFINALPROGRAMACION\Entidades\bin\Debug\Entidades.pdb
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Entidades\bin\Debug\Entidades.dll
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Entidades\bin\Debug\Entidades.pdb
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Entidades\obj\Debug\Entidades.dll
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Entidades\obj\Debug\Entidades.pdb

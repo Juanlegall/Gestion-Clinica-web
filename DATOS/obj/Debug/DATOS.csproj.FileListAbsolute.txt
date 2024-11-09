@@ -16,3 +16,12 @@ C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\obj\Debug\Datos.csproj.CoreCompileInp
 C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\obj\Debug\Datos.csproj.Up2Date
 C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\obj\Debug\DATOS.dll
 C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\obj\Debug\DATOS.pdb
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\DATOS\bin\Debug\DATOS.dll
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\DATOS\bin\Debug\DATOS.pdb
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\DATOS\bin\Debug\Entidades.dll
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\DATOS\bin\Debug\Entidades.pdb
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\DATOS\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\DATOS\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\DATOS\obj\Debug\Datos.csproj.Up2Date
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\DATOS\obj\Debug\DATOS.dll
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\DATOS\obj\Debug\DATOS.pdb

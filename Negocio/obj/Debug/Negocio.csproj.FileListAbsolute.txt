@@ -20,3 +20,14 @@ C:\facu\Prog III\TPFINALPROGRAMACION\Negocio\obj\Debug\Negocio.csproj.CoreCompil
 C:\facu\Prog III\TPFINALPROGRAMACION\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\facu\Prog III\TPFINALPROGRAMACION\Negocio\obj\Debug\Negocio.dll
 C:\facu\Prog III\TPFINALPROGRAMACION\Negocio\obj\Debug\Negocio.pdb
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\bin\Debug\Negocio.dll
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\bin\Debug\Negocio.pdb
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\bin\Debug\DATOS.dll
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\bin\Debug\Entidades.dll
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\bin\Debug\DATOS.pdb
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\bin\Debug\Entidades.pdb
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\obj\Debug\Negocio.dll
+C:\Users\emaru\Documents\TpFinalNew\TPFINALPROGRAMACION\Negocio\obj\Debug\Negocio.pdb
