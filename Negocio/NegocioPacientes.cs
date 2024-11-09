@@ -64,6 +64,16 @@ namespace Negocio
         {
             return dts.ObtenerLocalidades(idProvincia);
         }
-
+        public bool EliminarPaciente(int id)
+        {
+            DatosPacientes dp = new DatosPacientes();
+            Pacientes pa = new Pacientes();
+            pa.setId_Paciente(id);
+            int op = dp.EliminarPac(pa);
+            if (op == 1)
+                return true;
+            else
+                return false;
+        }
     }
 }

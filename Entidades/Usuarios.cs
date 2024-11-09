@@ -8,6 +8,7 @@ namespace Entidades
 {
     public class Usuarios
     {
+        private int id_Usuario;
         private int id_especialidad;
         private int id_localidad;
         private int id_provincia;
@@ -35,7 +36,10 @@ namespace Entidades
         {
 
         }
-
+        public void setIdUsuario(int id)
+        {
+            this.id_Usuario = id;
+        }
         public void setNombre(string nombre)
         {
             this.nombre = nombre;
@@ -74,7 +78,10 @@ namespace Entidades
         }
 
 
-
+        public int getIdUsuario()
+        {
+            return id_Usuario;
+        }
         public string getNombre()
         {
             return nombre;

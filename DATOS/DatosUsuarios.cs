@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entidades;
 
 namespace DATOS
 {
@@ -83,7 +84,19 @@ namespace DATOS
 
 
         }
+        private void ArmaraParametrosMedicoEliminar(ref SqlCommand comando, Usuarios us)
+        {
+            SqlParameter sqlparametros = new SqlParameter();
+            sqlparametros = comando.Parameters.Add("@idusuario", SqlDbType.Int);
+            sqlparametros.Value = us.getIdUsuario();
+        }
+        public int EliminarMed(Usuarios us)
+        {
+            SqlCommand comando = new SqlCommand();
+            ArmaraParametrosMedicoEliminar(ref comando, us);
+            return accesoDatos.ExecProceAlmace(comando, "SP_EliminarMedico");
 
+        }
 
     }
 }

@@ -48,7 +48,20 @@ namespace Vistas
 
             }
         }
+        private void RecargarDatosGridView()
+        {
+            // Instanciamos la capa de negocio
+            NegocioUsuarios ngs = new NegocioUsuarios();
 
+            // Obtenemos los datos actualizados
+            DataSet dset = ngs.obtenerTablaMedicos();
+
+            // Asignamos los datos al GridView
+            grdAdministracionMedicos.DataSource = dset;
+
+            // Volvemos a hacer el binding de los datos
+            grdAdministracionMedicos.DataBind();
+        }
         protected void grdAdministracionMedicos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             if (e.CommandName == "Editar")
@@ -59,6 +72,27 @@ namespace Vistas
                 // Redirigir al formulario de edición con el ID como parámetro
                 Response.Redirect($"EditarFormularioMedicos.aspx?id={idSeleccionado}");
 
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                // Obtener el ID del médico desde el CommandArgument
+                int idMedico = Convert.ToInt32(e.CommandArgument);
+
+                // Crear una instancia de la capa de negocio para eliminar al médico
+                NegocioUsuarios negocioUsuarios = new NegocioUsuarios();
+                bool eliminado = negocioUsuarios.EliminarMedico(idMedico);
+
+                if (eliminado)
+                {
+                    // Si la eliminación fue exitosa, recargar los datos en el GridView
+                    RecargarDatosGridView();
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Médico eliminado correctamente.');", true);
+                }
+                else
+                {
+                    // Si no se pudo eliminar, mostrar un mensaje de error
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No se pudo eliminar el médico.');", true);
+                }
             }
         }
     }

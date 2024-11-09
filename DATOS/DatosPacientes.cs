@@ -80,6 +80,19 @@ namespace DATOS
             }
             return null;
         }
+        private void ArmaraParametrosPacienteEliminar(ref SqlCommand comando, Pacientes pa)
+        {
+            SqlParameter sqlparametros = new SqlParameter();
+            sqlparametros = comando.Parameters.Add("@idpaciente", SqlDbType.Int);
+            sqlparametros.Value = pa.getIdPaciente();
+        }
+        public int EliminarPac(Pacientes pa)
+        {
+            SqlCommand comando = new SqlCommand();
+            ArmaraParametrosPacienteEliminar(ref comando, pa);
+            return accesoDatos.ExecProceAlmace(comando, "SP_EliminarPaciente");
 
+        }
     }
+    
 }

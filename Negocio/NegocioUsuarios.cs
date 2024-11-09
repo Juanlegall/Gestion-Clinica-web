@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DATOS;
+using Entidades;
 
 namespace Negocio
 {
@@ -58,7 +59,17 @@ namespace Negocio
 
 
         }
-
+        public bool EliminarMedico(int id)
+        {
+            DatosUsuarios du = new DatosUsuarios();
+            Usuarios us = new Usuarios();
+            us.setIdUsuario(id);
+            int op = du.EliminarMed(us);
+            if (op == 1)
+                return true;
+            else
+                return false;
+        }
 
 
 

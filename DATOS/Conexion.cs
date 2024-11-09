@@ -113,10 +113,52 @@ namespace DATOS
             return estado;
 
         }
+        public SqlConnection Conectar()
+        {
+            SqlConnection cn = new SqlConnection(ruta);
+            try
+            {
+                cn.Open();
+                return cn;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al conectar a la base de datos: " + ex.Message);
+            }
+        }
+        public SqlDataAdapter Adapter(string consulta, SqlConnection cn)
+        {
+            if (cn == null || cn.State != ConnectionState.Open)
+            {
+                throw new Exception("Conexión no válida.");
+            }
+
+            try
+            {
+                return new SqlDataAdapter(consulta, cn);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al crear el adaptador: " + ex.Message);
+            }
+        }
+        public int ExecProceAlmace(SqlCommand comando, string nombreSP)
+        {
+            int FilasCambiadas;
+            SqlConnection conexion = Conectar();
+            SqlCommand cmd = new SqlCommand();
+            cmd = comando;
+            cmd.Connection = conexion;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = nombreSP;
+            FilasCambiadas = cmd.ExecuteNonQuery();
+            conexion.Close();
+            return FilasCambiadas;
+        }
 
 
 
- 
 
     }
 }
