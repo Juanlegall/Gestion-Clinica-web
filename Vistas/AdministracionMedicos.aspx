@@ -17,7 +17,7 @@
                 <Columns>
                     <asp:TemplateField>
                     <ItemTemplate>
-                <asp:HiddenField ID="hfMedicoId" runat="server" Value='<%# Bind("idMedico") %>' />
+                <asp:HiddenField ID="hfMedicoId" runat="server" Value='<%# Bind("idMedico") %>' OnValueChanged="hfMedicoId_ValueChanged" />
                     </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Nombre">

@@ -7,3 +7,12 @@ C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\DATOS\obj\Debug\DATOS.csproj.CoreComp
 C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\DATOS\obj\Debug\DATOS.csproj.Up2Date
 C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\DATOS\obj\Debug\DATOS.dll
 C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\DATOS\obj\Debug\DATOS.pdb
+C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\bin\Debug\DATOS.dll
+C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\bin\Debug\DATOS.pdb
+C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\bin\Debug\Entidades.dll
+C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\bin\Debug\Entidades.pdb
+C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\obj\Debug\Datos.csproj.Up2Date
+C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\obj\Debug\DATOS.dll
+C:\facu\Prog III\TPFINALPROGRAMACION\DATOS\obj\Debug\DATOS.pdb
