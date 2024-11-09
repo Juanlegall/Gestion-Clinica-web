@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Pacientes
+    public class Pacientes
     {
-        private string nombre;
-        private string apellido;
-        private string obra_social;
-        private string telefono;
-        private string dni;
-        private DateTime fecha_nacimiento;
-        private string direccion;
-        private DateTime fecha_baja;
+        public string nombre;
+        public string apellido;
+        public string telefono;
+        public string dni;
+        public string sexo;
+        public string nacionalidad;
+        public string correo_electronico;
+        public DateTime fecha_nacimiento;
+        public string direccion;
+        public int id_paciente;
+        public int id_localidad;
+        public int id_provincia;
 
 
 
@@ -30,17 +34,11 @@ namespace Entidades
             this.nombre = nombre;
         }
 
-
-
         public void setApellido(string apellido)
         {
             this.apellido = apellido;
         }
 
-        public void setObraSocial(string obra_social)
-        {
-            this.obra_social = obra_social;
-        }
 
         public void setTelefono(string telefono)
         {
@@ -62,11 +60,35 @@ namespace Entidades
             this.direccion = direccion;
         }
 
-
-        public void setFechaBaja(DateTime fecha_baja)
+        public void setNacionalidad( string nacionalidad)
         {
-            this.fecha_baja = fecha_baja;
+            this.nacionalidad = nacionalidad;
         }
+
+        public void setSexo(string sexo)
+        {
+            this.sexo = sexo;
+        }
+
+        public void setCorreoElectronico (string correoElectronico)
+        {
+            this.correo_electronico = correoElectronico;
+        }
+
+        public void setId_Localidad (int  id_localidad)
+        {
+            this.id_localidad = id_localidad;
+        }
+        public void setId_Provincia(int id_provincia)
+        {
+            this.id_provincia = id_provincia;
+        }
+
+        public void setId_Paciente (int id_paciente)
+        {
+            this.id_paciente = id_paciente;
+        }
+
 
 
         public string getNombre()
@@ -79,11 +101,6 @@ namespace Entidades
         {
             return apellido;
             
-        }
-
-        public string getObraSocial()
-        {
-            return obra_social;
         }
 
         public string getTelefono()
@@ -107,10 +124,36 @@ namespace Entidades
             return direccion;
         }
 
-        public DateTime getFechaBaja()
+
+        public int getIdLocalidad()
         {
-            return fecha_baja;
+            return id_localidad;
         }
+
+        public int getIdProvincia()
+        {
+            return id_provincia;
+        }
+
+        public string getNacionalidad()
+        {
+            return nacionalidad;
+        }
+
+        public string getSexo()
+        { return sexo;}
+
+        public string getCorreoElectronico()
+        {
+            return correo_electronico;
+        }
+
+        public int getIdPaciente()
+        {
+            return id_paciente;
+        }
+
+
 
 
     }

@@ -10,7 +10,7 @@ namespace DATOS
 {
     public class Conexion
     {
-        private string ruta = "Data Source=localhost;Initial Catalog=TP_FINAL;User ID=sa;Password=elu1234;TrustServerCertificate=True;";
+        private string ruta = "Data Source=FRANCISPC\\SQLEXPRESS;Initial Catalog=TP_FINAL;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public SqlConnection obtenerConexion()
         {
@@ -72,6 +72,31 @@ namespace DATOS
 
             return ds;
         }
+
+        public DataSet getData(SqlCommand cmd) // Modificado para aceptar SqlCommand
+        {
+            DataSet ds = new DataSet();
+            SqlConnection conexion = obtenerConexion();
+
+            try
+            {
+                cmd.Connection = conexion;
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(ds); // Llenamos el DataSet con los datos de la consulta
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+            return ds;
+        }
+
 
 
         public Boolean existe(string consulta)
