@@ -68,6 +68,8 @@
     </Columns>
 </asp:GridView>
             <br />
+            <asp:Button ID="btn_AltaMedicos" runat="server" OnClick="btn_AltaMedicos_Click" Text="ALTA MEDICOS" />
+            <br />
         </div>
     </form>
 </body>

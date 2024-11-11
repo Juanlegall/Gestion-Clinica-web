@@ -95,5 +95,10 @@ namespace Vistas
                 }
             }
         }
+
+        protected void btn_AltaMedicos_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AltaMedico.aspx");
+        }
     }
 }

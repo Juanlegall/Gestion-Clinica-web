@@ -6,6 +6,17 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 847px;
+        }
+        .auto-style3 {
+            font-weight: normal;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -14,8 +25,11 @@
             <h4>Buscar por DNI:&nbsp;
                 <asp:TextBox ID="txtBuscarPaciente" runat="server" Width="504px"></asp:TextBox>
 &nbsp;
-                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" />
-&nbsp; </h4>
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" />
+&nbsp; 
+                <asp:Label ID="lblMensaje" runat="server" CssClass="auto-style3"></asp:Label>
+                <asp:Button ID="btnMostrar" runat="server" OnClick="btnMostrar_Click" Text="Mostrar Todo" />
+            </h4>
             <p>
                 <asp:GridView ID="grdVPacientes" runat="server" AutoGenerateColumns="False" OnRowCommand="grdVPacientes_RowCommand" DataKeyNames="idPaciente" CellPadding="4" ForeColor="#333333" GridLines="None" Width="1019px"> 
 
@@ -93,7 +107,16 @@
                 </asp:GridView>
             </p>
         </div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">
         <asp:Button ID="btn_AltaPaciente" runat="server" OnClick="btn_AltaPaciente_Click" Text="ALTA " />
+                </td>
+                <td>
+                    <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="VOLVER" />
+                </td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>
