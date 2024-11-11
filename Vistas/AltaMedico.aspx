@@ -147,19 +147,34 @@
              </div>
 
 
-         <div  class="auto-style1" style="margin-bottom: 10px;margin-left: 123px;margin-bottom: 10px;">
-
-             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" />
-
-             <br />
-             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
-
-        </div>
+       
     </div>
 
 
 </div>
-        </div>
+        </div> 
+
+        <table class="w-100">
+    <tr>
+        <td class="auto-style3"></td>
+        <td class="auto-style4">
+
+     <asp:Button ID="Button1" runat="server" Text="Aceptar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" Width="141px" />
+
+        </td>
+        <td class="auto-style5">
+            <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" ValidationGroup="none" />
+        </td>
+    </tr>
+    <tr>
+        <td class="auto-style1">&nbsp;</td>
+        <td class="auto-style2">
+     <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
 
     </form>
 </body>

@@ -73,8 +73,10 @@ namespace Negocio
                 return false;
         }
 
-        public bool AltaMedicos(int idProvincia, int idLocalidad, int idEspecialidad, int idRol, string dni, string legajo, string nombre, string apellido, string sexo, string nacionalidad, string direccion, string correoElectronico, string telefono, string nombre_usuario, string contraseña)
+        public bool AltaMedicos(int idProvincia, int idLocalidad, int idEspecialidad, int idRol, string dni, string nombre, string apellido, string sexo, string nacionalidad, string direccion, string legajo, string correoElectronico, string telefono, string nombre_usuario, string contraseña)
         {
+            Console.WriteLine("Valor de legajo en negocio: " + legajo);
+
             DatosUsuarios ds = new DatosUsuarios();
             Usuarios usuario = new Usuarios
             {
@@ -83,12 +85,12 @@ namespace Negocio
                 id_especialidad = idEspecialidad,
                 id_rol = idRol,
                 dni = dni,
-                legajo = legajo,
                 nombre = nombre,
                 apellido = apellido,
                 sexo = sexo,
                 nacionalidad = nacionalidad,
                 direccion = direccion,
+                legajo = legajo,
                 correo_electronico = correoElectronico,
                 telefono = telefono,
                 nombre_usuario = nombre_usuario,

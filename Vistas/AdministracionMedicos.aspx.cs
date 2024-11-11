@@ -29,7 +29,7 @@ namespace Vistas
 
         protected void grdAdministracionMedicos_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            if (e.Row.RowType == DataControlRowType.DataRow)
+            /*if (e.Row.RowType == DataControlRowType.DataRow)
             {
                 int legajo = Convert.ToInt32(DataBinder.Eval(e.Row.DataItem, "legajo"));
 
@@ -46,8 +46,40 @@ namespace Vistas
                 ddlHorarios.DataTextField = "DiasHorarios"; // Texto a mostrar en el DropDownList
                 ddlHorarios.DataBind();
 
+            }*/
+
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+
+                string legajoValue = DataBinder.Eval(e.Row.DataItem, "legajo")?.ToString().Trim();
+
+                if (!string.IsNullOrEmpty(legajoValue) && legajoValue.All(char.IsDigit))
+                {
+                    // Convertir 'legajo' a entero
+                    int legajo = Convert.ToInt32(legajoValue);
+                }
+                else
+                {
+                    // Manejar el caso donde 'legajo' no es válido
+                    int legajo = 0;
+                }
+
+                // Obtener el DropDownList y HiddenField de la fila
+                DropDownList ddlHorarios = (DropDownList)e.Row.FindControl("ddlHorariosMedicos");
+                HiddenField hfMedicoId = (HiddenField)e.Row.FindControl("hfMedicoId");
+                int medicoId = Convert.ToInt32(hfMedicoId.Value);
+
+                // Llamar a una función que obtenga los horarios del médico
+                NegocioUsuarios ngs = new NegocioUsuarios();
+
+                DataSet ds = ngs.traerDiasHorarios(medicoId);
+                ddlHorarios.DataSource = ds.Tables[0];
+                ddlHorarios.DataTextField = "DiasHorarios"; // Texto a mostrar en el DropDownList
+                ddlHorarios.DataBind();
             }
+
         }
+ 
         private void RecargarDatosGridView()
         {
             // Instanciamos la capa de negocio

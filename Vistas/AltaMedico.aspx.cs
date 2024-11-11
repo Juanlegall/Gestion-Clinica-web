@@ -138,9 +138,10 @@ namespace Vistas
             string nombre_usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
 
-           
 
-            bool exito = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, correo, telefono, legajo, nombre_usuario, contraseña);
+
+            bool exito = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, legajo, correo, telefono, nombre_usuario, contraseña);
+        
 
             if (exito)
             {
@@ -150,6 +151,12 @@ namespace Vistas
             {
                 lblMensaje.Text = "Error al agregar al Personal";
             }
+        }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Page.Validate("None");
+            Response.Redirect("AdministracionMedicos.aspx");
         }
     }
 }
