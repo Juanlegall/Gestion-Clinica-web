@@ -75,5 +75,9 @@ namespace Negocio
             else
                 return false;
         }
+        public DataSet ObtenerPacientesPorDni(string dni)
+        {
+            return dts.ObtenerPacientesPorDni(dni);
+        }
     }
 }

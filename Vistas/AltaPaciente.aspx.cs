@@ -103,14 +103,37 @@ namespace Vistas
             if (exito)
             {
                 lblMensaje.Text = "Paciente agregado con éxito";
+                LimpiarCampos();
             }
             else
             {
                 lblMensaje.Text = "Error al agregar el paciente";
             }
+            
         }
+        private void LimpiarCampos()
+        {
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtSexo.Text = "";
+            txtNacionalidad.Text = "";
+            txtDireccion.Text = "";
+            txtCorreo.Text = "";
+            txtTelefono.Text = "";
+            txtDni.Text = "";
+            txtFecNacimiento.Text = "";
 
+            
+            ddlProvincias.SelectedIndex = 0; 
+            ddlLocalidad.SelectedIndex = 0; 
 
+            lblMensaje.Text = "";
+        }
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Page.Validate("None");
+            Response.Redirect("ABMLPacientes.aspx");
+        }
     }
 
 
