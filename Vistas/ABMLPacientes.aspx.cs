@@ -113,5 +113,7 @@ namespace Vistas
         {
             RecargarDatosGridView();
         }
+        
+
     }
 }
