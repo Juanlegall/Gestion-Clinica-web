@@ -19,7 +19,6 @@ namespace Vistas
             {
                 CargarProvincias();
                 CargarEspecialidades();
-                CargarRoles();
             }
         }
 
@@ -94,24 +93,6 @@ namespace Vistas
 
         }
 
-        private void CargarRoles()
-        {
-            NegocioUsuarios ngRoles = new NegocioUsuarios();
-            DataTable roles = ngRoles.ObtenerRoles();
-
-            if(roles != null && roles.Rows.Count > 0)
-            {
-                ddlRol.DataSource = roles;
-                ddlRol.DataTextField = "nombre_rol";
-                ddlRol.DataValueField = "id_rol";
-                ddlRol.DataBind();
-                ddlRol.Items.Insert(0, new ListItem("Seleccionar", "0"));
-            }
-            else
-            {
-                lblMensaje.Text = "No se encuentran roles";
-            }
-        }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -127,7 +108,7 @@ namespace Vistas
             int idProvincia = int.Parse(ddlProvincias.SelectedValue);
             int idLocalidad = int.Parse(ddlLocalidad.SelectedValue);
             int idEspecialidad = int.Parse(ddlEspecialidad.SelectedValue);
-            int idRol = int.Parse(ddlRol.SelectedValue);
+            int idRol = 2; //Medico
             string dni = txtDni.Text;
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
