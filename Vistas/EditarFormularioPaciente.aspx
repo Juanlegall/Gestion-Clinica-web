@@ -6,6 +6,14 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 337px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -105,11 +113,31 @@
 
          <div  class="form-group px-0 d-flex justify-content-center align-items-center col-10" style="margin-bottom: 10px;margin-left: 123px;width: 120px;margin-bottom: 10px;">
 
-             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" />
-
              <br />
-             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2">
+
+             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" />
+
+                </td>
+                <td>
+
+                    &nbsp;</td>
+                <td>
+                    <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" ValidationGroup="none" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style2">
+             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+                </td>
+                <td>
+                    &nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
     </form>
 </body>
 </html>

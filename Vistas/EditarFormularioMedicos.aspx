@@ -8,6 +8,15 @@
     <title></title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
 
+    <style type="text/css">
+        .auto-style1 {
+            width: 298px;
+        }
+        .auto-style2 {
+            width: 509px;
+        }
+    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -123,16 +132,32 @@
 
          <div  class="form-group px-0 d-flex justify-content-center align-items-center col-10" style="margin-bottom: 10px;margin-left: 123px;width: 120px;margin-bottom: 10px;">
 
-             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" />
-
              
 
         </div>
-             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+             <br />
     </div>
 
 </div>
         </div>
+
+        <table class="w-100">
+            <tr>
+                <td class="auto-style1">
+             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+                </td>
+                <td class="auto-style2">
+
+             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" Width="172px" />
+
+             
+
+                </td>
+                <td>
+                    <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" ValidationGroup="none" />
+                </td>
+            </tr>
+        </table>
 
     </form>
 </body>

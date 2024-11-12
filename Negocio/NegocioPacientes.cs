@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -83,6 +84,17 @@ namespace Negocio
         {
             return dts.ObtenerDatosPacientes(idPaciente);
 
+
+        }
+        public Boolean pacienteEditado(string id, string idProvincia, string idLocalidad, string nombre, string apellido, string sexo, string nacionalidad, string direccion, string correo, string telefono, DateTime fecha ,string dni)
+        {
+            int filasAfectadas = dts.pacienteEditado( id, idProvincia, idLocalidad, nombre, apellido, sexo, nacionalidad, direccion, correo, telefono, fecha ,dni);
+            if (filasAfectadas > 0)
+            {
+                return true;
+
+            }
+            return false;
 
         }
     }

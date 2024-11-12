@@ -113,7 +113,7 @@ namespace DATOS
         public DataSet ObtenerDatosPacientes(string id)
         {
             DataSet ds = new DataSet();
-            string consulta = $"SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad, p.direccion, p.correo_electronico AS correo, p.telefono, p.fecha_nacimiento_p AS fechaNacimiento, prov.nombre_provincia AS provincia, loc.nombre_localidad AS localidad FROM Pacientes AS p INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P where p.id_paciente = {id}";
+            string consulta = $"SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad, p.direccion AS direccion, p.correo_electronico AS correo, p.telefono, p.fecha_nacimiento_p AS fechaNacimiento , prov.id_provincia AS idProvincia, prov.nombre_provincia AS provincia, loc.nombre_localidad AS localidad, loc.id_localidad AS idLocalidad FROM Pacientes AS p INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P where p.id_paciente = {id}";
 
             // Obteniendo el conjunto de datos
             ds = accesoDatos.getData(consulta);
@@ -121,6 +121,39 @@ namespace DATOS
             // Devuelve el DataSet
             return ds;
         }
+        // public int pacienteEditado(string id, string idProvincia, string idLocalidad, string nombre, string apellido, string sexo, string nacionalidad, string direccion, string correo, string telefono, DateTime fecha, string dni)
+        //{
+        //string consulta = $"update usuarios set id_provincia_us = {idProvincia} , id_localidad_us = {idLocalidad} , id_rol_us = 2 ,  nombre = '{nombre}' , apellido = '{apellido}' , sexo = '{sexo}' ,  nacionalidad = '{nacionalidad}' , direccion = '{direccion}' ,  correo_electronico  = '{correo}' ,  telefono = '{telefono}' ,  fecha_nacimiento = '{fecha}' ,  dni = '{dni}' where id_paciente = {id}";
+
+        //int filasAfectadas = accesoDatos.execute(consulta);
+        //return filasAfectadas;
+
+        //}
+        
+        
+   
+        public int pacienteEditado(string id, string idProvincia, string idLocalidad, string nombre, string apellido, string sexo, string nacionalidad, string direccion, string correo, string telefono, DateTime fecha, string dni)
+        {
+            string consulta = $@"UPDATE pacientes 
+                        SET id_provincia_P= '{idProvincia}',
+                            id_localidad_P = '{idLocalidad}',
+                            nombre_p= '{nombre}',
+                            apellido_p = '{apellido}',
+                            sexo_p = '{sexo}',
+                            nacionalidad = '{nacionalidad}',
+                            direccion = '{direccion}',
+                            correo_electronico = '{correo}',
+                            telefono = '{telefono}',
+                             fecha_nacimiento_p = '{fecha.ToString("dd-MM-yyyy")}',
+                            dni_p = '{dni}'
+                        WHERE id_paciente = '{id}'";
+
+            // Llamamos a 'execute' pasándole la consulta SQL como string
+            int filasAfectadas = accesoDatos.execute(consulta);
+
+            return filasAfectadas;
+        }
+
     }
     
 }
