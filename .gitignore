@@ -1,1 +1,60 @@
+# Ignorar archivos de compilación
+*.com
+*.class
+*.dll
+*.exe
+*.pdb
+*.dll.config
+*.cache
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignorar archivos de paquetes NuGet
+packages/
+
+# Ignorar archivos de compilación
+bin/
+obj/
+
+# Ignorar resultados de pruebas
+TestResults/
+
+# Ignorar archivos de publicación web
+*.Publish.xml
+
+# Ignorar archivos de ReSharper
+_ReSharper.*
+*.ReSharper.*
+
+# Ignorar archivos de packages
+packages/
+packages/*/*.dll
+
+# Ignorar archivos de configuración de Visual Studio
 .vs/
+.vscode/
+.idea/
+.vssettings
+
+# Ignorar archivos de logs y bases de datos
+*.log
+*.sqlite
+
+# Ignorar archivos generados por el sistema operativo
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Ignorar archivos temporales y caché
+*.tmp
+*.tmp_proj
+*.log
+.vspscc
+.vssscc
+.builds
+.pidb
+.svclog
+.scc

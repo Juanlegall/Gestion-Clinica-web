@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using Entidades;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -52,15 +53,15 @@ namespace Vistas
                 string idSeleccionado = e.CommandArgument.ToString();
 
                 // Redirigir al formulario de edición con el ID como parámetro
-                Response.Redirect($"EditarFormularioMedico.aspx?id={idSeleccionado}");
+                Response.Redirect($"EditarFormularioPaciente.aspx?id={idSeleccionado}");
 
             }
             else if (e.CommandName == "Eliminar")
             {
-                // Obtener el ID del médico desde el CommandArgument
+                // Obtener el ID del paciente desde el CommandArgument
                 int idPaciente = Convert.ToInt32(e.CommandArgument);
 
-                // Crear una instancia de la capa de negocio para eliminar al médico
+                // Crear una instancia de la capa de negocio para eliminar al paciente
                 NegocioPacientes np = new NegocioPacientes();
                 bool eliminado = np.EliminarPaciente(idPaciente);
 
@@ -75,7 +76,44 @@ namespace Vistas
                     // Si no se pudo eliminar, mostrar un mensaje de error
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No se pudo eliminar el paciente.');", true);
                 }
+
             }
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("HomeAdministradores.aspx");
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string dni = txtBuscarPaciente.Text.Trim();
+
+            
+            NegocioPacientes negocio = new NegocioPacientes();
+            DataSet dsPacientes = negocio.ObtenerPacientesPorDni(dni);
+
+            // Verificar si hay resultados y mostrar en el GridView
+            if (dsPacientes.Tables[0].Rows.Count > 0)
+            {
+                grdVPacientes.DataSource = dsPacientes;
+                grdVPacientes.DataBind();
+                txtBuscarPaciente.Text = "";
+            }
+            else
+            {
+                lblMensaje.Text = "No se encontraron pacientes con ese DNI.";
+                grdVPacientes.DataSource = null;
+                grdVPacientes.DataBind();
+                txtBuscarPaciente.Text = "";
+            }
+        }
+
+        protected void btnMostrar_Click(object sender, EventArgs e)
+        {
+            RecargarDatosGridView();
+        }
+        
+
     }
 }

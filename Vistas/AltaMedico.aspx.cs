@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,13 +10,15 @@ using System.Web.UI.WebControls;
 
 namespace Vistas
 {
-    public partial class AltaPaciente : System.Web.UI.Page
+    public partial class AltaMedico : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 CargarProvincias();
+                CargarEspecialidades();
+                CargarRoles();
             }
         }
 
@@ -70,9 +73,48 @@ namespace Vistas
             }
         }
 
+        private void CargarEspecialidades()
+        {
+            NegocioEspecialidades ngcioEspecialiades = new NegocioEspecialidades();
+            DataTable especialidades = ngcioEspecialiades.ObtenerEspecialidades();
+
+            if (especialidades != null && especialidades.Rows.Count > 0)
+            {
+                ddlEspecialidad.DataSource = especialidades;
+                ddlEspecialidad.DataTextField = "nombre_especialidad";
+                ddlEspecialidad.DataValueField = "id_especialidad";
+                ddlEspecialidad.DataBind();
+                ddlEspecialidad.Items.Insert(0, new ListItem("Seleccione una especialidad", "0"));
+            }
+            else
+            {
+                lblMensaje.Text = "No se encontraron provincias.";
+            }
+
+        }
+
+        private void CargarRoles()
+        {
+            NegocioUsuarios ngRoles = new NegocioUsuarios();
+            DataTable roles = ngRoles.ObtenerRoles();
+
+            if(roles != null && roles.Rows.Count > 0)
+            {
+                ddlRol.DataSource = roles;
+                ddlRol.DataTextField = "nombre_rol";
+                ddlRol.DataValueField = "id_rol";
+                ddlRol.DataBind();
+                ddlRol.Items.Insert(0, new ListItem("Seleccionar", "0"));
+            }
+            else
+            {
+                lblMensaje.Text = "No se encuentran roles";
+            }
+        }
+
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            NegocioPacientes ngPaciente = new NegocioPacientes();
+            NegocioUsuarios ngMedico = new NegocioUsuarios();
 
             if (ddlProvincias.SelectedValue == "0" || ddlLocalidad.SelectedValue == "0")
             {
@@ -82,59 +124,39 @@ namespace Vistas
 
             int idProvincia = int.Parse(ddlProvincias.SelectedValue);
             int idLocalidad = int.Parse(ddlLocalidad.SelectedValue);
+            int idEspecialidad = int.Parse(ddlEspecialidad.SelectedValue);
+            int idRol = int.Parse(ddlRol.SelectedValue);
             string dni = txtDni.Text;
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
             string sexo = txtSexo.Text;
             string nacionalidad = txtNacionalidad.Text;
             string direccion = txtDireccion.Text;
+            string legajo = txtLegajo.Text;
             string correo = txtCorreo.Text;
             string telefono = txtTelefono.Text;
+            string nombre_usuario = txtUsuario.Text;
+            string contraseña = txtContraseña.Text;
 
-            DateTime fechaNacimiento;
-            if (!DateTime.TryParse(txtFecNacimiento.Text, out fechaNacimiento))
-            {
-                lblMensaje.Text = "Ingrese una fecha de nacimiento válida.";
-                return;
-            }
 
-            bool exito = ngPaciente.AltaPaciente(idProvincia, idLocalidad, dni, nombre, apellido, sexo, nacionalidad, direccion, correo, telefono, fechaNacimiento);
+
+            bool exito = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, legajo, correo, telefono, nombre_usuario, contraseña);
+        
 
             if (exito)
             {
-                lblMensaje.Text = "Paciente agregado con éxito";
-                LimpiarCampos();
+                lblMensaje.Text = "Personal agregado con éxito";
             }
             else
             {
-                lblMensaje.Text = "Error al agregar el paciente";
+                lblMensaje.Text = "Error al agregar al Personal";
             }
-            
         }
-        private void LimpiarCampos()
-        {
-            txtNombre.Text = "";
-            txtApellido.Text = "";
-            txtSexo.Text = "";
-            txtNacionalidad.Text = "";
-            txtDireccion.Text = "";
-            txtCorreo.Text = "";
-            txtTelefono.Text = "";
-            txtDni.Text = "";
-            txtFecNacimiento.Text = "";
 
-            
-            ddlProvincias.SelectedIndex = 0; 
-            ddlLocalidad.SelectedIndex = 0; 
-
-            lblMensaje.Text = "";
-        }
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Page.Validate("None");
-            Response.Redirect("ABMLPacientes.aspx");
+            Response.Redirect("AdministracionMedicos.aspx");
         }
     }
-
-
 }

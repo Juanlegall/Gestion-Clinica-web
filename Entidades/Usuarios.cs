@@ -8,24 +8,24 @@ namespace Entidades
 {
     public class Usuarios
     {
-        private int id_Usuario;
-        private int id_especialidad;
-        private int id_localidad;
-        private int id_provincia;
-        private int id_rol;
-        private string obra_social;
-        private string nombre;
-        private string apellido;
-        private string sexo;
-        private string nacionalidad;
-        private string direccion;
-        private string correo_electronico;
-        private string telefono;
-        private string legajo;
-        private string dni;
-        private string nombre_usuario;
-        private string contraseña;
-        private DateTime fecha_nacimiento;
+        public  int id_Usuario;
+        public  int id_especialidad;
+        public  int id_localidad;
+        public  int id_provincia;
+        public  int id_rol;
+        public  string obra_social;
+        public  string nombre;
+        public  string apellido;
+        public  string sexo;
+        public  string nacionalidad;
+        public  string direccion;
+        public  string correo_electronico;
+        public  string telefono;
+        public  string legajo;
+        public  string dni;
+        public  string nombre_usuario;
+        public  string contraseña;
+        public  DateTime fecha_nacimiento;
 
 
 
@@ -118,6 +118,11 @@ namespace Entidades
         public string getDireccion()
         {
             return direccion;
+        }
+
+        public int getProvincia()
+        {
+            return id_provincia;
         }
 
 

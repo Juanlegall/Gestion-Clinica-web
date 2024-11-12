@@ -68,9 +68,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ABMLPacientes.aspx" />
-    <Content Include="ABMLMedicos.aspx" />
+    <Content Include="AdministracionMedicos.aspx" />
+    <Content Include="AltaMedico.aspx" />
     <Content Include="AltaPaciente.aspx" />
     <Content Include="EditarFormularioMedicos.aspx" />
+    <Content Include="EditarFormularioPaciente.aspx" />
     <Content Include="HomeAdministradores.aspx" />
     <Content Include="HomeMedicos.aspx" />
     <Content Include="Login.aspx" />
@@ -84,12 +86,19 @@
     <Compile Include="ABMLPacientes.aspx.designer.cs">
       <DependentUpon>ABMLPacientes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ABMLMedicos.aspx.cs">
-      <DependentUpon>ABMLMedicos.aspx</DependentUpon>
+    <Compile Include="AdministracionMedicos.aspx.cs">
+      <DependentUpon>AdministracionMedicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ABMLMedicos.aspx.designer.cs">
-      <DependentUpon>ABMLMedicos.aspx</DependentUpon>
+    <Compile Include="AdministracionMedicos.aspx.designer.cs">
+      <DependentUpon>AdministracionMedicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AltaMedico.aspx.cs">
+      <DependentUpon>AltaMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltaMedico.aspx.designer.cs">
+      <DependentUpon>AltaMedico.aspx</DependentUpon>
     </Compile>
     <Compile Include="AltaPaciente.aspx.cs">
       <DependentUpon>AltaPaciente.aspx</DependentUpon>
@@ -104,6 +113,13 @@
     </Compile>
     <Compile Include="EditarFormularioMedicos.aspx.designer.cs">
       <DependentUpon>EditarFormularioMedicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarFormularioPaciente.aspx.cs">
+      <DependentUpon>EditarFormularioPaciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarFormularioPaciente.aspx.designer.cs">
+      <DependentUpon>EditarFormularioPaciente.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomeAdministradores.aspx.cs">
       <DependentUpon>HomeAdministradores.aspx</DependentUpon>

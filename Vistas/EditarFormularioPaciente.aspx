@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaPaciente.aspx.cs" Inherits="Vistas.AltaPaciente"  UnobtrusiveValidationMode="None"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditarFormularioPaciente.aspx.cs" Inherits="Vistas.EditarFormularioPaciente" %>
 
 <!DOCTYPE html>
 
@@ -6,45 +6,11 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-
-    <style type="text/css">
-        .auto-style1 {
-            width: 346px;
-        }
-        .auto-style2 {
-            width: 379px;
-        }
-        .auto-style3 {
-            width: 346px;
-            height: 36px;
-        }
-        .auto-style4 {
-            width: 379px;
-            height: 36px;
-        }
-        .auto-style5 {
-            height: 36px;
-        }
-    </style>
-
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="col-12 row">
-
-     <div class="col-1">
-
-     </div>
-
-<div class="col-8" style="margin-top:35px;">
-
-     <div style="margin-top: 60px;">
-
-           <div>
-
-
-         <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
+        <div>
+                     <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
             <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Nombre</label>
             <asp:TextBox ID="txtNombre" runat="server" class="form-control campo"></asp:TextBox>
             <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre">*</asp:RequiredFieldValidator>
@@ -92,7 +58,14 @@
       <asp:TextBox ID="txtTelefono" runat="server" class="form-control campo"></asp:TextBox>
      <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="txtTelefono">*</asp:RequiredFieldValidator>
 
-&nbsp;</div>
+</div>
+
+           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
+               Fecha Nacimiento
+      <asp:TextBox ID="txtFecha" runat="server" class="form-control campo"></asp:TextBox>
+     <asp:RequiredFieldValidator ID="rfvFecha" runat="server" ControlToValidate="txtFecha">*</asp:RequiredFieldValidator>
+
+</div>
 
            <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
       <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Dni</label>
@@ -101,16 +74,10 @@
 
             
 </div>
-             <div>
-                       <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
- <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Fecha Nacimiento</label>
- <asp:TextBox ID="txtFecNacimiento" runat="server" class="form-control campo"></asp:TextBox>
-<asp:RequiredFieldValidator ID="rfvFecNacimiento" runat="server" ControlToValidate="txtFecNacimiento">*</asp:RequiredFieldValidator>
-             </div>
 
            <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
       <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Provincia</label>
-               <asp:DropDownList ID="ddlProvincias" runat="server"  class="form-control campo" OnSelectedIndexChanged="ddlProvincias_SelectedIndexChanged" AutoPostBack="True" >
+               <asp:DropDownList ID="ddlProvincias" runat="server"  class="form-control campo">
                 </asp:DropDownList>
      <asp:RequiredFieldValidator ID="rfvProvincias" runat="server" ControlToValidate="ddlProvincias" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
 
@@ -120,7 +87,7 @@
          
            <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
       <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Localidad</label>
-               <asp:DropDownList ID="ddlLocalidad" runat="server"  class="form-control campo"  AutoPostBack="True">
+               <asp:DropDownList ID="ddlLocalidad" runat="server"  class="form-control campo">
                 </asp:DropDownList>
      <asp:RequiredFieldValidator ID="frvLocalidad" runat="server" ControlToValidate="ddlLocalidad" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
 
@@ -129,42 +96,20 @@
 
 
          
+           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
+
+            
+</div>
              </div>
 
 
          <div  class="form-group px-0 d-flex justify-content-center align-items-center col-10" style="margin-bottom: 10px;margin-left: 123px;width: 120px;margin-bottom: 10px;">
 
+             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" />
+
              <br />
-
-        </div>
-    </div>
-
-</div>
-        </div>
-
-        </div>
-        <table class="w-100">
-            <tr>
-                <td class="auto-style3"></td>
-                <td class="auto-style4">
-
-             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" Width="141px" />
-
-                </td>
-                <td class="auto-style5">
-                    <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" ValidationGroup="none" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style2">
              <asp:Label ID="lblMensaje" runat="server"></asp:Label>
-
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-
+        </div>
     </form>
 </body>
 </html>
