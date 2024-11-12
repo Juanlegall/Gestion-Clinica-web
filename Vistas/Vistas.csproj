@@ -68,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ABMLPacientes.aspx" />
-    <Content Include="AdministracionMedicos.aspx" />
+    <Content Include="ABMLMedicos.aspx" />
     <Content Include="AltaPaciente.aspx" />
     <Content Include="EditarFormularioMedicos.aspx" />
     <Content Include="HomeAdministradores.aspx" />
@@ -84,12 +84,12 @@
     <Compile Include="ABMLPacientes.aspx.designer.cs">
       <DependentUpon>ABMLPacientes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AdministracionMedicos.aspx.cs">
-      <DependentUpon>AdministracionMedicos.aspx</DependentUpon>
+    <Compile Include="ABMLMedicos.aspx.cs">
+      <DependentUpon>ABMLMedicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AdministracionMedicos.aspx.designer.cs">
-      <DependentUpon>AdministracionMedicos.aspx</DependentUpon>
+    <Compile Include="ABMLMedicos.aspx.designer.cs">
+      <DependentUpon>ABMLMedicos.aspx</DependentUpon>
     </Compile>
     <Compile Include="AltaPaciente.aspx.cs">
       <DependentUpon>AltaPaciente.aspx</DependentUpon>

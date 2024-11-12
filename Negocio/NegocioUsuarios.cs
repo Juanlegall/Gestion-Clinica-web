@@ -74,6 +74,26 @@ namespace Negocio
 
 
 
+        public DataSet medicosFiltrados(string legajo,string apellido,string especialidad)
+        {
+            return dts.medicosFiltrados(legajo,apellido,especialidad);
+
+
+        }
+
+
+        public Boolean medicoEditado(string id, string idEspecialidad, string idProvincia, string idLocalidad, string nombre, string apellido, string sexo, string nacionalidad, string direccion, string correo, string telefono, string legajo, string dni)
+        {
+            int filasAfectadas = dts.medicoEditado(id, idEspecialidad, idProvincia, idLocalidad, nombre, apellido, sexo, nacionalidad, direccion, correo, telefono, legajo, dni);
+            if (filasAfectadas > 0)
+            {
+            return true;
+
+            }
+            return false;
+
+        }
+
 
 
 

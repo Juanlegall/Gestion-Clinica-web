@@ -123,12 +123,12 @@
 
          <div  class="form-group px-0 d-flex justify-content-center align-items-center col-10" style="margin-bottom: 10px;margin-left: 123px;width: 120px;margin-bottom: 10px;">
 
-             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" />
+             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" />
 
-             <br />
-             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+             
 
         </div>
+             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
     </div>
 
 </div>

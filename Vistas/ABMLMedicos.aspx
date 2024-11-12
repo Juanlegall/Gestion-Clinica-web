@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdministracionMedicos.aspx.cs" Inherits="Vistas.AdministracionMedicos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ABMLMedicos.aspx.cs" Inherits="Vistas.AdministracionMedicos" %>
 
 <!DOCTYPE html>
 
@@ -11,6 +11,21 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Administracion Medicos"></asp:Label>
+
+            <asp:Panel ID="Panel1" runat="server" Height="30px">
+                Buscar :
+                <asp:TextBox ID="txtLegajo" runat="server" placeholder="Legajo" style="height: 25px;"></asp:TextBox>
+                <asp:TextBox ID="txtApellido" runat="server" placeholder="Apellido" style="height: 25px;"></asp:TextBox>
+                <asp:DropDownList ID="ddlEspecialidades" runat="server" InitialValue="Seleccionar" style="height: 31px;">
+                </asp:DropDownList>
+                <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" style="height: 31px;"/>
+
+                <asp:Button ID="btnAgregar" runat="server" OnClick="btnAgregar_Click" Text="Agregar" style="height: 31px;" />
+
+            </asp:Panel>
+
+
+
             <br />
             <br />
                         <asp:GridView ID="grdAdministracionMedicos" runat="server" AutoGenerateColumns="False" 

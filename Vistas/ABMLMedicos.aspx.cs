@@ -18,10 +18,19 @@ namespace Vistas
             if (!IsPostBack)
             {
             NegocioUsuarios ngs = new NegocioUsuarios();
+            NegocioEspecialidades ne = new NegocioEspecialidades();
             DataSet dset = new DataSet();
             dset = ngs.obtenerTablaMedicos();
             grdAdministracionMedicos.DataSource = dset;
             grdAdministracionMedicos.DataBind();
+
+
+            dset = ne.obtenerEspecialidades();
+            ddlEspecialidades.DataSource = dset;
+            ddlEspecialidades.DataTextField = "especialidad";
+            ddlEspecialidades.DataValueField = "id_especialidad";
+            ddlEspecialidades.DataBind();
+            ddlEspecialidades.Items.Insert(0, new ListItem("Seleccionar", ""));
 
             }
 
@@ -94,6 +103,35 @@ namespace Vistas
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('No se pudo eliminar el médico.');", true);
                 }
             }
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect($"EditarFormularioMedicos.aspx?id=0");
+        }
+
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string legajo = txtLegajo.Text;
+            string apellido = txtApellido.Text;
+            string  especialidad = ddlEspecialidades.SelectedValue.ToString();
+
+            NegocioUsuarios negocioUsuarios = new NegocioUsuarios();
+            DataSet ds = negocioUsuarios.medicosFiltrados(legajo,apellido,especialidad);
+
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+
+            grdAdministracionMedicos.DataSource = ds;
+            grdAdministracionMedicos.DataBind();
+
+            }
+
+
+
+
+
         }
     }
 }

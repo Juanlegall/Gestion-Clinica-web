@@ -1,12 +1,24 @@
-﻿using System;
+﻿using DATOS;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DATOS;
 
 namespace Negocio
 {
-    internal class NegocioProvincias
+    public class NegocioProvincias
     {
+
+        DatosProvincias dtp = new DatosProvincias();
+        
+        public DataSet obtenerProvincias()
+        {
+            return dtp.obtenerProvincias();
+
+
+        }
     }
 }
