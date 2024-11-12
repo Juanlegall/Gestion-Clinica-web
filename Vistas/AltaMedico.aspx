@@ -141,8 +141,25 @@
                <asp:DropDownList ID="ddlEspecialidad" runat="server"  class="form-control campo">
                 </asp:DropDownList>
      <asp:RequiredFieldValidator ID="rfvEspecialidad" runat="server" ControlToValidate="ddlEspecialidad" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
+               </div>
+                              <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
+      <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Dia</label>
+               <asp:TextBox ID="txtdias" runat="server"  class="form-control campo">
+                </asp:TextBox>
+     <asp:RequiredFieldValidator ID="rfvDias" runat="server" ControlToValidate="txtdias" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
 
             
+</div>
+             <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
+   <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Desde</label>
+    <asp:TextBox ID="txtDesde" runat="server" class="form-control campo"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="rfvDesde" runat="server" ControlToValidate="txtDesde">*</asp:RequiredFieldValidator>
+             </div>
+                       <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
+<label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Hasta</label>
+ <asp:TextBox ID="txtHasta" runat="server" class="form-control campo"></asp:TextBox>
+ <asp:RequiredFieldValidator ID="rfvHasta" runat="server" ControlToValidate="txtHasta">*</asp:RequiredFieldValidator>
+          </div>      
 </div>
              </div>
 
@@ -152,7 +169,7 @@
 
 
 </div>
-        </div> 
+        </div>
 
         <table class="w-100">
     <tr>

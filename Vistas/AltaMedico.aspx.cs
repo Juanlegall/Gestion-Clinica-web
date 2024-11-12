@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using Entidades;
+using Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -115,7 +116,8 @@ namespace Vistas
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
             NegocioUsuarios ngMedico = new NegocioUsuarios();
-
+            HorariosMedicos Horario = new HorariosMedicos();
+            NegocioHorariosMedicos nHorario= new NegocioHorariosMedicos();
             if (ddlProvincias.SelectedValue == "0" || ddlLocalidad.SelectedValue == "0")
             {
                 lblMensaje.Text = "Seleccione una provincia y localidad.";
@@ -137,7 +139,10 @@ namespace Vistas
             string telefono = txtTelefono.Text;
             string nombre_usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
-
+            Horario.Dias = txtdias.Text;
+            Horario.HoraInicio = txtDesde.Text;
+            Horario.HoraFin = txtHasta.Text;
+            nHorario.AltaHorario(Horario);
 
 
             bool exito = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, legajo, correo, telefono, nombre_usuario, contraseña);
@@ -156,7 +161,7 @@ namespace Vistas
         protected void btnVolver_Click(object sender, EventArgs e)
         {
             Page.Validate("None");
-            Response.Redirect("AdministracionMedicos.aspx");
+            Response.Redirect("ABMLMedicos.aspx");
         }
     }
 }

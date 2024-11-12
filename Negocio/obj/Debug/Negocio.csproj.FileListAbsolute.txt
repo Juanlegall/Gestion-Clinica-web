@@ -31,3 +31,14 @@ C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\obj\Debug\Negocio.csproj.Core
 C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\obj\Debug\Negocio.csproj.Up2Date
 C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\obj\Debug\Negocio.dll
 C:\Users\Usuario\Desktop\TPINTEGRADORFINAL\Negocio\obj\Debug\Negocio.pdb
+C:\Bases\ashe\Negocio\bin\Debug\Negocio.dll
+C:\Bases\ashe\Negocio\bin\Debug\Negocio.pdb
+C:\Bases\ashe\Negocio\bin\Debug\DATOS.dll
+C:\Bases\ashe\Negocio\bin\Debug\Entidades.dll
+C:\Bases\ashe\Negocio\bin\Debug\DATOS.pdb
+C:\Bases\ashe\Negocio\bin\Debug\Entidades.pdb
+C:\Bases\ashe\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Bases\ashe\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Bases\ashe\Negocio\obj\Debug\Negocio.csproj.Up2Date
+C:\Bases\ashe\Negocio\obj\Debug\Negocio.dll
+C:\Bases\ashe\Negocio\obj\Debug\Negocio.pdb
