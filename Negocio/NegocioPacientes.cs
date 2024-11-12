@@ -79,5 +79,11 @@ namespace Negocio
         {
             return dts.ObtenerPacientesPorDni(dni);
         }
+        public DataSet obtenerDatosPacientes(string idPaciente)
+        {
+            return dts.ObtenerDatosPacientes(idPaciente);
+
+
+        }
     }
 }

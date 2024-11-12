@@ -60,7 +60,7 @@ namespace DATOS
 
 
 
-    public DataTable ObtenerProvincias()
+        public DataTable ObtenerProvincias()
         {
             string consulta = "SELECT id_provincia, nombre_provincia FROM Provincias";
             DataSet ds = accesoDatos.getData(consulta);
@@ -108,6 +108,17 @@ namespace DATOS
             cmd.Parameters.AddWithValue("@dni", "%" + dni + "%"); // Uso de LIKE para que el filtro sea flexible (por ejemplo, DNI parcial)
 
             ds = accesoDatos.getData(cmd);
+            return ds;
+        }
+        public DataSet ObtenerDatosPacientes(string id)
+        {
+            DataSet ds = new DataSet();
+            string consulta = $"SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad, p.direccion, p.correo_electronico AS correo, p.telefono, p.fecha_nacimiento_p AS fechaNacimiento, prov.nombre_provincia AS provincia, loc.nombre_localidad AS localidad FROM Pacientes AS p INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P where p.id_paciente = {id}";
+
+            // Obteniendo el conjunto de datos
+            ds = accesoDatos.getData(consulta);
+
+            // Devuelve el DataSet
             return ds;
         }
     }

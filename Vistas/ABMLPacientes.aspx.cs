@@ -53,15 +53,15 @@ namespace Vistas
                 string idSeleccionado = e.CommandArgument.ToString();
 
                 // Redirigir al formulario de edición con el ID como parámetro
-                Response.Redirect($"EditarFormularioMedico.aspx?id={idSeleccionado}");
+                Response.Redirect($"EditarFormularioPaciente.aspx?id={idSeleccionado}");
 
             }
             else if (e.CommandName == "Eliminar")
             {
-                // Obtener el ID del médico desde el CommandArgument
+                // Obtener el ID del paciente desde el CommandArgument
                 int idPaciente = Convert.ToInt32(e.CommandArgument);
 
-                // Crear una instancia de la capa de negocio para eliminar al médico
+                // Crear una instancia de la capa de negocio para eliminar al paciente
                 NegocioPacientes np = new NegocioPacientes();
                 bool eliminado = np.EliminarPaciente(idPaciente);
 

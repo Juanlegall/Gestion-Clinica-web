@@ -72,6 +72,7 @@
     <Content Include="AltaMedico.aspx" />
     <Content Include="AltaPaciente.aspx" />
     <Content Include="EditarFormularioMedicos.aspx" />
+    <Content Include="EditarFormularioPaciente.aspx" />
     <Content Include="HomeAdministradores.aspx" />
     <Content Include="HomeMedicos.aspx" />
     <Content Include="Login.aspx" />
@@ -112,6 +113,13 @@
     </Compile>
     <Compile Include="EditarFormularioMedicos.aspx.designer.cs">
       <DependentUpon>EditarFormularioMedicos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditarFormularioPaciente.aspx.cs">
+      <DependentUpon>EditarFormularioPaciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditarFormularioPaciente.aspx.designer.cs">
+      <DependentUpon>EditarFormularioPaciente.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomeAdministradores.aspx.cs">
       <DependentUpon>HomeAdministradores.aspx</DependentUpon>
