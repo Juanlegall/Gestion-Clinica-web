@@ -76,12 +76,12 @@ namespace Vistas
         private void CargarEspecialidades()
         {
             NegocioEspecialidades ngcioEspecialiades = new NegocioEspecialidades();
-            DataTable especialidades = ngcioEspecialiades.ObtenerEspecialidades();
+            DataSet especialidades = ngcioEspecialiades.obtenerEspecialidades();
 
-            if (especialidades != null && especialidades.Rows.Count > 0)
+            if (especialidades != null && especialidades.Tables[0].Rows.Count > 0)
             {
-                ddlEspecialidad.DataSource = especialidades;
-                ddlEspecialidad.DataTextField = "nombre_especialidad";
+                ddlEspecialidad.DataSource = especialidades.Tables[0];
+                ddlEspecialidad.DataTextField = "especialidad";
                 ddlEspecialidad.DataValueField = "id_especialidad";
                 ddlEspecialidad.DataBind();
                 ddlEspecialidad.Items.Insert(0, new ListItem("Seleccione una especialidad", "0"));

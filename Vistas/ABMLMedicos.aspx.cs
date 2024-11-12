@@ -17,20 +17,20 @@ namespace Vistas
 
             if (!IsPostBack)
             {
-            NegocioUsuarios ngs = new NegocioUsuarios();
-            NegocioEspecialidades ne = new NegocioEspecialidades();
-            DataSet dset = new DataSet();
-            dset = ngs.obtenerTablaMedicos();
-            grdAdministracionMedicos.DataSource = dset;
-            grdAdministracionMedicos.DataBind();
+                NegocioUsuarios ngs = new NegocioUsuarios();
+                NegocioEspecialidades ne = new NegocioEspecialidades();
+                DataSet dset = new DataSet();
+                dset = ngs.obtenerTablaMedicos();
+                grdAdministracionMedicos.DataSource = dset;
+                grdAdministracionMedicos.DataBind();
 
 
-            dset = ne.obtenerEspecialidades();
-            ddlEspecialidades.DataSource = dset;
-            ddlEspecialidades.DataTextField = "especialidad";
-            ddlEspecialidades.DataValueField = "id_especialidad";
-            ddlEspecialidades.DataBind();
-            ddlEspecialidades.Items.Insert(0, new ListItem("Seleccionar", ""));
+                dset = ne.obtenerEspecialidades();
+                ddlEspecialidades.DataSource = dset;
+                ddlEspecialidades.DataTextField = "especialidad";
+                ddlEspecialidades.DataValueField = "id_especialidad";
+                ddlEspecialidades.DataBind();
+                ddlEspecialidades.Items.Insert(0, new ListItem("Seleccionar", ""));
 
             }
 
@@ -88,7 +88,7 @@ namespace Vistas
             }
 
         }
- 
+
         private void RecargarDatosGridView()
         {
             // Instanciamos la capa de negocio
@@ -146,17 +146,17 @@ namespace Vistas
         {
             string legajo = txtLegajo.Text;
             string apellido = txtApellido.Text;
-            string  especialidad = ddlEspecialidades.SelectedValue.ToString();
+            string especialidad = ddlEspecialidades.SelectedValue.ToString();
 
             NegocioUsuarios negocioUsuarios = new NegocioUsuarios();
-            DataSet ds = negocioUsuarios.medicosFiltrados(legajo,apellido,especialidad);
+            DataSet ds = negocioUsuarios.medicosFiltrados(legajo, apellido, especialidad);
 
 
             if (ds.Tables[0].Rows.Count > 0)
             {
 
-            grdAdministracionMedicos.DataSource = ds;
-            grdAdministracionMedicos.DataBind();
+                grdAdministracionMedicos.DataSource = ds;
+                grdAdministracionMedicos.DataBind();
 
             }
 
@@ -164,8 +164,8 @@ namespace Vistas
 
 
 
-            }
         }
+
 
         protected void btn_AltaMedicos_Click(object sender, EventArgs e)
         {
@@ -177,4 +177,5 @@ namespace Vistas
             Response.Redirect("HomeAdministradores.aspx");
         }
     }
+
 }
