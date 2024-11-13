@@ -76,7 +76,7 @@ namespace Vistas
                 // Obtener el DropDownList y HiddenField de la fila
                 DropDownList ddlHorarios = (DropDownList)e.Row.FindControl("ddlHorariosMedicos");
                 HiddenField hfMedicoId = (HiddenField)e.Row.FindControl("hfMedicoId");
-                int medicoId = Convert.ToInt32(hfMedicoId.Value);
+                int medicoId = Convert.ToInt32(hfMedicoId.Value)-1;
 
                 // Llamar a una función que obtenga los horarios del médico
                 NegocioUsuarios ngs = new NegocioUsuarios();

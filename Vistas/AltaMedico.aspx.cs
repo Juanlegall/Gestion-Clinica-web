@@ -146,6 +146,10 @@ namespace Vistas
                 lblMensaje.Text = "Error al agregar al Personal";
             }
         }
+        public void CargarHorario()
+        {
+
+        }
 
         protected void btnVolver_Click(object sender, EventArgs e)
         {
