@@ -97,12 +97,19 @@
             <tr>
                 <td class="auto-style2">
             <asp:Button ID="btn_AltaMedicos" runat="server" OnClick="btn_AltaMedicos_Click" Text="ALTA MEDICOS" />
+
+
+
                 </td>
                 <td>
                     <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" />
                 </td>
             </tr>
         </table>
+
+
     </form>
+
+
 </body>
 </html>

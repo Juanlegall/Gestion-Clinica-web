@@ -19,6 +19,7 @@ namespace Vistas
             {
                 CargarProvincias();
                 CargarEspecialidades();
+                CargarSexo();
             }
         }
 
@@ -34,6 +35,14 @@ namespace Vistas
                 ddlLocalidad.Items.Clear();
                 ddlLocalidad.Items.Insert(0, new ListItem("Seleccione una localidad", "0"));
             }
+        }
+
+        private void CargarSexo()
+        {
+            ddlSexo.Items.Clear();
+            ddlSexo.Items.Insert(0, new ListItem("Seleccione un sexo", "0"));
+            ddlSexo.Items.Insert(1, new ListItem("Masculino", "1"));
+            ddlSexo.Items.Insert(2, new ListItem("Femenino", "2"));
         }
 
         private void CargarProvincias()
@@ -112,7 +121,7 @@ namespace Vistas
             string dni = txtDni.Text;
             string nombre = txtNombre.Text;
             string apellido = txtApellido.Text;
-            string sexo = txtSexo.Text;
+            string sexo = ddlSexo.SelectedIndex.ToString();
             string nacionalidad = txtNacionalidad.Text;
             string direccion = txtDireccion.Text;
             string legajo = txtLegajo.Text;
