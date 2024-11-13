@@ -14,7 +14,9 @@
             image.onerror = null; // prevents looping
             image.src = 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg';
         }
+        
     </script>
+
 
     <style type="text/css">
         /*.auto-style1 {
@@ -40,7 +42,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"> </asp:ScriptManager>
 
         <div class="container">
             <div class="row">
@@ -163,18 +165,9 @@
                         <asp:RequiredFieldValidator ID="rfvEspecialidad" runat="server" ControlToValidate="ddlEspecialidad" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
-                <div>
-                    <%--Dias--%>
-                    <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-                        <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Dias de atención</label>
-                        <asp:TextBox ID="txtdias" runat="server" class="form-control campo">
-                        </asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvDias" runat="server" ControlToValidate="txtdias" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
-                    </div>
-                </div>
+                <br />
                 <div>
                     <%--Horarios de atencion--%>
-                    <br />
                     <div class="form-group px-0 d-flex justify-content-lg-start align-items-center col-6" style="margin-bottom: 10px;">
                         <label class="col-4 text-start" style="margin-right: 10px;">Horarios de atención:&nbsp;&nbsp;&nbsp; </label>
 
@@ -183,6 +176,7 @@
                             Cargar Horarios
                         </button>
 
+                        <%--Offcanvas--%>
                         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                             <div class="offcanvas-header">
                                 <h5 class="offcanvas-title" id="offcanvasExampleLabel">Carga de horarios</h5>
@@ -203,10 +197,11 @@
                                     <tbody>
                                         <%--Lunes--%>
                                         <tr>
-                                            <th scope="row">1</th>
+                                            <th scope="row">
+                                                <asp:CheckBox ID="chkLunes" runat="server" />
+                                            </th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="chkLunes" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Lunes
                                                     </label>
@@ -214,17 +209,35 @@
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="txtEntradaLunes" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revEntradaLunes"
+                                                    runat="server"
+                                                    ControlToValidate="txtEntradaLunes"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtSalidaLunes" runat="server"  Width="50px"/>
+                                                <asp:TextBox ID="txtSalidaLunes" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revSalidaLunes"
+                                                    runat="server"
+                                                    ControlToValidate="txtSalidaLunes"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
+
                                             </td>
                                         </tr>
                                         <%--Martes--%>
                                         <tr>
-                                            <th scope="row">2</th>
+                                            <th scope="row">
+                                                <asp:CheckBox ID="chkMartes" runat="server" />
+                                            </th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="2" id="chkMartes" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Martes
                                                     </label>
@@ -232,17 +245,34 @@
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="txtEntradaMartes" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revEntradaMartes"
+                                                    runat="server"
+                                                    ControlToValidate="txtEntradaMartes"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtSalidaMartes" runat="server"  Width="50px"/>
+                                                <asp:TextBox ID="txtSalidaMartes" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revSalidaMartes"
+                                                    runat="server"
+                                                    ControlToValidate="txtSalidaMartes"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                         </tr>
                                         <%--Miercoles--%>
                                         <tr>
-                                            <th scope="row">3</th>
+                                            <th scope="row">
+                                                <asp:CheckBox ID="chkMiercoles" runat="server" />
+                                            </th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkMiercoles" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Miercoles
                                                     </label>
@@ -250,17 +280,34 @@
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="txtEntradaMiercoles" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revEntradaMiercoles"
+                                                    runat="server"
+                                                    ControlToValidate="txtEntradaMiercoles"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtSalidaMiercoles" runat="server"  Width="50px"/>
+                                                <asp:TextBox ID="txtSalidaMiercoles" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revSalidaMiercoles"
+                                                    runat="server"
+                                                    ControlToValidate="txtSalidaMiercoles"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                         </tr>
                                         <%--Jueves--%>
                                         <tr>
-                                            <th scope="row">4</th>
+                                            <th scope="row">
+                                                <asp:CheckBox ID="chkJueves" runat="server" />
+                                            </th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkJueves" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Jueves
                                                     </label>
@@ -268,17 +315,34 @@
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="txtEntradaJueves" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revEntradaJueves"
+                                                    runat="server"
+                                                    ControlToValidate="txtEntradaJueves"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtSalidaJueves" runat="server"  Width="50px"/>
+                                                <asp:TextBox ID="txtSalidaJueves" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revSalidaJueves"
+                                                    runat="server"
+                                                    ControlToValidate="txtSalidaJueves"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                         </tr>
-                                         <%--Viernes--%>
+                                        <%--Viernes--%>
                                         <tr>
-                                            <th scope="row">5</th>
+                                            <th scope="row">
+                                                <asp:CheckBox ID="chkViernes" runat="server" />
+                                            </th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkViernes" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Viernes
                                                     </label>
@@ -286,17 +350,34 @@
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="txtEntradaViernes" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revEntradaViernes"
+                                                    runat="server"
+                                                    ControlToValidate="txtEntradaViernes"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtSalidaViernes" runat="server"  Width="50px"/>
+                                                <asp:TextBox ID="txtSalidaViernes" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revSalidaViernes"
+                                                    runat="server"
+                                                    ControlToValidate="txtSalidaViernes"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                         </tr>
                                         <%--Sabado--%>
                                         <tr>
-                                            <th scope="row">6</th>
+                                            <th scope="row">
+                                                <asp:CheckBox ID="chkSabado" runat="server" />
+                                            </th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkSabado" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Sabado
                                                     </label>
@@ -304,17 +385,34 @@
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="txtEntradaSabado" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revEntradaSabado"
+                                                    runat="server"
+                                                    ControlToValidate="txtEntradaSabado"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtSalidaSabado" runat="server"  Width="50px"/>
+                                                <asp:TextBox ID="txtSalidaSabado" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revSalidaSabado"
+                                                    runat="server"
+                                                    ControlToValidate="txtSalidaSabado"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                         </tr>
                                         <%--Domingo--%>
                                         <tr>
-                                            <th scope="row">7</th>
+                                            <th scope="row">
+                                                <asp:CheckBox ID="chkDomingo" runat="server" />
+                                            </th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkDomingo" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Domingo
                                                     </label>
@@ -322,19 +420,40 @@
                                             </td>
                                             <td>
                                                 <asp:TextBox ID="txtEntradaDomingo" runat="server" Width="50px" />
+                                                <asp:RegularExpressionValidator
+                                                    ID="revEntradaDomingo"
+                                                    runat="server"
+                                                    ControlToValidate="txtEntradaDomingo"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
                                             </td>
                                             <td>
-                                                <asp:TextBox ID="txtSalidaDomingo" runat="server"  Width="50px"/>
+                                                <asp:TextBox ID="txtSalidaDomingo" runat="server" Width="50px" /><asp:RegularExpressionValidator
+                                                    ID="revSalidaDomingo"
+                                                    runat="server"
+                                                    ControlToValidate="txtSalidaDomingo"
+                                                    ErrorMessage="Formato de hora no válido. Use HH:mm"
+                                                    ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
+                                                    ForeColor="Red">
+                                                </asp:RegularExpressionValidator>
+                                                
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
 
+                                <asp:Button runat="server" ID="btnCargarHorario" OnClick="btnCargarHorario_Click" Text="Cargar" CssClass="btn btn-success"></asp:Button>
+
+                                <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="btn btn-danger" >Cancelar</button>
                             </div>
 
                         </div>
                         <br />
                     </div>
+
+                </div>
 
                     <br /><br /><br />
 
@@ -361,7 +480,7 @@
                 </table>
             </div>
         </div>
-    </div>
+            
     </form>
 </body>
 </html>

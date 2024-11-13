@@ -285,22 +285,13 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEspecialidad;
 
         /// <summary>
-        /// Control txtdias.
+        /// Control chkLunes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdias;
-
-        /// <summary>
-        /// Control rfvDias.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDias;
+        protected global::System.Web.UI.WebControls.CheckBox chkLunes;
 
         /// <summary>
         /// Control txtEntradaLunes.
@@ -312,6 +303,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtEntradaLunes;
 
         /// <summary>
+        /// Control revEntradaLunes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEntradaLunes;
+
+        /// <summary>
         /// Control txtSalidaLunes.
         /// </summary>
         /// <remarks>
@@ -319,6 +319,24 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaLunes;
+
+        /// <summary>
+        /// Control revSalidaLunes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSalidaLunes;
+
+        /// <summary>
+        /// Control chkMartes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMartes;
 
         /// <summary>
         /// Control txtEntradaMartes.
@@ -330,6 +348,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtEntradaMartes;
 
         /// <summary>
+        /// Control revEntradaMartes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEntradaMartes;
+
+        /// <summary>
         /// Control txtSalidaMartes.
         /// </summary>
         /// <remarks>
@@ -337,6 +364,24 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaMartes;
+
+        /// <summary>
+        /// Control revSalidaMartes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSalidaMartes;
+
+        /// <summary>
+        /// Control chkMiercoles.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMiercoles;
 
         /// <summary>
         /// Control txtEntradaMiercoles.
@@ -348,6 +393,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtEntradaMiercoles;
 
         /// <summary>
+        /// Control revEntradaMiercoles.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEntradaMiercoles;
+
+        /// <summary>
         /// Control txtSalidaMiercoles.
         /// </summary>
         /// <remarks>
@@ -355,6 +409,24 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaMiercoles;
+
+        /// <summary>
+        /// Control revSalidaMiercoles.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSalidaMiercoles;
+
+        /// <summary>
+        /// Control chkJueves.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkJueves;
 
         /// <summary>
         /// Control txtEntradaJueves.
@@ -366,6 +438,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtEntradaJueves;
 
         /// <summary>
+        /// Control revEntradaJueves.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEntradaJueves;
+
+        /// <summary>
         /// Control txtSalidaJueves.
         /// </summary>
         /// <remarks>
@@ -373,6 +454,24 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaJueves;
+
+        /// <summary>
+        /// Control revSalidaJueves.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSalidaJueves;
+
+        /// <summary>
+        /// Control chkViernes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkViernes;
 
         /// <summary>
         /// Control txtEntradaViernes.
@@ -384,6 +483,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtEntradaViernes;
 
         /// <summary>
+        /// Control revEntradaViernes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEntradaViernes;
+
+        /// <summary>
         /// Control txtSalidaViernes.
         /// </summary>
         /// <remarks>
@@ -391,6 +499,24 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaViernes;
+
+        /// <summary>
+        /// Control revSalidaViernes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSalidaViernes;
+
+        /// <summary>
+        /// Control chkSabado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkSabado;
 
         /// <summary>
         /// Control txtEntradaSabado.
@@ -402,6 +528,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtEntradaSabado;
 
         /// <summary>
+        /// Control revEntradaSabado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEntradaSabado;
+
+        /// <summary>
         /// Control txtSalidaSabado.
         /// </summary>
         /// <remarks>
@@ -409,6 +544,24 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaSabado;
+
+        /// <summary>
+        /// Control revSalidaSabado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSalidaSabado;
+
+        /// <summary>
+        /// Control chkDomingo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkDomingo;
 
         /// <summary>
         /// Control txtEntradaDomingo.
@@ -420,6 +573,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtEntradaDomingo;
 
         /// <summary>
+        /// Control revEntradaDomingo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revEntradaDomingo;
+
+        /// <summary>
         /// Control txtSalidaDomingo.
         /// </summary>
         /// <remarks>
@@ -427,6 +589,24 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaDomingo;
+
+        /// <summary>
+        /// Control revSalidaDomingo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revSalidaDomingo;
+
+        /// <summary>
+        /// Control btnCargarHorario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCargarHorario;
 
         /// <summary>
         /// Control Button1.

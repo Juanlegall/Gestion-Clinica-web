@@ -10,11 +10,15 @@ namespace Negocio
 {
     public class NegocioHorariosMedicos
     {
-        private DatosHorariosMedicos dHorario= new DatosHorariosMedicos();
+        private DatosHorariosMedicos dHorario = new DatosHorariosMedicos();
 
-        public void AltaHorario(HorariosMedicos horario)
+        public void AltaHorario(List<HorariosMedicos> listaHorarios)
         {
-            dHorario.AgregarHorario(horario);
+
+            foreach (HorariosMedicos horario in listaHorarios)
+            {
+                dHorario.AgregarHorario(horario);
+            }
         }
     }
 }

@@ -28,10 +28,6 @@ namespace Entidades
         public  DateTime fecha_nacimiento;
 
 
-
-
-
-
         public Usuarios()
         {
 

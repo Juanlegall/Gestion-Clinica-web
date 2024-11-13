@@ -13,6 +13,7 @@ namespace Vistas
 {
     public partial class AltaMedico : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -106,8 +107,8 @@ namespace Vistas
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
             NegocioUsuarios ngMedico = new NegocioUsuarios();
-            HorariosMedicos Horario = new HorariosMedicos();
-            NegocioHorariosMedicos nHorario= new NegocioHorariosMedicos();
+            NegocioHorariosMedicos negocioHorario = new NegocioHorariosMedicos();
+
             if (ddlProvincias.SelectedValue == "0" || ddlLocalidad.SelectedValue == "0")
             {
                 lblMensaje.Text = "Seleccione una provincia y localidad.";
@@ -129,10 +130,8 @@ namespace Vistas
             string telefono = txtTelefono.Text;
             string nombre_usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
-            Horario.Dias = txtdias.Text;
-            Horario.HoraInicio = txtDesde.Text;
-            Horario.HoraFin = txtHasta.Text;
-            nHorario.AltaHorario(Horario);
+
+            //negocioHorario.AltaHorario(horario);
 
 
             bool exito = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, legajo, correo, telefono, nombre_usuario, contraseña);
@@ -153,5 +152,69 @@ namespace Vistas
             Page.Validate("None");
             Response.Redirect("ABMLMedicos.aspx");
         }
+
+        protected void btnCargarHorario_Click(object sender, EventArgs e)
+        {
+
+            HorariosMedicos horario = new HorariosMedicos();
+            List<HorariosMedicos> listaHorarios = new List<HorariosMedicos>();
+            NegocioHorariosMedicos negocioHorario = new NegocioHorariosMedicos();
+
+            //Asignacion de los horarios cargados
+            if (chkLunes.Checked)
+            {
+                horario.Dias = "Lunes";
+                horario.HoraInicio = TimeSpan.Parse(txtEntradaLunes.Text);
+                horario.HoraFin = TimeSpan.Parse(txtSalidaLunes.Text);
+                listaHorarios.Add(horario);
+            }
+            if (chkMartes.Checked)
+            {
+                horario.Dias = "Martes";
+                horario.HoraInicio = TimeSpan.Parse(txtEntradaMartes.Text);
+                horario.HoraFin = TimeSpan.Parse(txtSalidaMartes.Text);
+                listaHorarios.Add(horario);
+            }
+            if (chkMiercoles.Checked)
+            {
+                horario.Dias = "Miercoles";
+                horario.HoraInicio = TimeSpan.Parse(txtEntradaMiercoles.Text);
+                horario.HoraFin = TimeSpan.Parse(txtSalidaMiercoles.Text);
+                listaHorarios.Add(horario);
+            }
+            if (chkJueves.Checked)
+            {
+                horario.Dias = "Jueves";
+                horario.HoraInicio = TimeSpan.Parse(txtEntradaJueves.Text);
+                horario.HoraFin = TimeSpan.Parse(txtSalidaJueves.Text);
+                listaHorarios.Add(horario);
+            }
+            if (chkViernes.Checked)
+            {
+                horario.Dias = "Viernes";
+                horario.HoraInicio = TimeSpan.Parse(txtEntradaViernes.Text);
+                horario.HoraFin = TimeSpan.Parse(txtSalidaViernes.Text);
+                listaHorarios.Add(horario);
+            }
+            if (chkSabado.Checked)
+            {
+                horario.Dias = "Sabado";
+                horario.HoraInicio = TimeSpan.Parse(txtEntradaSabado.Text);
+                horario.HoraFin = TimeSpan.Parse(txtSalidaSabado.Text);
+                listaHorarios.Add(horario);
+            }
+            if (chkDomingo.Checked)
+            {
+                horario.Dias = "Domingo";
+                horario.HoraInicio = TimeSpan.Parse(txtEntradaDomingo.Text);
+                horario.HoraFin = TimeSpan.Parse(txtSalidaDomingo.Text);
+                listaHorarios.Add(horario);
+            }
+
+            negocioHorario.AltaHorario(listaHorarios);
+
+        }
+
+
     }
 }
