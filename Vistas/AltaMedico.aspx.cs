@@ -129,10 +129,25 @@ namespace Vistas
             string telefono = txtTelefono.Text;
             string nombre_usuario = txtUsuario.Text;
             string contraseña = txtContraseña.Text;
-            Horario.Dias = txtdias.Text;
-            Horario.HoraInicio = txtDesde.Text;
-            Horario.HoraFin = txtHasta.Text;
-            nHorario.AltaHorario(Horario);
+            string[] diasSemana = { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" };
+
+            for (int i = 0; i < diasSemana.Length; i++)
+            {
+                var checkBox = (CheckBox)this.FindControl("chk" + diasSemana[i]);//la vuelta 0=chkLunes/ la vuelta 1=chkMartes etc.....
+                // Verificamos si el CheckBox existe y si está marcado
+                if (checkBox != null && checkBox.Checked)
+                {
+                    var Entrada=(TextBox)this.FindControl("txtEntrada"+ diasSemana[i]);//txtEntrada+ dia chequeado
+                    var Salida = (TextBox)this.FindControl("txtSalida" + diasSemana[i]);
+                    Horario.Dias=diasSemana[i];
+                    Horario.HoraInicio=TimeSpan.Parse(Entrada.Text);
+                    Horario.HoraFin=TimeSpan.Parse(Salida.Text);
+                    nHorario.AltaHorario(Horario);
+                }
+            }
+
+
+
 
 
             bool exito = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, legajo, correo, telefono, nombre_usuario, contraseña);
@@ -146,6 +161,10 @@ namespace Vistas
             {
                 lblMensaje.Text = "Error al agregar al Personal";
             }
+        }
+        public void CargarHorario()
+        {
+
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)

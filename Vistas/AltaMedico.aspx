@@ -164,13 +164,6 @@
                     </div>
                 </div>
                 <div>
-                    <%--Dias--%>
-                    <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-                        <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Dias de atención</label>
-                        <asp:TextBox ID="txtdias" runat="server" class="form-control campo">
-                        </asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvDias" runat="server" ControlToValidate="txtdias" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
-                    </div>
                 </div>
                 <div>
                     <%--Horarios de atencion--%>
@@ -206,7 +199,7 @@
                                             <th scope="row">1</th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="1" id="chkLunes" />
+                                                    <asp:CheckBox ID="chkLunes" runat="server" CssClass="form-check-input" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Lunes
                                                     </label>
@@ -224,7 +217,7 @@
                                             <th scope="row">2</th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="2" id="chkMartes" />
+                                                    <asp:CheckBox ID="chkMartes" runat="server" CssClass="form-check-input" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Martes
                                                     </label>
@@ -242,7 +235,7 @@
                                             <th scope="row">3</th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkMiercoles" />
+                                                    <asp:CheckBox ID="chkMiercoles" runat="server" CssClass="form-check-input" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Miercoles
                                                     </label>
@@ -260,7 +253,7 @@
                                             <th scope="row">4</th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkJueves" />
+                                                   <asp:CheckBox ID="chkJueves" runat="server" CssClass="form-check-input" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Jueves
                                                     </label>
@@ -278,7 +271,7 @@
                                             <th scope="row">5</th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkViernes" />
+                                                    <asp:CheckBox ID="chkViernes" runat="server" CssClass="form-check-input" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Viernes
                                                     </label>
@@ -296,7 +289,7 @@
                                             <th scope="row">6</th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkSabado" />
+                                                    <asp:CheckBox ID="chkSabado" runat="server" CssClass="form-check-input" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Sabado
                                                     </label>
@@ -314,7 +307,7 @@
                                             <th scope="row">7</th>
                                             <td>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="3" id="chkDomingo" />
+                                                    <asp:CheckBox ID="chkDomingo" runat="server" CssClass="form-check-input" />
                                                     <label class="form-check-label" for="flexCheckDefault">
                                                         Domingo
                                                     </label>

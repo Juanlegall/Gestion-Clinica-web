@@ -285,22 +285,13 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEspecialidad;
 
         /// <summary>
-        /// Control txtdias.
+        /// Control chkLunes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtdias;
-
-        /// <summary>
-        /// Control rfvDias.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDias;
+        protected global::System.Web.UI.WebControls.CheckBox chkLunes;
 
         /// <summary>
         /// Control txtEntradaLunes.
@@ -321,6 +312,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtSalidaLunes;
 
         /// <summary>
+        /// Control chkMartes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMartes;
+
+        /// <summary>
         /// Control txtEntradaMartes.
         /// </summary>
         /// <remarks>
@@ -337,6 +337,15 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaMartes;
+
+        /// <summary>
+        /// Control chkMiercoles.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMiercoles;
 
         /// <summary>
         /// Control txtEntradaMiercoles.
@@ -357,6 +366,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtSalidaMiercoles;
 
         /// <summary>
+        /// Control chkJueves.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkJueves;
+
+        /// <summary>
         /// Control txtEntradaJueves.
         /// </summary>
         /// <remarks>
@@ -373,6 +391,15 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaJueves;
+
+        /// <summary>
+        /// Control chkViernes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkViernes;
 
         /// <summary>
         /// Control txtEntradaViernes.
@@ -393,6 +420,15 @@ namespace Vistas
         protected global::System.Web.UI.WebControls.TextBox txtSalidaViernes;
 
         /// <summary>
+        /// Control chkSabado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkSabado;
+
+        /// <summary>
         /// Control txtEntradaSabado.
         /// </summary>
         /// <remarks>
@@ -409,6 +445,15 @@ namespace Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSalidaSabado;
+
+        /// <summary>
+        /// Control chkDomingo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkDomingo;
 
         /// <summary>
         /// Control txtEntradaDomingo.
