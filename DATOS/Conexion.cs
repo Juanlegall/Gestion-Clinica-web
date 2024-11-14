@@ -10,7 +10,7 @@ namespace DATOS
 {
     public class Conexion
     {
-        private string ruta = "Data Source=localhost\\sqlexpress01;Initial Catalog=TP_FINAL;Integrated Security=True;";
+        private string ruta = "Data Source=localhost;Initial Catalog=TP_FINAL;User ID=sa;Password=elu1234;TrustServerCertificate=True;";
 
         public SqlConnection obtenerConexion()
         {
@@ -114,20 +114,7 @@ namespace DATOS
             return estado;
 
         }
-        public SqlConnection Conectar()
-        {
-            SqlConnection cn = new SqlConnection(ruta);
-            try
-            {
-                cn.Open();
-                return cn;
-            }
-            catch (Exception ex)
-            {
 
-                throw new Exception("Error al conectar a la base de datos: " + ex.Message);
-            }
-        }
         public SqlDataAdapter Adapter(string consulta, SqlConnection cn)
         {
             if (cn == null || cn.State != ConnectionState.Open)
@@ -147,7 +134,7 @@ namespace DATOS
         public int ExecProceAlmace(SqlCommand comando, string nombreSP)
         {
             int FilasCambiadas;
-            SqlConnection conexion = Conectar();
+            SqlConnection conexion = obtenerConexion();
             SqlCommand cmd = new SqlCommand();
             cmd = comando;
             cmd.Connection = conexion;

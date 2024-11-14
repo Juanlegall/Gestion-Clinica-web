@@ -73,7 +73,7 @@ namespace Negocio
                 return false;
         }
 
-        public bool AltaMedicos(int idProvincia, int idLocalidad, int idEspecialidad, int idRol, string dni, string nombre, string apellido, string sexo, string nacionalidad, string direccion, string legajo, string correoElectronico, string telefono, string nombre_usuario, string contraseña)
+        public int AltaMedicos(int idProvincia, int idLocalidad, int idEspecialidad, int idRol, string dni, string nombre, string apellido, string sexo, string nacionalidad, string direccion, string legajo, string correoElectronico, string telefono, string nombre_usuario, string contraseña)
         {
             Console.WriteLine("Valor de legajo en negocio: " + legajo);
 
@@ -101,16 +101,16 @@ namespace Negocio
             if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellido))
             {
                 Console.WriteLine("El nombre y el apellido son obligatorios.");
-                return false;
+                return -1;
             }
 
             if (dni.Length != 8)
             {
                 Console.WriteLine("El DNI debe tener 8 caracteres.");
-                return false;
+                return -1;
             }
 
-            return ds.AgregarMedico(usuario) == 1;
+            return ds.AgregarMedico(usuario);
         }
 
         public DataTable ObtenerProvincias()

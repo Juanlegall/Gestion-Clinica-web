@@ -13,7 +13,7 @@ namespace DATOS
     {
         Conexion con = new Conexion();
 
-        public int AgregarHorario(HorariosMedicos hm)
+        public int AgregarHorario(HorariosMedicos hm,int idMedico)
         {
             using (SqlConnection conexion = con.obtenerConexion())
             {
@@ -21,14 +21,17 @@ namespace DATOS
                 using (SqlCommand comando = new SqlCommand("SP_Horario", conexion))
                 {
                     comando.CommandType = CommandType.StoredProcedure;
-                    ArmarParametrosHorarioAgregar(comando, hm);
+                    ArmarParametrosHorarioAgregar(comando, hm,idMedico);
 
-                    return comando.ExecuteNonQuery();
+                   comando.ExecuteNonQuery();
+
+                    return idMedico;
                 }
             }
         }
-        private void ArmarParametrosHorarioAgregar(SqlCommand comando, HorariosMedicos hm)
+        private void ArmarParametrosHorarioAgregar(SqlCommand comando, HorariosMedicos hm,int idMedico)
         {
+            comando.Parameters.Add("@id_usuario", SqlDbType.Int).Value = idMedico;
             comando.Parameters.Add("@dias", SqlDbType.VarChar, 10).Value = hm.Dias;
             comando.Parameters.Add("@HorarioInicio", SqlDbType.Time).Value = hm.HoraInicio;
             comando.Parameters.Add("@HorarioFin", SqlDbType.Time).Value = hm.HoraFin;

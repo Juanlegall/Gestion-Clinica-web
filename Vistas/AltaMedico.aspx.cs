@@ -12,8 +12,18 @@ using System.Web.UI.WebControls;
 namespace Vistas
 {
     public partial class AltaMedico : System.Web.UI.Page
+
+
+
     {
-        
+
+
+        private int idMedico
+        {
+            get { return ViewState["id_medico"] != null ? (int)ViewState["id_medico"] : 0; }
+            set { ViewState["id_medico"] = value; }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -134,10 +144,10 @@ namespace Vistas
             //negocioHorario.AltaHorario(horario);
 
 
-            bool exito = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, legajo, correo, telefono, nombre_usuario, contraseña);
+            idMedico = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, legajo, correo, telefono, nombre_usuario, contraseña);
         
 
-            if (exito)
+            if (idMedico!=0)
             {
                 lblMensaje.Text = "Personal agregado con éxito";
             }
@@ -160,13 +170,13 @@ namespace Vistas
         protected void btnCargarHorario_Click(object sender, EventArgs e)
         {
 
-            HorariosMedicos horario = new HorariosMedicos();
             List<HorariosMedicos> listaHorarios = new List<HorariosMedicos>();
             NegocioHorariosMedicos negocioHorario = new NegocioHorariosMedicos();
 
             //Asignacion de los horarios cargados
             if (chkLunes.Checked)
             {
+                HorariosMedicos horario = new HorariosMedicos();
                 horario.Dias = "Lunes";
                 horario.HoraInicio = TimeSpan.Parse(txtEntradaLunes.Text);
                 horario.HoraFin = TimeSpan.Parse(txtSalidaLunes.Text);
@@ -174,6 +184,7 @@ namespace Vistas
             }
             if (chkMartes.Checked)
             {
+                HorariosMedicos horario = new HorariosMedicos();
                 horario.Dias = "Martes";
                 horario.HoraInicio = TimeSpan.Parse(txtEntradaMartes.Text);
                 horario.HoraFin = TimeSpan.Parse(txtSalidaMartes.Text);
@@ -181,6 +192,7 @@ namespace Vistas
             }
             if (chkMiercoles.Checked)
             {
+                HorariosMedicos horario = new HorariosMedicos();
                 horario.Dias = "Miercoles";
                 horario.HoraInicio = TimeSpan.Parse(txtEntradaMiercoles.Text);
                 horario.HoraFin = TimeSpan.Parse(txtSalidaMiercoles.Text);
@@ -188,6 +200,7 @@ namespace Vistas
             }
             if (chkJueves.Checked)
             {
+                HorariosMedicos horario = new HorariosMedicos();
                 horario.Dias = "Jueves";
                 horario.HoraInicio = TimeSpan.Parse(txtEntradaJueves.Text);
                 horario.HoraFin = TimeSpan.Parse(txtSalidaJueves.Text);
@@ -195,6 +208,7 @@ namespace Vistas
             }
             if (chkViernes.Checked)
             {
+                HorariosMedicos horario = new HorariosMedicos();
                 horario.Dias = "Viernes";
                 horario.HoraInicio = TimeSpan.Parse(txtEntradaViernes.Text);
                 horario.HoraFin = TimeSpan.Parse(txtSalidaViernes.Text);
@@ -202,6 +216,7 @@ namespace Vistas
             }
             if (chkSabado.Checked)
             {
+                HorariosMedicos horario = new HorariosMedicos();
                 horario.Dias = "Sabado";
                 horario.HoraInicio = TimeSpan.Parse(txtEntradaSabado.Text);
                 horario.HoraFin = TimeSpan.Parse(txtSalidaSabado.Text);
@@ -209,13 +224,14 @@ namespace Vistas
             }
             if (chkDomingo.Checked)
             {
+                HorariosMedicos horario = new HorariosMedicos();
                 horario.Dias = "Domingo";
                 horario.HoraInicio = TimeSpan.Parse(txtEntradaDomingo.Text);
                 horario.HoraFin = TimeSpan.Parse(txtSalidaDomingo.Text);
                 listaHorarios.Add(horario);
             }
 
-            negocioHorario.AltaHorario(listaHorarios);
+            negocioHorario.AltaHorario(listaHorarios,idMedico);
 
         }
 

@@ -100,7 +100,7 @@ namespace DATOS
         }
 
         /// Esto es mas o menos como quiero hacerlo.
-        private void ArmarParametrosMedicoAgregar(SqlCommand comando, Usuarios usuario)
+        private int ArmarParametrosMedicoAgregar(SqlCommand comando, Usuarios usuario)
         {
             comando.Parameters.Add("@id_provincia_us", SqlDbType.Int).Value = usuario.id_provincia;
             comando.Parameters.Add("@id_localidad_us", SqlDbType.Int).Value = usuario.id_localidad;
@@ -118,6 +118,10 @@ namespace DATOS
             comando.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.nombre_usuario;
             comando.Parameters.Add("@contraseña", SqlDbType.VarChar, 50).Value= usuario.contraseña;
 
+
+            int idMedico = idMedico = Convert.ToInt32(comando.ExecuteScalar());
+            return idMedico;
+
         }
 
         public int AgregarMedico(Usuarios usuario)
@@ -128,9 +132,9 @@ namespace DATOS
                 using (SqlCommand comando = new SqlCommand("SP_AgregarMedico", conexion))
                 {
                     comando.CommandType = CommandType.StoredProcedure;
-                    ArmarParametrosMedicoAgregar(comando, usuario);
+                   int idMedico = ArmarParametrosMedicoAgregar(comando, usuario);
 
-                    return comando.ExecuteNonQuery();
+                    return idMedico;
                 }
             }
         }
