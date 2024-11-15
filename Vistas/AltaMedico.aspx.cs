@@ -13,11 +13,7 @@ namespace Vistas
 {
     public partial class AltaMedico : System.Web.UI.Page
 
-
-
     {
-
-
         private int idMedico
         {
             get { return ViewState["id_medico"] != null ? (int)ViewState["id_medico"] : 0; }
@@ -32,8 +28,10 @@ namespace Vistas
                 CargarEspecialidades();
                 CargarSexo();
             }
+            
         }
 
+        //--Cargas de DDL--
         protected void ddlProvincias_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (ddlProvincias.SelectedValue != "0")
@@ -110,10 +108,9 @@ namespace Vistas
             {
                 lblMensaje.Text = "No se encontraron provincias.";
             }
-
         }
 
-
+        //--Botones--
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
             NegocioUsuarios ngMedico = new NegocioUsuarios();
@@ -145,20 +142,20 @@ namespace Vistas
 
 
             idMedico = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, legajo, correo, telefono, nombre_usuario, contraseña);
-        
 
-            if (idMedico!=0)
+
+            if (idMedico != 0)
             {
                 lblMensaje.Text = "Personal agregado con éxito";
+
+                string script = "document.getElementById('btnHorarios').disabled = false;";
+                ClientScript.RegisterStartupScript(this.GetType(), "habilitarBoton", script, true);
+
             }
             else
             {
                 lblMensaje.Text = "Error al agregar al Personal";
             }
-        }
-        public void CargarHorario()
-        {
-
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)

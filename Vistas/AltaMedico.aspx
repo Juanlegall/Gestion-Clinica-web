@@ -14,6 +14,11 @@
             image.onerror = null; // prevents looping
             image.src = 'https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg';
         }
+        /*habilitar boton de carga de horario*/
+        function habilitarBoton() {
+            // Habilitar el botón
+            document.getElementById('btnHorarios').disabled = false;
+        }
         
     </script>
 
@@ -165,14 +170,50 @@
                         <asp:RequiredFieldValidator ID="rfvEspecialidad" runat="server" ControlToValidate="ddlEspecialidad" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
+
                 <br />
+               
+                <%--Botones del formulario--%>
+                <table class="w-100">
+                        <tr>
+                            <td class="auto-style3">
+                                <br /><br /><br />
+                            </td>
+                            <td class="auto-style4">
+                                <asp:Button ID="btnAceptar" runat="server" Text="Cargar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" Width="141px" />
+                            </td>
+                            <td class="auto-style5">
+                                <asp:Button ID="btnVolver" runat="server" class="btn btn-secondary form-control" OnClick="btnVolver_Click" Text="Cancelar" ValidationGroup="none" Width="141px"  />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style1">&nbsp;</td>
+                        <td class="auto-style2">
+                            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+
+                        </td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+
+                 <%--linea--%>
+                <hr style="border: none;height: 2px; background-color: #4CAF50;"/>
+
+                <div>
+                    <div class="form-group px-0 d-flex justify-content-lg-start align-items-center col-6" style="margin-bottom: 10px ;">
+                        <p class="text-body-secondary"> 
+                            (El boton se habilitara una vez que la carga del medico se haya realizado efectivamente)
+                        </p>
+                    </div>
+                </div>
+
                 <div>
                     <%--Horarios de atencion--%>
                     <div class="form-group px-0 d-flex justify-content-lg-start align-items-center col-6" style="margin-bottom: 10px;">
                         <label class="col-4 text-start" style="margin-right: 10px;">Horarios de atención:&nbsp;&nbsp;&nbsp; </label>
 
                         <%--Cargar Horarios--%>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <button class="btn btn-primary" type="button" id="btnHorarios" disabled="disabled" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                             Cargar Horarios
                         </button>
 
@@ -183,7 +224,6 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
-
 
                                 <table class="table">
                                     <thead>
@@ -453,31 +493,13 @@
                         <br />
                     </div>
 
+
+
                 </div>
 
                     <br /><br /><br />
 
-                    <table class="w-100">
-                        <tr>
-                            <td class="auto-style3"></td>
-                            <td class="auto-style4">
-
-                                <asp:Button ID="Button1" runat="server" Text="Aceptar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" Width="141px" />
-
-                            </td>
-                            <td class="auto-style5">
-                                <asp:Button ID="btnVolver" runat="server" class="btn btn-secondary form-control" OnClick="btnVolver_Click" Text="Volver" ValidationGroup="none" Width="141px"  />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="auto-style1">&nbsp;</td>
-                        <td class="auto-style2">
-                            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
-
-                        </td>
-                        <td>&nbsp;</td>
-                    </tr>
-                </table>
+                    
             </div>
         </div>
             

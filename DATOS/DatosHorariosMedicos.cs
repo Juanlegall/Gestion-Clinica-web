@@ -16,7 +16,7 @@ namespace DATOS
         public int AgregarHorario(HorariosMedicos hm,int idMedico)
         {
             using (SqlConnection conexion = con.obtenerConexion())
-            {
+            {   
                 //conexion.Open();
                 using (SqlCommand comando = new SqlCommand("SP_Horario", conexion))
                 {
