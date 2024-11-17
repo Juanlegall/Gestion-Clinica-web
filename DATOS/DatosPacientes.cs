@@ -54,10 +54,6 @@ namespace DATOS
                 }
             }
         }
-    
-
-
-
 
 
         public DataTable ObtenerProvincias()

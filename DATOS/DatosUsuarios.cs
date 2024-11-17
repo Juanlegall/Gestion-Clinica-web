@@ -45,11 +45,7 @@ namespace DATOS
                 return (string.Empty, 0);
             }
 
-
         }
-
-
-
 
         public DataSet obtenerTablaMedicos()
         {
@@ -59,9 +55,6 @@ namespace DATOS
             return ds;
 
         }
-
-
-
 
         public DataSet traerDiasHorarios(int idMedico)
         {
