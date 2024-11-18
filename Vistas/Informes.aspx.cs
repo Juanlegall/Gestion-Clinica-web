@@ -18,6 +18,21 @@ namespace Vistas
                 
             }
         }
-       
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InformeTurnosPresentismo.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InformeEspecialidadUtilizada.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("HomeAdministradores.aspx");
+
+        }
     }
 }

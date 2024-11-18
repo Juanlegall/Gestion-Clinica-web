@@ -21,5 +21,10 @@ namespace Vistas
 
             return negocioTurnos.obtenerDatosEspecialides();
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Informes.aspx");
+        }
     }
 }

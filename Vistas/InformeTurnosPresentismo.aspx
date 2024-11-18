@@ -33,6 +33,7 @@
 
             <div id="graficoPresentismo" style="width: 900px; height: 500px;"></div>
         </div>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Volver" />
     </form>
 </body>
 </html>
