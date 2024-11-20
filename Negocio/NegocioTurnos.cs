@@ -47,5 +47,14 @@ namespace Negocio
             strDatos = strDatos + "]";
             return strDatos;
         }
+
+
+        public int agregarTurno(string idPaciente, string idMedico, string fechaSeleccionada, string horaSeleccionada, string obs)
+        {
+            int filasAfectadas = datos.agregarTurno(idPaciente,idMedico,fechaSeleccionada,horaSeleccionada,obs);
+            return filasAfectadas;
+        }
+
+
     }
 }

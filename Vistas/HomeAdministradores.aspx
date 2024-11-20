@@ -47,7 +47,7 @@
             <asp:Button ID="btnInformes" runat="server" Text="INFORMES" cssclass="rounded-button" Width="351px" CommandArgument="Informes.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion" OnClick="btnInformes_Click" />
             <br />
             <br />
-            <asp:Button ID="btnTurnos" runat="server" Text="ASIGNACION DE TURNOS" cssclass="rounded-button" Width="351px" CommandArgument="AsignascionTurnos.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion" />
+            <asp:Button ID="btnTurnos" runat="server" Text="ASIGNACION DE TURNOS" cssclass="rounded-button" Width="351px" CommandArgument="AsignacionTurnos.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion" />
           </div>
         </div>
     </div>

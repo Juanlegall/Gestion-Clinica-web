@@ -72,6 +72,7 @@
     <Content Include="ABMLMedicos.aspx" />
     <Content Include="AltaMedico.aspx" />
     <Content Include="AltaPaciente.aspx" />
+    <Content Include="AsignacionTurnos.aspx" />
     <Content Include="EditarFormularioMedicos.aspx" />
     <Content Include="EditarFormularioPaciente.aspx" />
     <Content Include="HomeAdministradores.aspx" />
@@ -110,6 +111,13 @@
     </Compile>
     <Compile Include="AltaPaciente.aspx.designer.cs">
       <DependentUpon>AltaPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AsignacionTurnos.aspx.cs">
+      <DependentUpon>AsignacionTurnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AsignacionTurnos.aspx.designer.cs">
+      <DependentUpon>AsignacionTurnos.aspx</DependentUpon>
     </Compile>
     <Compile Include="EditarFormularioMedicos.aspx.cs">
       <DependentUpon>EditarFormularioMedicos.aspx</DependentUpon>

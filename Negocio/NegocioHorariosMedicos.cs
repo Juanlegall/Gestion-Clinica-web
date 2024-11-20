@@ -2,6 +2,7 @@
 using Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,5 +21,18 @@ namespace Negocio
                 dHorario.AgregarHorario(horario, idMedico);
             }
         }
+
+
+        public DataSet traerHorariosPorDia(string diaSemana , string idMedico, string fechaSeleccionada)
+        {
+
+            DataSet ds = dHorario.traerHorariosPorDia(diaSemana, idMedico,fechaSeleccionada);
+            return ds;
+        }
+
+        
+
+
+
     }
 }

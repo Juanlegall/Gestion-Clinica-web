@@ -38,5 +38,14 @@ namespace DATOS
             return ds;
         }
 
+
+        public int agregarTurno(string idPaciente,string idMedico,string fechaSeleccionada,string horaSeleccionada,string obs)
+        {
+            string consulta = $"insert into turnos (id_paciente_t,id_usuario_t,fecha_consulta,hora_consulta,observaciones) " +
+                $"select {idPaciente},{idMedico}, '{fechaSeleccionada}','{horaSeleccionada}','{obs}'";
+                 return cn.execute(consulta);
+
+        }
+
     }
 }

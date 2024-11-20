@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
+using Microsoft.SqlServer.Server;
 
 namespace DATOS
 {
@@ -36,5 +37,21 @@ namespace DATOS
             comando.Parameters.Add("@HorarioInicio", SqlDbType.Time).Value = hm.HoraInicio;
             comando.Parameters.Add("@HorarioFin", SqlDbType.Time).Value = hm.HoraFin;
         }
+
+        public DataSet traerHorariosPorDia(string diaSemana,string idMedico,string fechaSeleccionada)
+        {
+            string consulta = $"select fh.Hora horario_libre " +
+                $"from HorariosMedicos hm " +
+                $"cross apply (SELECT Hora FROM franja_horaria(hm.horario_inicio, hm.horario_fin)) as fh " +
+                $"left join turnos t on t.hora_consulta = fh.Hora and t.fecha_consulta = '{fechaSeleccionada}' " +
+                $"where hm.id_usuario_HM = {idMedico} and dias = '{diaSemana}'  and t.hora_consulta is null";
+
+            DataSet ds = con.getData(consulta);
+            return ds;
+        }
+
+
+
+
     }
 }

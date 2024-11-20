@@ -174,6 +174,16 @@ namespace DATOS
         }
 
 
+        public DataSet selectMedicosPorEspecialidad(string idEspecialidad)
+        {
+            string consulta = $"select Usuarios.nombre as medico , Usuarios.id_usuario as idMedico from usuarios inner join Especialidades as e on e.id_especialidad = Usuarios.id_especialidad_us where Usuarios.id_especialidad_us = {idEspecialidad}";
+            DataSet ds = accesoDatos.getData(consulta);
+
+            return ds;
+
+        }
+
+
 
 
     }

@@ -151,7 +151,12 @@ namespace Negocio
 
         }
 
+        public DataSet selectMedicosPorEspecialidad(string idEspecialidad)
+        {
+            return dts.selectMedicosPorEspecialidad(idEspecialidad);
 
+
+        }
 
 
 
