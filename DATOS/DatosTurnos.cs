@@ -46,9 +46,10 @@ namespace DATOS
                  return cn.execute(consulta);
 
         }
-        public void actualizarPresente(bool realizado)
+        public void actualizarPresente(bool realizado, int IdTurno)
         {
-            string consulta = "update Turnos set re";
+            string consulta = $"update Turnos set realizado_t = '{realizado}' where id_turno = {IdTurno}";
+            cn.getData(consulta);
         }
 
     }

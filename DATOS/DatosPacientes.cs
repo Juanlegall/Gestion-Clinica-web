@@ -93,10 +93,10 @@ namespace DATOS
         public DataSet obtenerPacientesxMedicos(int IdMedico)
         {
             DataSet ds = new DataSet();
-            string consulta = $"SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, " +
+            string consulta = $"SELECT  p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, " +
                 $"p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad AS nacionalidad, p.direccion AS direccion, p.correo_electronico AS correo," +
                 $" p.telefono AS telefono, p.fecha_nacimiento_p AS fechaNacimiento, prov.nombre_provincia AS provincia," +
-                $" loc.nombre_localidad AS localidad, realizado_t as realizado" +
+                $" loc.nombre_localidad AS localidad, realizado_t as realizado, id_turno as idTurno" +
                 $" FROM Pacientes AS p " +
                 $"INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P " +
                 $"INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P " +
@@ -112,7 +112,7 @@ namespace DATOS
             string consulta = $"SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, " +
                $"p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad AS nacionalidad, p.direccion AS direccion, p.correo_electronico AS correo," +
                $" p.telefono AS telefono, p.fecha_nacimiento_p AS fechaNacimiento, prov.nombre_provincia AS provincia," +
-               $" loc.nombre_localidad AS localidad, realizado_t as realizado" +
+               $" loc.nombre_localidad AS localidad, realizado_t as realizado, id_turno as idTurno" +
                $" FROM Pacientes AS p " +
                $"INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P " +
                $"INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P " +

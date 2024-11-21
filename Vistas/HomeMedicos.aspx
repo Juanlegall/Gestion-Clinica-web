@@ -22,6 +22,11 @@
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
+                    <asp:HiddenField ID="hfIdTurno" runat="server" Value='<%# Bind("idTurno") %>' />
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField>
+                <ItemTemplate>
                     <asp:HiddenField ID="hfIdPaciente" runat="server" Value='<%# Bind("idPaciente") %>' />
                 </ItemTemplate>
             </asp:TemplateField>
@@ -87,7 +92,7 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Presente">
                 <ItemTemplate>
-                    <asp:CheckBox ID="chkPresente" runat="server" Checked='<%# Bind("realizado") %>' OnCheckedChanged="chkPresente_CheckedChanged" AutoPostBack="True" />
+                    <asp:CheckBox ID="chkPresente" runat="server" Checked='<%# Bind("realizado") %>' OnCheckedChanged="chkPresente_CheckedChanged"  AutoPostBack="True" />
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>

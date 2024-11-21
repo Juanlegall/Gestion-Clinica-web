@@ -13,19 +13,22 @@ namespace Vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["NombreUsuario"] != null)
+            if (!IsPostBack)
             {
-                NegocioPacientes neg_Pacientes = new NegocioPacientes();
-                string nombre = Session["NombreUsuario"].ToString();
-                lblMensaje.Text = "Bienvenido, " + nombre;
-                DataSet ds = new DataSet();
-                ds = neg_Pacientes.ObtenerPacientesxMedicos((int)Session["ID"]);
-                llenarGrilla(ds);
-            }
-            else
-            {
-                // Si no hay sesión, redirigir al login
-                Response.Redirect("Login.aspx");
+                if (Session["NombreUsuario"] != null)
+                {
+                    NegocioPacientes neg_Pacientes = new NegocioPacientes();
+                    string nombre = Session["NombreUsuario"].ToString();
+                    lblMensaje.Text = "Bienvenido, " + nombre;
+                    DataSet ds = new DataSet();
+                    ds = neg_Pacientes.ObtenerPacientesxMedicos((int)Session["ID"]);
+                    llenarGrilla(ds);
+                }
+                else
+                {
+                    // Si no hay sesión, redirigir al login
+                    Response.Redirect("Login.aspx");
+                }
             }
         }
         public void llenarGrilla(DataSet ds)
@@ -63,19 +66,12 @@ namespace Vistas
         protected void chkPresente_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox chkPresente = (CheckBox)sender;
-            GridView fila = (GridView)chkPresente.NamingContainer;
-            bool realizado = ((CheckBox)fila.FindControl("chkPresente")).Checked;
+            GridViewRow fila = (GridViewRow)chkPresente.NamingContainer;
+            int IdTurno = Convert.ToInt32(((HiddenField)fila.FindControl("hfIdTurno")).Value);
+            lblBuscar.Text = IdTurno.ToString();
+            bool realizado = chkPresente.Checked;
             NegocioTurnos ng_Turnos = new NegocioTurnos();
-            ng_Turnos.actualizarPresente(realizado);
-            lblBuscar.Text = realizado + " en la fila " + fila;
-            if (realizado)
-            {
-                lblBuscar.Text = realizado + " en la fila " + fila;
-            }
-            else
-            {
-                lblBuscar.Text = "no " + realizado + " en la fila " + fila;
-            }
+            ng_Turnos.actualizarPresente(realizado, IdTurno);
         }
     }
 }
