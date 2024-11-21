@@ -54,6 +54,11 @@ namespace Negocio
 
         }
 
+        public int TraerID(string usuario)
+        {
+            return dts.TraerIdUsuario(usuario);
+        }
+
 
         public DataSet obtenerDatosMedicos(string idMedico)
         {

@@ -22,14 +22,16 @@ namespace Vistas
             string contraseña = txtContraseña.Text;
 
             NegocioUsuarios ng_usuarios = new NegocioUsuarios();
+            
             if (ng_usuarios.verificarUsuario(usuario) == true)
             {
                 bool resultado = ng_usuarios.verificarContraseña(usuario, contraseña);
                 if (resultado == true)
                 {
+
                     lblMensaje.Text = "Usuario ingresado con exito";
                     (string nombre, int id) =  ng_usuarios.traerNombre_Rol(usuario, contraseña);
-
+                    Session["ID"]=ng_usuarios.TraerID(usuario);
                     Session["NombreUsuario"] = nombre;
 
                     if(id == 2)

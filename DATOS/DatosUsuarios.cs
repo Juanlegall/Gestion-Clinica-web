@@ -20,6 +20,17 @@ namespace DATOS
 
         }
 
+        public int TraerIdUsuario(string usuario)
+        {
+            DataSet ds = new DataSet();
+            string consulta = $"select id_usuario from usuarios where nombre_usuario='{usuario}'";
+            ds = accesoDatos.getData(consulta);
+            int id = Convert.ToInt32(ds.Tables[0].Rows[0]["id_usuario"]);
+            return id;
+
+        }
+
+
         public Boolean verificarContraseña(string usuario , string contraseña)
         {
             string consulta = $"Select * from usuarios where nombre_usuario = '{usuario}' and contraseña COLLATE Latin1_General_CS_AS = '{contraseña}'";

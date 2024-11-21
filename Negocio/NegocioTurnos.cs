@@ -54,6 +54,10 @@ namespace Negocio
             int filasAfectadas = datos.agregarTurno(idPaciente,idMedico,fechaSeleccionada,horaSeleccionada,obs);
             return filasAfectadas;
         }
+        public void actualizarPresente(bool realizado)
+        {
+            datos.actualizarPresente(realizado);
+        }
 
 
     }

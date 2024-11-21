@@ -46,6 +46,10 @@ namespace DATOS
                  return cn.execute(consulta);
 
         }
+        public void actualizarPresente(bool realizado)
+        {
+            string consulta = "update Turnos set re";
+        }
 
     }
 }
