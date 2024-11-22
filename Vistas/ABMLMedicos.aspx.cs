@@ -136,10 +136,16 @@ namespace Vistas
                 }
             }
         }
-
+        private void LimpiarCampos()
+        {
+            txtApellido.Text = "";
+            txtLegajo.Text = "";
+            ddlEspecialidades.SelectedIndex = 0;
+        }
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            Response.Redirect($"EditarFormularioMedicos.aspx?id=0");
+            RecargarDatosGridView();
+            LimpiarCampos();
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)

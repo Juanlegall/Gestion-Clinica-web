@@ -96,6 +96,7 @@
 
                 </td>
                 <td>
+                    <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" />
                 </td>
             </tr>
         </table>

@@ -28,7 +28,7 @@
                 </asp:DropDownList>
                 <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" style="height: 31px;"/>
 
-                <asp:Button ID="btnAgregar" runat="server" OnClick="btnAgregar_Click" Text="Agregar" style="height: 31px;" />
+                <asp:Button ID="btnMostrar" runat="server" OnClick="btnAgregar_Click" Text="Mostrar Todo" style="height: 31px;" />
 
             </asp:Panel>
 
