@@ -164,6 +164,15 @@ namespace Negocio
         }
 
 
+        //Falopeada de Fran pero que si les copa dejenla (es para saber la especialidad del medico porque no me acordaba
+        //cual era cual)
+        public string ObtenerEspecialidadMedico(int idUsuario)
+        {
+            DatosUsuarios datosMedicos = new DatosUsuarios();
+            return datosMedicos.ObtenerEspecialidad(idUsuario);
+        }
+
+
 
 
     }

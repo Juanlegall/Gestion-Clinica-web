@@ -59,6 +59,17 @@ namespace Negocio
             datos.actualizarPresente(realizado, IdTurno);
         }
 
+        public bool GuardarObservacionTurno(int idTurno, string titulo)
+        {
+            if (idTurno <= 0 || string.IsNullOrWhiteSpace(titulo))
+            {
+                return false; // Valida que los datos sean válidos
+            }
+
+            datos.ActualizarObservacionTurno(idTurno, titulo);
+            return true; // Indica éxito
+        }
+
 
     }
 }

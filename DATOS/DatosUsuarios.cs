@@ -194,6 +194,58 @@ namespace DATOS
 
         }
 
+        //Falopeada de Fran pero que si les copa dejenla (es para saber la especialidad del medico porque no me acordaba
+        //cual era cual)
+
+        public string ObtenerEspecialidad(int idUsuario)
+        {
+            string consulta = @"
+                SELECT nombre_especialidad 
+                FROM Especialidades 
+                WHERE id_especialidad = (
+                SELECT id_especialidad_us 
+                FROM Usuarios 
+                WHERE id_usuario = @idUsuario
+                )";
+
+            using (SqlConnection conexion = accesoDatos.obtenerConexion())
+            {
+                if (conexion == null)
+                {
+                    return "Error: No se pudo obtener una conexión válida.";
+                }
+
+                using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                {
+                    comando.Parameters.AddWithValue("@idUsuario", idUsuario);
+
+                    try
+                    {
+                        // Verifica si la conexión está abierta antes de abrirla.
+                        if (conexion.State != System.Data.ConnectionState.Open)
+                        {
+                            conexion.Open();
+                        }
+
+                        object resultado = comando.ExecuteScalar();
+                        return resultado != null ? resultado.ToString() : "Sin especialidad";
+                    }
+                    catch (Exception ex)
+                    {
+                        return $"Error al obtener especialidad: {ex.Message}";
+                    }
+                    finally
+                    {
+                        // Si por algún motivo la conexión quedó abierta, ciérrala.
+                        if (conexion.State == System.Data.ConnectionState.Open)
+                        {
+                            conexion.Close();
+                        }
+                    }
+                }
+            }
+        }
+
 
 
 

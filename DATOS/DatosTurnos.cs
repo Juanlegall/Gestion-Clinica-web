@@ -52,5 +52,43 @@ namespace DATOS
             cn.getData(consulta);
         }
 
+        public void ActualizarObservacionTurno(int idTurno, string titulo)
+        {
+            using (SqlConnection conexion = cn.obtenerConexion())
+            {
+                // Usamos un bloque `using` para asegurar que la conexión se cierre
+                using (SqlCommand comando = new SqlCommand("UPDATE Turnos SET observaciones = @Titulo WHERE id_turno = @IdTurno", conexion))
+                {
+                    // Definir parámetros
+                    comando.Parameters.Add("@Titulo", SqlDbType.VarChar).Value = titulo;
+                    comando.Parameters.Add("@IdTurno", SqlDbType.Int).Value = idTurno;
+
+                    // Ejecutar la consulta
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void InsertarObservacion(string idElemento, string titulo, string descripcion)
+        {
+            string query = "INSERT INTO Observaciones (IdElemento, Titulo, Descripcion) VALUES (@Id, @Titulo, @Descripcion)";
+
+            using (SqlConnection conexion = cn.obtenerConexion()) // Conexión obtenida desde tu clase Conexion
+            {
+                using (SqlCommand cmd = new SqlCommand(query, conexion))
+                {
+                    // Configuramos los parámetros
+                    cmd.Parameters.AddWithValue("@Id", idElemento);
+                    cmd.Parameters.AddWithValue("@Titulo", titulo);
+                    cmd.Parameters.AddWithValue("@Descripcion", descripcion);
+
+                    // Ejecutamos la consulta
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+
     }
 }
