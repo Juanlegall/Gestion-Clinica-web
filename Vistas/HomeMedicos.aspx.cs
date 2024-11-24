@@ -74,7 +74,7 @@ namespace Vistas
             CheckBox chkPresente = (CheckBox)sender;
             GridViewRow fila = (GridViewRow)chkPresente.NamingContainer;
             int IdTurno = Convert.ToInt32(((HiddenField)fila.FindControl("hfIdTurno")).Value);
-            lblBuscar.Text = IdTurno.ToString();
+            //lblBuscar.Text = IdTurno.ToString();
             bool realizado = chkPresente.Checked;
             NegocioTurnos ng_Turnos = new NegocioTurnos();
             ng_Turnos.actualizarPresente(realizado, IdTurno);
@@ -92,11 +92,11 @@ namespace Vistas
 
             if (exito)
             {
-                lblMensaje.Text = "Observación guardada con éxito.";
+                lbl_Observacion.Text = "Observación guardada con éxito.";
             }
             else
             {
-                lblMensaje.Text = "Error al guardar la observación. Verifique los datos.";
+                lbl_Observacion.Text = "Error al guardar la observación. Verifique los datos.";
             }
 
             // Limpiar campos si es necesario
