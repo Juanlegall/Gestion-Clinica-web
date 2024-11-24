@@ -15,20 +15,27 @@
 
         function drawChart() {
 
-            var data = google.visualization.arrayToDataTable( <%=obtenerEspecialidadesMasUtilizadas() %>); 
+            var data = google.visualization.arrayToDataTable( <%=obtenerEspecialidadesMasUtilizadas() %>);
 
             var options = {
-                title: 'Grafico de especialidades mas utilizadas'
+                title: 'Grafico de especialidades mas utilizadas',
+                curveType: 'function',
+                legend: { position: 'bottom' }
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('graficoEspecialidades'));
 
             chart.draw(data, options);
         }
+
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
+        <div>
+            Ciclo:&nbsp; <asp:DropDownList runat="server" ID="ddlCiclo" AutoPostBack="true"> </asp:DropDownList>
+        </div>
+
         <div>
 
             <div id="graficoEspecialidades" style="width: 900px; height: 500px;"></div>

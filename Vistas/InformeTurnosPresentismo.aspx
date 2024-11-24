@@ -19,6 +19,7 @@
 
             var options = {
                 title: 'Grafico de presentismo de pacientes por turnos'
+
             };
 
             var chart = new google.visualization.PieChart(document.getElementById('graficoPresentismo'));
@@ -30,9 +31,14 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            Ciclo:&nbsp; <asp:DropDownList runat="server" ID="ddlCiclo" AutoPostBack="true"> </asp:DropDownList>
+        </div>
 
+        <div>
             <div id="graficoPresentismo" style="width: 900px; height: 500px;"></div>
         </div>
+
+
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Volver" />
     </form>
 </body>

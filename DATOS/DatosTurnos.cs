@@ -14,30 +14,52 @@ namespace DATOS
     {
         Conexion cn = new Conexion();
 
-        public DataSet obtenerPresentismoTurnos()
+        public DataSet obtenerPresentismoTurnos(int anio)
         {
             DataSet ds = new DataSet();
-            string consulta = "SELECT CASE " +
-                "WHEN realizado_t = 1 THEN 'Presente' " +
-                "WHEN realizado_t = 0 THEN 'Ausente' " +
-                "ELSE 'Desconocido'" +
-                "END AS Estado, COUNT(realizado_t) AS Total FROM Turnos GROUP BY realizado_t ORDER BY Total";
+            string consulta = "";
+            if (anio > 0)
+            {
+                /*consulta con año*/
+                consulta = $"SELECT CASE WHEN realizado_t = 1 THEN 'Presente' WHEN realizado_t = 0 THEN 'Ausente' ELSE 'Desconocido' END AS Estado, COUNT(realizado_t) AS Total FROM Turnos WHERE YEAR(fecha_consulta) = {anio} GROUP BY realizado_t ORDER BY Total";
+            }
+            else
+            {
+                /*consulta sin año*/
+                consulta = $"SELECT CASE WHEN realizado_t = 1 THEN 'Presente' WHEN realizado_t = 0 THEN 'Ausente' ELSE 'Desconocido' END AS Estado, COUNT(realizado_t) AS Total FROM Turnos GROUP BY realizado_t ORDER BY Total";
+            }
             ds = cn.getData(consulta);
 
             return ds;
         }
 
-        public DataSet obtenerEspecialidadTurnos()
+        public DataSet obtenerEspecialidadTurnos(int anio)
         {
             DataSet ds = new DataSet();
-            string consulta = "SELECT e.nombre_especialidad AS Especialidad, COUNT(t.id_turno) AS Total FROM Turnos t INNER JOIN Usuarios u ON t.id_usuario_t = u.id_usuario " +
-                "INNER JOIN Especialidades e ON u.id_especialidad_us = e.id_especialidad " +
-                "GROUP BY e.nombre_especialidad ORDER BY Total";
+            string consulta ="";
+            if (anio > 0)
+            {
+                /*consulta con año*/
+                consulta = $"SELECT e.nombre_especialidad AS Especialidad, COUNT(t.id_turno) AS Total FROM Turnos t INNER JOIN Usuarios u ON t.id_usuario_t = u.id_usuario INNER JOIN Especialidades e ON u.id_especialidad_us = e.id_especialidad WHERE YEAR(t.fecha_consulta) = {anio} GROUP BY e.nombre_especialidad";
+            }
+            else
+            {
+                /*consulta sin año*/
+                consulta = "SELECT e.nombre_especialidad AS Especialidad, COUNT(t.id_turno) AS Total FROM Turnos t INNER JOIN Usuarios u ON t.id_usuario_t = u.id_usuario INNER JOIN Especialidades e ON u.id_especialidad_us = e.id_especialidad GROUP BY e.nombre_especialidad ";
+            }
             ds = cn.getData(consulta);
 
             return ds;
         }
 
+        public DataSet obtenerAniosCargados()
+        {
+            DataSet ds = new DataSet();
+            string consulta = "SELECT DISTINCT YEAR(fecha_consulta) AS Año FROM Turnos ORDER BY Año ";
+            ds = cn.getData(consulta);
+
+            return ds;
+        }
 
         public int agregarTurno(string idPaciente,string idMedico,string fechaSeleccionada,string horaSeleccionada,string obs)
         {

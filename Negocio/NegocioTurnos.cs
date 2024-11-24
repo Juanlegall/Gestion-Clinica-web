@@ -14,9 +14,9 @@ namespace Negocio
     {
         DatosTurnos datos = new DatosTurnos();
 
-        public string obtenerDatosPresentismo()
+        public string obtenerDatosPresentismo(int anio)
         {
-            DataTable datosPresentismo = datos.obtenerPresentismoTurnos().Tables[0];
+            DataTable datosPresentismo = datos.obtenerPresentismoTurnos(anio).Tables[0];
             string strDatos;
             strDatos = "[['Presentismo', 'Total'],";
 
@@ -31,9 +31,11 @@ namespace Negocio
             return strDatos;
         }
 
-        public string obtenerDatosEspecialides()
+
+        public string obtenerDatosEspecialides(int anio)
         {
-            DataTable datosPresentismo = datos.obtenerEspecialidadTurnos().Tables[0];
+            DataTable datosPresentismo = datos.obtenerEspecialidadTurnos(anio).Tables[0];
+
             string strDatos;
             strDatos = "[['Especialidades', 'Total'],";
 
@@ -48,6 +50,10 @@ namespace Negocio
             return strDatos;
         }
 
+        public DataSet obtenerAniosCargados() /*obtener los años de los turnos cargados*/
+        {
+            return datos.obtenerAniosCargados();
+        }
 
         public int agregarTurno(string idPaciente, string idMedico, string fechaSeleccionada, string horaSeleccionada, string obs)
         {
