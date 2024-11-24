@@ -12,24 +12,26 @@
     <form id="form1" runat="server">
         <div>
             <style>
-            .Menu-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-             .Menu-box {
-     width: 400px;
-     padding: 20px;
-     border-radius: 10px;
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-     background-color: white;
- }
-              .rounded-button {
-     border-radius: 15px; 
-     border: none; 
- }
-                </style>
+                .Menu-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    min-height: 100vh;
+                }
+
+                .Menu-box {
+                    width: 400px;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    background-color: white;
+                }
+
+                .rounded-button {
+                    border-radius: 15px;
+                    border: none;
+                }
+            </style>
       <div class="Menu-container">
           <div class="Menu-box text-center">
             <asp:Label ID="lblMensaje" font-bold="true" Font-Size="25px" runat="server"></asp:Label>

@@ -9,13 +9,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Informes</title>
 
-
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
+    <style>
+        .Menu-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 60vh;
+            max-width:100vw;
         }
-        .auto-style2 {
-            width: 524px;
+
+        .Menu-box {
+            width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: white;
+        }
+
+
+        .rounded-button {
+            border-radius: 15px;
+            border: none;
+            Width:100%;
+            Height:auto;
+            Font-Size:25px;
         }
     </style>
 
@@ -23,61 +41,28 @@
 </head>
 <body>
     <form id="form1" runat="server" aria-atomic="False">
-        <div>
-            
 
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Informe sobre presencia de pacientes" />
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>
-                        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Informe sobre especialidad medico" />
-                    </td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
-            
-  
-
-
-        </div>
-        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Volver" />
+            <div class="Menu-container">
+               <div class="Menu-box">
+                    <asp:Label ID="lblMenu" runat="server" Font-Size="50px" Text="INFORMES" Font-Bold="true"></asp:Label>
+                    <br />
+                    <br />
+                   <br />
+                    <br />
+                    <div class="form-group mb-3">
+                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" cssclass="rounded-button" Text="Informe presentismo de pacientes" />
+                        <br />
+                        <br />
+                         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" cssclass="rounded-button" Text="Informe especialidades medico" />
+                        <br />
+                        <br />
+                        <br />
+                    <br />
+                        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" cssclass="rounded-button" Text="Volver" />
+                    </div>
+                </div>
+            </div>
+        
     </form>
 </body>
 </html>
