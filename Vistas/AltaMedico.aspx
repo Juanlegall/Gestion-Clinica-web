@@ -1,13 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaMedico.aspx.cs" Inherits="Vistas.AltaMedico"  UnobtrusiveValidationMode="None"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaMedico.aspx.cs" Inherits="Vistas.AltaMedico" UnobtrusiveValidationMode="None" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-     <%--Bootstrap--%>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <%--Bootstrap--%>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script type="text/javascript">
         function handleImageError(image) {
@@ -19,7 +19,7 @@
             // Habilitar el botón
             document.getElementById('btnHorarios').disabled = false;
         }
-        
+
     </script>
 
 
@@ -42,19 +42,21 @@
         .auto-style11 {
             width: 99%;
         }*/
-        </style>
+    </style>
 
 </head>
 <body>
     <form id="form1" runat="server">
-        <asp:ScriptManager ID="ScriptManager1" runat="server"> </asp:ScriptManager>
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
-        <div class="container">
+        <div class="container mt-4">
             <div class="row">
                 <%--Titulo--%>
-                <div class="text-center" >
+                <div class="text-center">
                     <label class="h1">ALTA MEDICOS</label>
-                    <br /><br /><br />  
+                    <br />
+                    <br />
+                    <br />
                 </div>
                 <div>
                     <%--Nombre--%>
@@ -172,18 +174,20 @@
                 </div>
 
                 <br />
-               
+
                 <%--Botones del formulario--%>
                 <table class="w-100">
-                        <tr>
-                            <td class="auto-style3">
-                                <br /><br /><br />
-                            </td>
-                            <td class="auto-style4">
-                                <asp:Button ID="btnAceptar" runat="server" Text="Cargar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" Width="141px" />
-                            </td>
-                            <td class="auto-style5">
-                                <asp:Button ID="btnVolver" runat="server" class="btn btn-secondary form-control" OnClick="btnVolver_Click" Text="Cancelar" ValidationGroup="none" Width="141px"  />
+                    <tr>
+                        <td class="auto-style3">
+                            <br />
+                            <br />
+                            <br />
+                        </td>
+                        <td class="auto-style4">
+                            <asp:Button ID="btnAceptar" runat="server" Text="Cargar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" Width="141px" />
+                        </td>
+                        <td class="auto-style5">
+                            <asp:Button ID="btnVolver" runat="server" class="btn btn-secondary form-control" OnClick="btnVolver_Click" Text="Cancelar" ValidationGroup="none" Width="141px" />
                         </td>
                     </tr>
                     <tr>
@@ -196,12 +200,12 @@
                     </tr>
                 </table>
 
-                 <%--linea--%>
-                <hr style="border: none;height: 2px; background-color: #4CAF50;"/>
+                <%--linea--%>
+                <hr style="border: none; height: 2px; background-color: #4CAF50;" />
 
                 <div>
-                    <div class="form-group px-0 d-flex justify-content-lg-start align-items-center col-6" style="margin-bottom: 10px ;">
-                        <p class="text-body-secondary"> 
+                    <div class="form-group px-0 d-flex justify-content-lg-start align-items-center col-6" style="margin-bottom: 10px;">
+                        <p class="text-body-secondary">
                             (El boton se habilitara una vez que la carga del medico se haya realizado efectivamente)
                         </p>
                     </div>
@@ -478,7 +482,7 @@
                                                     ValidationExpression="^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$"
                                                     ForeColor="Red">
                                                 </asp:RegularExpressionValidator>
-                                                
+
                                             </td>
                                         </tr>
                                     </tbody>
@@ -486,7 +490,7 @@
 
                                 <asp:Button runat="server" ID="btnCargarHorario" OnClick="btnCargarHorario_Click" Text="Cargar" CssClass="btn btn-success"></asp:Button>
 
-                                <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="btn btn-danger" >Cancelar</button>
+                                <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="btn btn-danger">Cancelar</button>
                             </div>
 
                         </div>
@@ -497,12 +501,14 @@
 
                 </div>
 
-                    <br /><br /><br />
+                <br />
+                <br />
+                <br />
 
-                    
+
             </div>
         </div>
-            
+
     </form>
 </body>
 </html>

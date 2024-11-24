@@ -1,170 +1,115 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaPaciente.aspx.cs" Inherits="Vistas.AltaPaciente"  UnobtrusiveValidationMode="None"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaPaciente.aspx.cs" Inherits="Vistas.AltaPaciente" UnobtrusiveValidationMode="None" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <meta charset="utf-8" />
+    <title>Alta Paciente</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <style>
+        .form-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    <style type="text/css">
-        .auto-style1 {
-            width: 346px;
+        .form-group label {
+              margin-bottom: 2px;
         }
-        .auto-style2 {
-            width: 379px;
-        }
-        .auto-style3 {
-            width: 346px;
-            height: 36px;
-        }
-        .auto-style4 {
-            width: 379px;
-            height: 36px;
-        }
-        .auto-style5 {
-            height: 36px;
+
+        .btn-custom {
+            width: 150px;
         }
     </style>
-
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="col-12 row">
-
-     <div class="col-1">
-
-     </div>
-
-<div class="col-8" style="margin-top:35px;">
-
-     <div style="margin-top: 60px;">
-
-           <div>
-
-
-         <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-            <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Nombre</label>
-            <asp:TextBox ID="txtNombre" runat="server" class="form-control campo"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre">*</asp:RequiredFieldValidator>
+        <div class="container mt-5">
+            <div class="text-center mb-4">
+                <h1>Registro de Pacientes</h1>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="form-container p-4 col-md-6">
+                    <%-- Nombre --%>
+                    <div class="form-group ">
+                        <label for="txtNombre">Nombre</label>
+                        <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvNombre" runat="server" ControlToValidate="txtNombre" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+                    <%-- Apellido --%>
+                    <div class="form-group ">
+                        <label for="txtApellido">Apellido</label>
+                        <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+                    <%-- Sexo --%>
+                    <div class="form-group ">
+                        <label for="txtSexo">Sexo</label>
+                        <asp:TextBox ID="txtSexo" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvSexo" runat="server" ControlToValidate="txtSexo" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+                    <%-- Nacionalidad --%>
+                    <div class="form-group ">
+                        <label for="txtNacionalidad">Nacionalidad</label>
+                        <asp:TextBox ID="txtNacionalidad" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvNacionalidad" runat="server" ControlToValidate="txtNacionalidad" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+                    <%-- Dirección --%>
+                    <div class="form-group ">
+                        <label for="txtDireccion">Dirección</label>
+                        <asp:TextBox ID="txtDireccion" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="txtDireccion" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+                    <%-- Correo Electrónico --%>
+                    <div class="form-group ">
+                        <label for="txtCorreo">Correo Electrónico</label>
+                        <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+                    <%-- Teléfono --%>
+                    <div class="form-group ">
+                        <label for="txtTelefono">Teléfono</label>
+                        <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="txtTelefono" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+                    <%-- DNI --%>
+                    <div class="form-group ">
+                        <label for="txtDni">DNI</label>
+                        <asp:TextBox ID="txtDni" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvDni" runat="server" ControlToValidate="txtDni" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+                    <%-- Fecha de Nacimiento --%>
+                    <div class="form-group ">
+                        <label for="txtFecNacimiento">Fecha de Nacimiento</label>
+                        <asp:TextBox ID="txtFecNacimiento" runat="server" CssClass="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvFecNacimiento" runat="server" ControlToValidate="txtFecNacimiento" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    </div>
+                    <%--Provincia--%>
+                    <div class="form-group ">
+                        <label for="ddlProvincias">Provincia</label>
+                        <asp:DropDownList ID="ddlProvincias" runat="server" class="form-control" OnSelectedIndexChanged="ddlProvincias_SelectedIndexChanged" AutoPostBack="True">
+                        </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="rfvProvincias" runat="server" ControlToValidate="ddlProvincias" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
+                    </div>
+                    <%--Localidad--%>
+                    <div class="form-group ">
+                        <label for="ddlLocalidad">Localidad</label>
+                        <asp:DropDownList ID="ddlLocalidad" runat="server" class="form-control" AutoPostBack="True">
+                        </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="frvLocalidad" runat="server" ControlToValidate="ddlLocalidad" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
+                    </div>
+                    <%-- Botones --%>
+                    <div class="text-center">
+                        <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary btn-custom me-3" OnClick="btnAceptar_Click" />
+                        <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-secondary btn-custom" OnClick="btnVolver_Click" />
+                    </div>
+                    <div class="text-center mt-3">
+                        <asp:Label ID="lblMensaje" runat="server" CssClass="text-success"></asp:Label>
+                    </div>
+                </div>
+            </div>
         </div>
-
-          <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-            <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Apellido</label>
-            <asp:TextBox ID="txtApellido" runat="server" class="form-control campo"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rfvApellido" runat="server" ControlToValidate="txtApellido">*</asp:RequiredFieldValidator>
-        </div>
-
-           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-                <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Sexo</label>
-                 <asp:TextBox ID="txtSexo" runat="server" class="form-control campo"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="rfvSexo" runat="server" ControlToValidate="txtSexo" >*</asp:RequiredFieldValidator>
-           </div>
-
-          <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-              <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Nacionalidad</label>
-              <asp:TextBox ID="txtNacionalidad" runat="server" class="form-control campo"></asp:TextBox>
-             <asp:RequiredFieldValidator ID="rfvNacionalidad" runat="server" ControlToValidate="txtNacionalidad">*</asp:RequiredFieldValidator>
-
-        </div>
-
-           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-      <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Direccion</label>
-      <asp:TextBox ID="txtDireccion" runat="server" class="form-control campo"></asp:TextBox>
-     <asp:RequiredFieldValidator ID="rfvDireccion" runat="server" ControlToValidate="txtDireccion">*</asp:RequiredFieldValidator>
-
-</div>
-
-           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-      <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Correo electronico</label>
-      <asp:TextBox ID="txtCorreo" runat="server" class="form-control campo"></asp:TextBox>
-     <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo">*</asp:RequiredFieldValidator>
-
-</div>
-         </div>
-
-
-         <div>
-
-           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-      <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Telefono</label>
-      <asp:TextBox ID="txtTelefono" runat="server" class="form-control campo"></asp:TextBox>
-     <asp:RequiredFieldValidator ID="rfvTelefono" runat="server" ControlToValidate="txtTelefono">*</asp:RequiredFieldValidator>
-
-&nbsp;</div>
-
-           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-      <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Dni</label>
-      <asp:TextBox ID="txtDni" runat="server" class="form-control campo"></asp:TextBox>
-     <asp:RequiredFieldValidator ID="rfvDni" runat="server" ControlToValidate="txtDni">*</asp:RequiredFieldValidator>
-
-            
-</div>
-             <div>
-                       <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
- <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Fecha Nacimiento</label>
- <asp:TextBox ID="txtFecNacimiento" runat="server" class="form-control campo"></asp:TextBox>
-<asp:RequiredFieldValidator ID="rfvFecNacimiento" runat="server" ControlToValidate="txtFecNacimiento">*</asp:RequiredFieldValidator>
-             </div>
-
-           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-      <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Provincia</label>
-               <asp:DropDownList ID="ddlProvincias" runat="server"  class="form-control campo" OnSelectedIndexChanged="ddlProvincias_SelectedIndexChanged" AutoPostBack="True" >
-                </asp:DropDownList>
-     <asp:RequiredFieldValidator ID="rfvProvincias" runat="server" ControlToValidate="ddlProvincias" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
-
-            
-</div>
-         
-         
-           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
-      <label for="sexo" class="col-4 text-start" style="margin-right: 10px;">Localidad</label>
-               <asp:DropDownList ID="ddlLocalidad" runat="server"  class="form-control campo"  AutoPostBack="True">
-                </asp:DropDownList>
-     <asp:RequiredFieldValidator ID="frvLocalidad" runat="server" ControlToValidate="ddlLocalidad" InitialValue="Seleccionar">*</asp:RequiredFieldValidator>
-
-            
-</div>
-
-
-         
-             </div>
-
-
-         <div  class="form-group px-0 d-flex justify-content-center align-items-center col-10" style="margin-bottom: 10px;margin-left: 123px;width: 120px;margin-bottom: 10px;">
-
-             <br />
-
-        </div>
-    </div>
-
-</div>
-        </div>
-
-        </div>
-        <table class="w-100">
-            <tr>
-                <td class="auto-style3"></td>
-                <td class="auto-style4">
-
-             <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" class="btn btn-secondary form-control" OnClick="btnAceptar_Click" Width="141px" />
-
-                </td>
-                <td class="auto-style5">
-                    <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" ValidationGroup="none" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style1">&nbsp;</td>
-                <td class="auto-style2">
-             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
-
-                </td>
-                <td>&nbsp;</td>
-            </tr>
-        </table>
-
     </form>
 </body>
 </html>
+
