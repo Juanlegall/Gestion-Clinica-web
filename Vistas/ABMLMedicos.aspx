@@ -30,7 +30,7 @@
                 </div>
                 <div class="col-md-3 d-flex">
                     <asp:Button ID="btnBuscar" runat="server" CssClass="btn btn-primary me-2" Text="Buscar" OnClick="btnBuscar_Click" />
-                    <asp:Button ID="btnMostrar" runat="server" CssClass="btn btn-secondary" Text="Mostrar Todo" OnClick="btnAgregar_Click" />
+                    <asp:Button ID="btnMostrar" runat="server" CssClass="btn btn-secondary" Text="Mostrar Todo" OnClick="btnMostrarTodos_Click" />
                 </div>
             </div>
 

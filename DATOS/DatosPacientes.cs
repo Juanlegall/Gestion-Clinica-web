@@ -117,10 +117,12 @@ namespace DATOS
                $"INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P " +
                $"INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P " +
                $"INNER JOIN Turnos AS tur ON tur.id_paciente_t = p.id_paciente" +
-               $" WHERE id_usuario_t = {IdMedico}" +
-               $" AND dni_p Like '%{dni}%'";
-             
-            ds = accesoDatos.getData(consulta);
+               $" WHERE id_usuario_t = @IdMedico" +
+               $" AND dni_p Like '%' + @dni + '%'";
+            SqlCommand cmd = new SqlCommand(consulta);
+            cmd.Parameters.AddWithValue("@IdMedico", IdMedico);
+            cmd.Parameters.AddWithValue("@dni", dni);
+            ds = accesoDatos.getData(cmd);
             return ds;
         }
 
@@ -137,7 +139,6 @@ namespace DATOS
 
             SqlCommand cmd = new SqlCommand(consulta);
             cmd.Parameters.AddWithValue("@dni", "%" + dni + "%"); // Uso de LIKE para que el filtro sea flexible (por ejemplo, DNI parcial)
-
             ds = accesoDatos.getData(cmd);
             return ds;
         }

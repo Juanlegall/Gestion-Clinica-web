@@ -17,17 +17,13 @@ namespace Vistas
             {
                 if (Session["NombreUsuario"] != null)
                 {
-                    NegocioPacientes neg_Pacientes = new NegocioPacientes();
-                    string nombre = Session["NombreUsuario"].ToString();
-                    lblMensaje.Text = "Bienvenido, " + nombre;
-                    DataSet ds = new DataSet();
-                    ds = neg_Pacientes.ObtenerPacientesxMedicos((int)Session["ID"]);
-                    llenarGrilla(ds);
-
-                    int idUsuario = (int)Session["ID"];
                     NegocioUsuarios neg_Usuarios = new NegocioUsuarios();
+                    string nombre = Session["NombreUsuario"].ToString();
+                    int idUsuario = (int)Session["ID"];
                     string especialidad = neg_Usuarios.ObtenerEspecialidadMedico(idUsuario);
+                    lblBienvenido.Text = "Bienvenido, " + nombre;
                     lbl_especialidad.Text = "Especialidad: " + especialidad;
+                    GrillaCompleta();
 
                 }
                 else
@@ -37,36 +33,42 @@ namespace Vistas
                 }
             }
         }
+        public void GrillaCompleta()
+        {
+            NegocioPacientes neg_Pacientes = new NegocioPacientes();
+            DataSet ds = new DataSet();
+            ds = neg_Pacientes.ObtenerPacientesxMedicos((int)Session["ID"]);
+            llenarGrilla(ds);
+        }
         public void llenarGrilla(DataSet ds)
         {
             gvPacientesxMedicos.DataSource = ds;
             gvPacientesxMedicos.DataBind();
         }
-        public void GrillaEscondia()// esta grilla no tiene databind para que no se muestre pero seria la grilla sin filtro para que cuando filtramos un pacientes podamos filtrar otro directamente desde ahi sin tener que poner el mostrar todos
-        {
-            NegocioPacientes neg_Pacientes = new NegocioPacientes();
-            DataSet ds = new DataSet();
-            ds = neg_Pacientes.ObtenerPacientesxMedicos((int)Session["ID"]);
-            gvPacientesxMedicos.DataSource = ds;
-        }
         protected void btnFiltrar_Click(object sender, EventArgs e)
         {
             string dni = txtBuscarxDni.Text;
+            int idUsuario= (int)Session["ID"];
             DataSet ds = new DataSet();
             NegocioPacientes ng_Pacientes = new NegocioPacientes();
-            ds = ng_Pacientes.ObtenerPacientesxMedicoxDni(dni, (int)Session["ID"]);
-            llenarGrilla(ds);
-            GrillaEscondia();
-
+            ds = ng_Pacientes.ObtenerPacientesxMedicoxDni(dni, idUsuario);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                lblMensaje.Text = "";
+                llenarGrilla(ds);
+            }
+            else
+            {
+                lblMensaje.Text = "No se encontraron pacientes con ese DNI.";
+                ds = null;
+                llenarGrilla(ds);
+            }
         }
 
         protected void btnMostrarTodo_Click(object sender, EventArgs e)
         {
-            NegocioPacientes neg_Pacientes = new NegocioPacientes();
-            DataSet ds = new DataSet();
-            ds = neg_Pacientes.ObtenerPacientesxMedicos((int)Session["ID"]);
-            llenarGrilla(ds);
-
+            GrillaCompleta();
+            lblMensaje.Text = "";
         }
 
         protected void chkPresente_CheckedChanged(object sender, EventArgs e)

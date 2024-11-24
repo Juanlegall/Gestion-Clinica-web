@@ -38,7 +38,7 @@
             <!-- Encabezado -->
             <div class="mb-4 text-center">
                 <h2 class="text-center text-decoration-underline">Pacientes del Médico</h2>
-                <asp:Label ID="lblMensaje" runat="server" CssClass="d-block text-center mt-2 fs-4 fw-bold text-primary"></asp:Label>
+                <asp:Label ID="lblBienvenido" runat="server" CssClass="d-block text-center mt-2 fs-4 fw-bold text-primary"></asp:Label>
                <asp:Label ID="lbl_especialidad" runat="server" CssClass="d-block text-center fs-5"></asp:Label>
             </div>
 
@@ -48,9 +48,13 @@
                 <asp:Label ID="lblBuscar" runat="server" Text="Buscar por DNI del paciente"></asp:Label>
                 <div class="input-group">
                     <asp:TextBox ID="txtBuscarxDni" runat="server" CssClass="form-control" placeholder="Ingrese DNI"></asp:TextBox>
-                    <asp:Button ID="btnFiltrar" runat="server" CssClass="btn btn-primary" Text="Filtrar" />
-                </div>
+                    <asp:Button ID="btnFiltrar" runat="server" OnClick="btnFiltrar_Click" CssClass="btn btn-primary" Text="Filtrar" />
+                    <asp:Button ID="btnMostrar" runat="server" OnClick="btnMostrarTodo_Click" CssClass="btn btn-secondary" Text="Mostrar Todo" />
+                    <br />
             </div>
+                <div class="mb-3">
+                    <asp:Label ID="lblMensaje" runat="server" CssClass="text-danger"></asp:Label>
+                </div>
 
             <!-- TABLA DE PACIENTES -->
             <div class="table-responsive">

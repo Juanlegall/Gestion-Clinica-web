@@ -142,8 +142,9 @@ namespace Vistas
             txtLegajo.Text = "";
             ddlEspecialidades.SelectedIndex = 0;
         }
-        protected void btnAgregar_Click(object sender, EventArgs e)
+        protected void btnMostrarTodos_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
             RecargarDatosGridView();
             LimpiarCampos();
         }
@@ -163,12 +164,14 @@ namespace Vistas
 
                 grdAdministracionMedicos.DataSource = ds;
                 grdAdministracionMedicos.DataBind();
-
+                lblMensaje.Text = "";
             }
-
-
-
-
+            else
+            {
+                lblMensaje.Text = "No se encontraron Medicos";
+                grdAdministracionMedicos.DataSource = null;
+                grdAdministracionMedicos.DataBind();
+            }
 
         }
 

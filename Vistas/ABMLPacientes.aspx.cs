@@ -99,6 +99,7 @@ namespace Vistas
                 grdVPacientes.DataSource = dsPacientes;
                 grdVPacientes.DataBind();
                 txtBuscarPaciente.Text = "";
+                lblMensaje.Text = "";
             }
             else
             {
@@ -111,6 +112,7 @@ namespace Vistas
 
         protected void btnMostrar_Click(object sender, EventArgs e)
         {
+            lblMensaje.Text = "";
             RecargarDatosGridView();
         }
         
