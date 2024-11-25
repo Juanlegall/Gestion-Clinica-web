@@ -14,6 +14,7 @@
         function showModal(id) {
             document.getElementById('<%= hfSelectedId.ClientID %>').value = id;
             var modal = new bootstrap.Modal(document.getElementById('observacionModal'));
+       
             modal.show();
         }
     </script>
@@ -32,6 +33,10 @@
         background-color: #f5f5f5; /* Color de fondo para encabezados */
         font-weight: bold; /* Texto en negrita */
     }
+    .hidden-column {
+        display: none;
+    }
+
 </style>
 </head>
 <body class="bg-light">
@@ -75,11 +80,15 @@
     <asp:GridView ID="gvPacientesxMedicos" runat="server" AutoGenerateColumns="False" CssClass="custom-grid">
         <Columns>
             <asp:TemplateField>
+                <HeaderStyle CssClass="hidden-column" />
+                <ItemStyle CssClass="hidden-column" />
                 <ItemTemplate>
                     <asp:HiddenField ID="hfIdTurno" runat="server" Value='<%# Bind("idTurno") %>' />
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField>
+                <HeaderStyle CssClass="hidden-column" />
+                <ItemStyle CssClass="hidden-column" />
                 <ItemTemplate>
                     <asp:HiddenField ID="hfIdPaciente" runat="server" Value='<%# Bind("idPaciente") %>' />
                 </ItemTemplate>
@@ -89,44 +98,9 @@
                     <asp:Label ID="lblDni" runat="server" Text='<%# Bind("dni") %>' CssClass="label-cell"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Nombre">
-                <ItemTemplate>
-                    <asp:Label ID="lblNombre" runat="server" Text='<%# Bind("nombre") %>' CssClass="label-cell"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
             <asp:TemplateField HeaderText="Apellido">
                 <ItemTemplate>
                     <asp:Label ID="lblApellido" runat="server" Text='<%# Bind("apellido") %>' CssClass="label-cell"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Genero">
-                <ItemTemplate>
-                    <asp:Label ID="lblSexo" runat="server" Text='<%# Bind("sexo") %>' CssClass="label-cell"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Nacionalidad">
-                <ItemTemplate>
-                    <asp:Label ID="lblNacionalidad" runat="server" Text='<%# Bind("nacionalidad") %>' CssClass="label-cell"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Provincia">
-                <ItemTemplate>
-                    <asp:Label ID="lblProvincia" runat="server" Text='<%# Bind("provincia") %>' CssClass="label-cell"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Localidad">
-                <ItemTemplate>
-                    <asp:Label ID="lblLocalidad" runat="server" Text='<%# Bind("localidad") %>' CssClass="label-cell"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Direccion">
-                <ItemTemplate>
-                    <asp:Label ID="lblDireccion" runat="server" Text='<%# Bind("direccion") %>' CssClass="label-cell"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:TemplateField HeaderText="Fecha Nacimiento">
-                <ItemTemplate>
-                    <asp:Label ID="lblNacimiento" runat="server" Text='<%# Eval("fechaNacimiento", "{0:yyyy-MM-dd}") %>' CssClass="label-cell"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Correo">
@@ -134,14 +108,14 @@
                     <asp:Label ID="lblCorreo" runat="server" Text='<%# Bind("correo") %>' CssClass="label-cell"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Telefono">
-                <ItemTemplate>
-                    <asp:Label ID="lblTelefono" runat="server" Text='<%# Bind("telefono") %>' CssClass="label-cell"></asp:Label>
-                </ItemTemplate>
-            </asp:TemplateField>
             <asp:TemplateField HeaderText="Fecha Turno">
                 <ItemTemplate>
                     <asp:Label ID="lblFechaTurno" runat="server" CssClass="label-cell" Text='<%# Eval("FechaTurno", "{0:yyy-MM-dd}") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Hora Turno">
+                <ItemTemplate>
+                    <asp:Label ID="lblHoraConsulta" runat="server" Text='<%# Bind("HoraConsulta") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Observaciones">

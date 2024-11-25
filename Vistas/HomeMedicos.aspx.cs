@@ -108,7 +108,9 @@ namespace Vistas
 
             // Limpiar campos si es necesario
             txtTitulo.Text = "";
+            txtDescripcion.Text= "";
         }
 
     }
+
 }

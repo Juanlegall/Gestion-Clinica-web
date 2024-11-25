@@ -24,7 +24,7 @@ namespace Negocio
             foreach (DataRow dr in datosPresentismo.Rows)
             {
                 strDatos = strDatos + "[";
-                strDatos = strDatos + "'"+ dr[0] + "',"+ dr[1];
+                strDatos = strDatos + "'"+ dr[0] + "',"+ dr[1]; // recorro los ausentes y presentes
                 strDatos = strDatos + "],";
             }
             strDatos = strDatos + "]";

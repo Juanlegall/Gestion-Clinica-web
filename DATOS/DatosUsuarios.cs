@@ -40,7 +40,7 @@ namespace DATOS
         }
 
 
-        public (string nombre, int id) traerNombre_Rol(string usuario, string contraseña)
+        public (string nombre, int id) traerNombre_Rol(string usuario, string contraseña) // retornamos el nombre y el id del rol
         {
             DataSet ds = new DataSet();
             string consulta = $"Select nombre,id_rol_us from usuarios where nombre_usuario = '{usuario}' and contraseña COLLATE Latin1_General_CS_AS = '{contraseña}'";
@@ -67,7 +67,7 @@ namespace DATOS
 
         }
 
-        public DataSet traerDiasHorarios(int idMedico)
+        public DataSet traerDiasHorarios(int idMedico) //llenar el select de la tabla medicos para ver sus horarios
         {
             DataSet ds = new DataSet();
             string consulta = $"SELECT CONCAT(LTRIM(RTRIM(dias)), ' ', LTRIM(RTRIM(horario_inicio)), '-', LTRIM(RTRIM(horario_fin))) AS DiasHorarios FROM HorariosMedicos INNER JOIN usuarios AS us ON us.id_usuario = id_usuario_HM WHERE us.id_usuario = '{idMedico}'";
@@ -79,7 +79,7 @@ namespace DATOS
         }
 
 
-        public DataSet obtenerDatosMedicos(string idMedico)
+        public DataSet obtenerDatosMedicos(string idMedico) // para llenar el editar con sus datos
         {
             DataSet ds = new DataSet();
             string consulta = $"select nombre , apellido , sexo ,  nacionalidad , direccion , correo_electronico , telefono , legajo , dni , id_especialidad_us as idEspecialidad,es.nombre_especialidad as especialidad,id_provincia_us as idProvincia ,pr.nombre_provincia as provincia , id_localidad_us as idLocalidad, lo.nombre_localidad as localidad from usuarios inner join especialidades as es on es.id_especialidad = id_especialidad_us inner join localidades as lo on lo.id_provincia = id_provincia_us and lo.id_localidad = id_localidad_us inner join provincias as pr on pr.id_provincia = id_provincia_us where id_usuario = {idMedico}";
@@ -185,7 +185,7 @@ namespace DATOS
         }
 
 
-        public DataSet selectMedicosPorEspecialidad(string idEspecialidad)
+        public DataSet selectMedicosPorEspecialidad(string idEspecialidad) //me trae los medicos segun la especialidad elegida
         {
             string consulta = $"select Usuarios.nombre as medico , Usuarios.id_usuario as idMedico from usuarios inner join Especialidades as e on e.id_especialidad = Usuarios.id_especialidad_us where Usuarios.id_especialidad_us = {idEspecialidad}";
             DataSet ds = accesoDatos.getData(consulta);

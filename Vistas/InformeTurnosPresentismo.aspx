@@ -24,9 +24,9 @@
 
             };
 
-            var chart = new google.visualization.PieChart(document.getElementById('graficoPresentismo'));
+            var chart = new google.visualization.PieChart(document.getElementById('graficoPresentismo')); //agarra el elemento y lo transforma a grafico
 
-            chart.draw(data, options);
+            chart.draw(data, options); // aca llena el grafico
         }
     </script>
     <style>
