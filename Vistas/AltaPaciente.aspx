@@ -6,6 +6,8 @@
     <meta charset="utf-8" />
     <title>Alta Paciente</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
     <style>
         .form-container {
             background-color: #f8f9fa;
@@ -65,6 +67,7 @@
                         <label for="txtCorreo">Correo Electrónico</label>
                         <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revCorreo" runat="server"  ControlToValidate="txtCorreo" ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$">*</asp:RegularExpressionValidator>
                     </div>
                     <%-- Teléfono --%>
                     <div class="form-group ">
@@ -82,6 +85,11 @@
                     <div class="form-group ">
                         <label for="txtFecNacimiento">Fecha de Nacimiento</label>
                         <asp:TextBox ID="txtFecNacimiento" runat="server" CssClass="form-control"></asp:TextBox>
+                        <script>
+                            $(document).ready(function () {
+                                $("#<%= txtFecNacimiento.ClientID %>").inputmask("9999/99/99", { placeholder: "YYYY/MM/DD" });
+                            });
+                        </script>
                         <asp:RequiredFieldValidator ID="rfvFecNacimiento" runat="server" ControlToValidate="txtFecNacimiento" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
                     </div>
                     <%--Provincia--%>

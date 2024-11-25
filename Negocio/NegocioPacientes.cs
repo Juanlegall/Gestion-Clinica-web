@@ -80,9 +80,9 @@ namespace Negocio
         {
             return dts.ObtenerPacientesPorDni(dni);
         }
-        public DataSet ObtenerPacientesxMedicoxDni(string dni, int IdMedico)
+        public DataSet Filtros(string dni, int IdMedico, string desde, string hasta)
         {
-            return dts.obtenerPacientesxMedicosxDni(dni, IdMedico);
+            return dts.Filtros(dni, IdMedico, desde, hasta);
         }
         public DataSet ObtenerPacientesxMedicos(int ID)
                 {

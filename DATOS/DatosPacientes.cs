@@ -96,7 +96,7 @@ namespace DATOS
             string consulta = $"SELECT  p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, " +
                 $"p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad AS nacionalidad, p.direccion AS direccion, p.correo_electronico AS correo," +
                 $" p.telefono AS telefono, p.fecha_nacimiento_p AS fechaNacimiento, prov.nombre_provincia AS provincia," +
-                $" loc.nombre_localidad AS localidad, realizado_t as realizado, id_turno as idTurno" +
+                $" loc.nombre_localidad AS localidad, realizado_t as realizado, id_turno as idTurno, fecha_consulta as FechaTurno" +
                 $" FROM Pacientes AS p " +
                 $"INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P " +
                 $"INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P " +
@@ -106,23 +106,40 @@ namespace DATOS
             ds = accesoDatos.getData(consulta);
             return ds;
         }
-        public DataSet obtenerPacientesxMedicosxDni(string dni, int IdMedico)
+        public DataSet Filtros(string dni, int IdMedico, string desde, string hasta)
         {
             DataSet ds = new DataSet();
-            string consulta = $"SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, " +
-               $"p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad AS nacionalidad, p.direccion AS direccion, p.correo_electronico AS correo," +
-               $" p.telefono AS telefono, p.fecha_nacimiento_p AS fechaNacimiento, prov.nombre_provincia AS provincia," +
-               $" loc.nombre_localidad AS localidad, realizado_t as realizado, id_turno as idTurno" +
-               $" FROM Pacientes AS p " +
-               $"INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P " +
-               $"INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P " +
-               $"INNER JOIN Turnos AS tur ON tur.id_paciente_t = p.id_paciente" +
-               $" WHERE id_usuario_t = @IdMedico" +
-               $" AND dni_p Like '%' + @dni + '%'";
-            SqlCommand cmd = new SqlCommand(consulta);
+            string consulta = @"SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, " +
+               "p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad AS nacionalidad, p.direccion AS direccion, p.correo_electronico AS correo," +
+               " p.telefono AS telefono, p.fecha_nacimiento_p AS fechaNacimiento, prov.nombre_provincia AS provincia," +
+               " loc.nombre_localidad AS localidad, realizado_t as realizado, id_turno as idTurno, fecha_consulta as FechaTurno" +
+               " FROM Pacientes AS p " +
+               "INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P " +
+               "INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P " +
+               "INNER JOIN Turnos AS tur ON tur.id_paciente_t = p.id_paciente" +
+               $" WHERE id_usuario_t = {IdMedico}";
+            if (dni != "")
+            {
+                consulta += $" AND dni_p Like '%{dni}%'";
+            }
+            if (desde!= "" || hasta!= "")
+            {
+                if (desde == "")
+                {
+                    desde = "1900-01-01";
+                }
+                if (hasta=="")
+                {
+                    hasta ="2100-01-01";
+                }
+                consulta += $"and fecha_consulta between '{desde}' and '{hasta}'";
+            }
+            
+            ds = accesoDatos.getData(consulta);
+           /*SqlCommand cmd = new SqlCommand(consulta);
             cmd.Parameters.AddWithValue("@IdMedico", IdMedico);
             cmd.Parameters.AddWithValue("@dni", dni);
-            ds = accesoDatos.getData(cmd);
+            ds = accesoDatos.getData(cmd);*/
             return ds;
         }
 

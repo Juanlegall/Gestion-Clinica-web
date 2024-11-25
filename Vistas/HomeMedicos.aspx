@@ -6,8 +6,10 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
     <script>
         function showModal(id) {
             document.getElementById('<%= hfSelectedId.ClientID %>').value = id;
@@ -48,6 +50,18 @@
                 <asp:Label ID="lblBuscar" runat="server" Text="Buscar por DNI del paciente"></asp:Label>
                 <div class="input-group">
                     <asp:TextBox ID="txtBuscarxDni" runat="server" CssClass="form-control" placeholder="Ingrese DNI"></asp:TextBox>
+                    <asp:TextBox ID="txtDesde" runat="server" CssClass="form-control" placeholder="Turnos desde"></asp:TextBox>
+                    <script>
+                        $(document).ready(function () {
+                            $("#<%= txtDesde.ClientID %>").inputmask("9999/99/99", { placeholder: "YYYY/MM/DD" });
+                        });
+                    </script>
+                    <asp:TextBox ID="txtHasta" runat="server" CssClass="form-control" placeholder="Turnos Hasta"></asp:TextBox>
+                    <script>
+                        $(document).ready(function () {
+                            $("#<%= txtHasta.ClientID %>").inputmask("9999/99/99", { placeholder: "YYYY/MM/DD" });
+                        });
+                    </script>
                     <asp:Button ID="btnFiltrar" runat="server" OnClick="btnFiltrar_Click" CssClass="btn btn-primary" Text="Filtrar" />
                     <asp:Button ID="btnMostrar" runat="server" OnClick="btnMostrarTodo_Click" CssClass="btn btn-secondary" Text="Mostrar Todo" />
                     <br />
@@ -58,7 +72,7 @@
 
             <!-- TABLA DE PACIENTES -->
             <div class="table-responsive">
-    <asp:GridView ID="gvPacientesxMedicos" runat="server" AutoGenerateColumns="False" CssClass="custom-grid">
+    <asp:GridView ID="gvPacientesxMedicos" runat="server" AutoGenerateColumns="False" CssClass="custom-grid" OnSelectedIndexChanged="gvPacientesxMedicos_SelectedIndexChanged">
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
@@ -123,6 +137,11 @@
             <asp:TemplateField HeaderText="Telefono">
                 <ItemTemplate>
                     <asp:Label ID="lblTelefono" runat="server" Text='<%# Bind("telefono") %>' CssClass="label-cell"></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="Fecha Turno">
+                <ItemTemplate>
+                    <asp:Label ID="lblFechaTurno" runat="server" CssClass="label-cell" Text='<%# Eval("FechaTurno", "{0:yyy-MM-dd}") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Observaciones">

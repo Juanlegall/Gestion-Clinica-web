@@ -1,6 +1,7 @@
 ﻿using Negocio;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Web;
@@ -50,20 +51,24 @@ namespace Vistas
             string dni = txtBuscarxDni.Text;
             int idUsuario= (int)Session["ID"];
             DataSet ds = new DataSet();
+            NegocioTurnos ng_Turnos = new NegocioTurnos();
             NegocioPacientes ng_Pacientes = new NegocioPacientes();
-            ds = ng_Pacientes.ObtenerPacientesxMedicoxDni(dni, idUsuario);
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                lblMensaje.Text = "";
-                llenarGrilla(ds);
+            string desde =txtDesde.Text;
+            string hasta =txtHasta.Text;
+                ds = ng_Pacientes.Filtros(dni, idUsuario, desde, hasta);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    lblMensaje.Text = "";
+                    llenarGrilla(ds);
+                }
+                else
+                {
+                    lblMensaje.Text = "No se encontraron coincidencias.";
+                    ds = null;
+                    llenarGrilla(ds);
+                }
             }
-            else
-            {
-                lblMensaje.Text = "No se encontraron pacientes con ese DNI.";
-                ds = null;
-                llenarGrilla(ds);
-            }
-        }
+        
 
         protected void btnMostrarTodo_Click(object sender, EventArgs e)
         {
