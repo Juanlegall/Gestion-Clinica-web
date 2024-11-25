@@ -4,6 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
@@ -81,6 +83,15 @@
 
                     </div>
 
+           <div class="form-group px-0 d-flex justify-content-center align-items-center col-6" style="margin-bottom: 10px;">
+               Fecha Nacimiento
+      <asp:TextBox ID="txtFecha" runat="server" class="form-control campo"></asp:TextBox>
+                <script>
+     $(document).ready(function () {
+         $("#<%= txtFecha.ClientID %>").inputmask("9999/99/99", { placeholder: "YYYY/MM/DD" });
+     });
+                </script>
+     <asp:RequiredFieldValidator ID="rfvFecha" runat="server" ControlToValidate="txtFecha">*</asp:RequiredFieldValidator>
                     <div class="form-group ">
                         Fecha Nacimiento
                         <asp:TextBox ID="txtFecha" runat="server" class="form-control campo"></asp:TextBox>

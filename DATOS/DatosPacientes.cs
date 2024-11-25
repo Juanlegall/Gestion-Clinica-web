@@ -193,9 +193,9 @@ namespace DATOS
                             direccion = '{direccion}',
                             correo_electronico = '{correo}',
                             telefono = '{telefono}',
-                             fecha_nacimiento_p = '{fecha.ToString("dd-MM-yyyy")}',
+                             fecha_nacimiento_p = '{fecha.ToString("yyyy-MM-dd")}',
                             dni_p = '{dni}'
-                        WHERE id_paciente = '{id}'";
+                        WHERE id_paciente = {id}";
 
             // Llamamos a 'execute' pasándole la consulta SQL como string
             int filasAfectadas = accesoDatos.execute(consulta);

@@ -6,8 +6,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Xml.Linq;
-
 
 namespace Vistas
 {
@@ -38,8 +36,8 @@ namespace Vistas
                     txtCorreo.Text = datosPacientes.Tables[0].Rows[0]["correo"].ToString();
                     txtTelefono.Text = datosPacientes.Tables[0].Rows[0]["telefono"].ToString();
                     txtDni.Text = datosPacientes.Tables[0].Rows[0]["dni"].ToString();
-                    txtFecha.Text = datosPacientes.Tables[0].Rows[0]["fechaNacimiento"].ToString();
-
+                    txtFecha.Text = Convert.ToDateTime(datosPacientes.Tables[0].Rows[0]["fechaNacimiento"]).ToString("yyyy/MM/dd");
+                    
 
                     ddlProvincias.DataSource = datosProvincias.Tables[0];
                     ddlProvincias.DataTextField = "provincia";
@@ -98,7 +96,7 @@ namespace Vistas
 
 
 
-            Boolean insertado = ngs.pacienteEditado(id, idProvincia, idLocalidad, nombre, apellido, sexo, nacionalidad, direccion, correo, telefono, fecha, dni);
+            Boolean insertado = ngs.pacienteEditado( id, idProvincia, idLocalidad, nombre, apellido, sexo, nacionalidad, direccion, correo, telefono, fecha, dni);
 
             if (insertado == true)
             {
@@ -117,7 +115,6 @@ namespace Vistas
         {
             txtNombre.Text = "";
             txtApellido.Text = "";
-
             txtSexo.Text = "";
             txtNacionalidad.Text = "";
             txtDireccion.Text = "";
