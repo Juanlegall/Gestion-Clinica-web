@@ -14,7 +14,7 @@ namespace Vistas
     public partial class AltaMedico : System.Web.UI.Page
 
     {
-        private int idMedico
+        protected int idMedico
         {
             get { return ViewState["id_medico"] != null ? (int)ViewState["id_medico"] : 0; }
             set { ViewState["id_medico"] = value; }

@@ -104,6 +104,7 @@ namespace Vistas
             {
                 lblMensaje.Text = "Paciente agregado con éxito";
                 LimpiarCampos();
+                Response.Redirect("ABMLPacientes.aspx");
             }
             else
             {

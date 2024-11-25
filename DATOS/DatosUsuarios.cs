@@ -61,7 +61,7 @@ namespace DATOS
         public DataSet obtenerTablaMedicos()
         {
             DataSet ds = new DataSet();
-            string consulta = $"select id_usuario as idMedico, nombre , apellido ,legajo , p.nombre_provincia as provincia, lo.nombre_localidad as localidad , es.nombre_especialidad as especialidad from usuarios inner join provincias as p on p.id_provincia = id_provincia_us inner join localidades as lo on lo.id_localidad =id_localidad_us inner join Especialidades as es on es.id_especialidad = id_especialidad_us where id_rol_us = 2";
+            string consulta = $"select id_usuario as idMedico, nombre , apellido ,legajo , p.nombre_provincia as provincia, lo.nombre_localidad as localidad , es.nombre_especialidad as especialidad from usuarios inner join provincias as p on p.id_provincia = id_provincia_us inner join localidades as lo on lo.id_localidad =id_localidad_us inner join Especialidades as es on es.id_especialidad = id_especialidad_us where id_rol_us = 2 and activo=1";
             ds = accesoDatos.getData(consulta);
             return ds;
 
@@ -82,7 +82,7 @@ namespace DATOS
         public DataSet obtenerDatosMedicos(string idMedico) // para llenar el editar con sus datos
         {
             DataSet ds = new DataSet();
-            string consulta = $"select nombre , apellido , sexo ,  nacionalidad , direccion , correo_electronico , telefono , legajo , dni , id_especialidad_us as idEspecialidad,es.nombre_especialidad as especialidad,id_provincia_us as idProvincia ,pr.nombre_provincia as provincia , id_localidad_us as idLocalidad, lo.nombre_localidad as localidad from usuarios inner join especialidades as es on es.id_especialidad = id_especialidad_us inner join localidades as lo on lo.id_provincia = id_provincia_us and lo.id_localidad = id_localidad_us inner join provincias as pr on pr.id_provincia = id_provincia_us where id_usuario = {idMedico}";
+            string consulta = $"select nombre , apellido , sexo ,  nacionalidad , direccion , correo_electronico , telefono , legajo , dni , id_especialidad_us as idEspecialidad,es.nombre_especialidad as especialidad,id_provincia_us as idProvincia ,pr.nombre_provincia as provincia , id_localidad_us as idLocalidad, lo.nombre_localidad as localidad from usuarios inner join especialidades as es on es.id_especialidad = id_especialidad_us inner join localidades as lo on lo.id_provincia = id_provincia_us and lo.id_localidad = id_localidad_us inner join provincias as pr on pr.id_provincia = id_provincia_us where id_usuario = {idMedico} and activo=1";
             ds = accesoDatos.getData(consulta);
 
             return ds;
@@ -121,9 +121,9 @@ namespace DATOS
             comando.Parameters.Add("@telefono", SqlDbType.VarChar, 50).Value = usuario.telefono;
             comando.Parameters.Add("@nombre_usuario", SqlDbType.VarChar, 50).Value = usuario.nombre_usuario;
             comando.Parameters.Add("@contraseña", SqlDbType.VarChar, 50).Value= usuario.contraseña;
+            comando.Parameters.Add("@activo", SqlDbType.Bit).Value = 1;
 
-
-            int idMedico = idMedico = Convert.ToInt32(comando.ExecuteScalar());
+            int idMedico = _ = Convert.ToInt32(comando.ExecuteScalar());
             return idMedico;
 
         }
@@ -156,7 +156,7 @@ namespace DATOS
         public DataSet medicosFiltrados(string legajo, string apellido, string especialidad)
         {
             DataSet ds = new DataSet();
-            string consulta = $"select id_usuario as idMedico, nombre , apellido ,legajo , p.nombre_provincia as provincia, lo.nombre_localidad as localidad , es.nombre_especialidad as especialidad from usuarios inner join provincias as p on p.id_provincia = id_provincia_us inner join localidades as lo on lo.id_localidad =id_localidad_us inner join Especialidades as es on es.id_especialidad = id_especialidad_us where id_rol_us = 2 and 1=1";
+            string consulta = $"select id_usuario as idMedico, nombre , apellido ,legajo , p.nombre_provincia as provincia, lo.nombre_localidad as localidad , es.nombre_especialidad as especialidad from usuarios inner join provincias as p on p.id_provincia = id_provincia_us inner join localidades as lo on lo.id_localidad =id_localidad_us inner join Especialidades as es on es.id_especialidad = id_especialidad_us where id_rol_us = 2 and 1=1 and activo=1";
             if (legajo!="")
             {
                 consulta += $" AND legajo = '{legajo}'";
@@ -187,7 +187,7 @@ namespace DATOS
 
         public DataSet selectMedicosPorEspecialidad(string idEspecialidad) //me trae los medicos segun la especialidad elegida
         {
-            string consulta = $"select Usuarios.nombre as medico , Usuarios.id_usuario as idMedico from usuarios inner join Especialidades as e on e.id_especialidad = Usuarios.id_especialidad_us where Usuarios.id_especialidad_us = {idEspecialidad}";
+            string consulta = $"select Usuarios.nombre as medico , Usuarios.id_usuario as idMedico from usuarios inner join Especialidades as e on e.id_especialidad = Usuarios.id_especialidad_us where Usuarios.id_especialidad_us = {idEspecialidad} and activo=1";
             DataSet ds = accesoDatos.getData(consulta);
 
             return ds;

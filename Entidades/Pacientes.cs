@@ -20,13 +20,15 @@ namespace Entidades
         public int id_paciente;
         public int id_localidad;
         public int id_provincia;
+        public int activo { get; set; }
 
 
 
 
         public Pacientes()
         {
-
+            //cuando se crea el paciente, ya esta activo
+            activo = 1 ;
         }
 
         public void setNombre(string nombre)

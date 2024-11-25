@@ -243,6 +243,7 @@
                                 Cargar Horarios
                             </button>
 
+
                             <%--Offcanvas--%>
                             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                                 <div class="offcanvas-header">
@@ -530,6 +531,7 @@
 
                 </div>
             </div>
+        </div>
     </form>
 </body>
 </html>

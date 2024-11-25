@@ -21,13 +21,13 @@ namespace Vistas
                 dset = ngsP.ObtenerTablaPacientes();
                 grdVPacientes.DataSource = dset;
                 grdVPacientes.DataBind();
-
             }
         }
 
         protected void btn_AltaPaciente_Click(object sender, EventArgs e)
         {
             Response.Redirect("AltaPaciente.aspx");
+            RecargarDatosGridView();
         }
         private void RecargarDatosGridView()
         {

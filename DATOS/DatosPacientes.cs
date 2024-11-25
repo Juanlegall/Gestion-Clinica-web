@@ -17,7 +17,7 @@ namespace DATOS
         public DataSet ObtenerTablaPacientes()
         {
             DataSet ds = new DataSet();
-            string consulta = "SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad, p.direccion, p.correo_electronico AS correo, p.telefono, p.fecha_nacimiento_p AS fechaNacimiento, prov.nombre_provincia AS provincia, loc.nombre_localidad AS localidad FROM Pacientes AS p INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P";
+            string consulta = "SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad, p.direccion, p.correo_electronico AS correo, p.telefono, p.fecha_nacimiento_p AS fechaNacimiento, prov.nombre_provincia AS provincia, loc.nombre_localidad AS localidad FROM Pacientes AS p INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P where p.activo=1";
 
             // Obteniendo el conjunto de datos
             ds = accesoDatos.getData(consulta);
@@ -39,6 +39,7 @@ namespace DATOS
             comando.Parameters.Add("@correo_electronico", SqlDbType.VarChar).Value = paciente.correo_electronico;
             comando.Parameters.Add("@telefono", SqlDbType.VarChar).Value = paciente.telefono;
             comando.Parameters.Add("@fecha_nacimiento_p", SqlDbType.Date).Value = paciente.fecha_nacimiento;
+            comando.Parameters.Add("@activo", SqlDbType.Bit).Value = 1;
         }
 
         public int AgregarPaciente(Pacientes paciente)
@@ -77,6 +78,7 @@ namespace DATOS
             }
             return null;
         }
+
         private void ArmaraParametrosPacienteEliminar(ref SqlCommand comando, Pacientes pa)
         {
             SqlParameter sqlparametros = new SqlParameter();
@@ -115,7 +117,7 @@ namespace DATOS
                "INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P " +
                "INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P " +
                "INNER JOIN Turnos AS tur ON tur.id_paciente_t = p.id_paciente" +
-               $" WHERE id_usuario_t = {IdMedico}";
+               $" WHERE id_usuario_t = {IdMedico} AND p.activo=1";
             if (dni != "")
             {
                 consulta += $" AND dni_p Like '%{dni}%'";
@@ -150,7 +152,7 @@ namespace DATOS
                               "FROM Pacientes AS p " +
                               "INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P " +
                               "INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P " +
-                              "WHERE p.dni_p LIKE @dni";
+                              "WHERE p.dni_p LIKE @dni AND p.activo=1";
 
             SqlCommand cmd = new SqlCommand(consulta);
             cmd.Parameters.AddWithValue("@dni", "%" + dni + "%"); // Uso de LIKE para que el filtro sea flexible (por ejemplo, DNI parcial)
@@ -160,7 +162,7 @@ namespace DATOS
         public DataSet ObtenerDatosPacientes(string id) // es para llenar el editar de pacientes
         {
             DataSet ds = new DataSet();
-            string consulta = $"SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad, p.direccion AS direccion, p.correo_electronico AS correo, p.telefono, p.fecha_nacimiento_p AS fechaNacimiento , prov.id_provincia AS idProvincia, prov.nombre_provincia AS provincia, loc.nombre_localidad AS localidad, loc.id_localidad AS idLocalidad FROM Pacientes AS p INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P where p.id_paciente = {id}";
+            string consulta = $"SELECT p.id_paciente AS idPaciente, p.nombre_p AS nombre, p.apellido_p AS apellido, p.dni_p AS dni, p.sexo_p AS sexo, p.nacionalidad, p.direccion AS direccion, p.correo_electronico AS correo, p.telefono, p.fecha_nacimiento_p AS fechaNacimiento , prov.id_provincia AS idProvincia, prov.nombre_provincia AS provincia, loc.nombre_localidad AS localidad, loc.id_localidad AS idLocalidad FROM Pacientes AS p INNER JOIN Provincias AS prov ON prov.id_provincia = p.id_provincia_P INNER JOIN Localidades AS loc ON loc.id_localidad = p.id_localidad_P where p.id_paciente = {id} AND p.activo=1";
 
             // Obteniendo el conjunto de datos
             ds = accesoDatos.getData(consulta);

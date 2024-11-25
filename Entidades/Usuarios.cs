@@ -26,11 +26,13 @@ namespace Entidades
         public  string nombre_usuario;
         public  string contraseña;
         public  DateTime fecha_nacimiento;
+        public int activo { get; set; }
 
 
         public Usuarios()
         {
 
+            activo = 1;
         }
         public void setIdUsuario(int id)
         {
