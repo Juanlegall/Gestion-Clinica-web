@@ -30,15 +30,5 @@ namespace Vistas
             Response.Redirect(ventana);
 
         }
-
-        protected void btnAbmlMedicos_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("ABMLMedicos.aspx");
-        }
-
-        protected void btnInformes_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Informes.aspx");
-        }
     }
 }
