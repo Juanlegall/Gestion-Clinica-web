@@ -41,7 +41,7 @@ namespace DATOS
             }
             catch (Exception ex)
             {
-
+                Console.WriteLine(ex.Message);
             }
 
             return 0;
@@ -115,22 +115,7 @@ namespace DATOS
 
         }
 
-        public SqlDataAdapter Adapter(string consulta, SqlConnection cn)
-        {
-            if (cn == null || cn.State != ConnectionState.Open)
-            {
-                throw new Exception("Conexión no válida.");
-            }
-
-            try
-            {
-                return new SqlDataAdapter(consulta, cn);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al crear el adaptador: " + ex.Message);
-            }
-        }
+       
         public int ExecProceAlmace(SqlCommand comando, string nombreSP)
         {
             int FilasCambiadas;
