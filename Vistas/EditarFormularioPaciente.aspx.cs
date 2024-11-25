@@ -117,6 +117,7 @@ namespace Vistas
         {
             txtNombre.Text = "";
             txtApellido.Text = "";
+
             txtSexo.Text = "";
             txtNacionalidad.Text = "";
             txtDireccion.Text = "";
