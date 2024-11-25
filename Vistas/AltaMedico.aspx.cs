@@ -156,6 +156,19 @@ namespace Vistas
             {
                 lblMensaje.Text = "Error al agregar al Personal";
             }
+            LimpiarCampos();
+        }
+        private void LimpiarCampos()
+        {
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtDireccion.Text = "";
+            txtLegajo.Text = "";
+            txtNacionalidad.Text = "";
+            txtTelefono.Text = "";
+            ddlEspecialidad.SelectedIndex = 0;
+            ddlLocalidad.SelectedIndex = 0;
+            ddlProvincias.SelectedIndex = 0;
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)

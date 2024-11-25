@@ -10,7 +10,7 @@ namespace DATOS
 {
     public class Conexion
     {
-        private string ruta = "Data Source=FRANCISPC\\SQLEXPRESS;Initial Catalog = TP_FINAL; Integrated Security = True; Encrypt=True;TrustServerCertificate=True";
+        private string ruta = "Data Source=EMARD\\SQLEXPRESS;Initial Catalog=TP_FINAL;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public SqlConnection obtenerConexion()
         {
