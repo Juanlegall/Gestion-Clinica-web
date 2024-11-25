@@ -101,7 +101,7 @@
                     <%-- Botones --%>
                     <div class="text-center">
                         <asp:Button ID="btnAceptar" runat="server" Text="Aceptar" CssClass="btn btn-primary btn-custom me-3" OnClick="btnAceptar_Click" />
-                        <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-secondary btn-custom" OnClick="btnVolver_Click" />
+                        <asp:Button ID="btnVolver" runat="server" Text="Volver" CssClass="btn btn-secondary btn-custom" OnClick="btnVolver_Click" style="height: 34px" ValidationGroup="none" />
                     </div>
                     <div class="text-center mt-3">
                         <asp:Label ID="lblMensaje" runat="server" CssClass="text-success"></asp:Label>
