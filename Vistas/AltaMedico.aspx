@@ -9,6 +9,7 @@
     <%--Bootstrap--%>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <script type="text/javascript">
         function handleImageError(image) {
             image.onerror = null; // prevents looping
@@ -20,6 +21,38 @@
             document.getElementById('btnHorarios').disabled = false;
         }
 
+    </script>
+    <script>
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById('<%= txtContraseña.ClientID %>');
+            var toggleIcon = document.getElementById('togglePasswordIcon');
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleIcon.classList.remove("bi-eye");
+                toggleIcon.classList.add("bi-eye-slash");
+            } else {
+                passwordField.type = "password";
+                toggleIcon.classList.remove("bi-eye-slash");
+                toggleIcon.classList.add("bi-eye");
+            }
+        }
+    </script>
+    <script>
+        function mostrarContraseña() {
+            var passwordField = document.getElementById('<%= txtConfirmarContraseña.ClientID %>');
+           var toggleIcon = document.getElementById('togglePasswordIcon2');
+
+           if (passwordField.type === "password") {
+               passwordField.type = "text";
+               toggleIcon.classList.remove("bi-eye");
+               toggleIcon.classList.add("bi-eye-slash");
+           } else {
+               passwordField.type = "password";
+               toggleIcon.classList.remove("bi-eye-slash");
+               toggleIcon.classList.add("bi-eye");
+           }
+       }
     </script>
 
     <style>
@@ -155,7 +188,14 @@
                                 <%-- Contraseña --%>
                                 <div class="form-group">
                                     <label for="txtContraseña">Contraseña</label>
-                                    <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
+                                    <div class="input-group">
+                                        <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" onclick="togglePasswordVisibility()" style="cursor: pointer;">
+                                                <i id="togglePasswordIcon" class="bi bi-eye"></i>
+                                            </span>
+                                        </div>
+                                    </div>
                                     <asp:RequiredFieldValidator ID="rfvContraseña" runat="server" ControlToValidate="txtContraseña" ErrorMessage="*" CssClass="text-danger"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -163,7 +203,14 @@
                                 <%-- Confirmar Contraseña --%>
                                 <div class="form-group">
                                     <label for="txtConfirmarContraseña">Confirmar Contraseña</label>
-                                    <asp:TextBox ID="txtConfirmarContraseña" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
+                                    <div class="input-group">
+                                        <asp:TextBox ID="txtConfirmarContraseña" runat="server" TextMode="Password" class="form-control"></asp:TextBox>
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" onclick="mostrarContraseña()" style="cursor: pointer;">
+                                                <i id="togglePasswordIcon2" class="bi bi-eye"></i>
+                                            </span>
+                                        </div>
+                                    </div>
                                     <asp:CompareValidator ID="comVContraseña" runat="server" ControlToCompare="txtContraseña" ControlToValidate="txtConfirmarContraseña" ErrorMessage="*" CssClass="text-danger"></asp:CompareValidator>
                                 </div>
                             </div>

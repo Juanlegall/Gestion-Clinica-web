@@ -4,12 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Administración Médicos</title>
     <!-- Incluir Bootstrap para usar sus estilos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -41,7 +40,7 @@
 
             <!-- GridView -->
             <div class="table-responsive">
-                <asp:GridView ID="grdAdministracionMedicos" runat="server" AutoGenerateColumns="False" 
+                <asp:GridView ID="grdAdministracionMedicos" runat="server" AutoGenerateColumns="False"
                     CssClass="table table-bordered table-striped" DataKeyNames="idMedico"
                     OnRowCommand="grdAdministracionMedicos_RowCommand" OnRowDataBound="grdAdministracionMedicos_RowDataBound" AllowPaging="True" OnPageIndexChanging="grdAdministracionMedicos_PageIndexChanging" PageSize="5">
                     <Columns>

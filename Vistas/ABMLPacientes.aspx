@@ -11,7 +11,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="container mt-4">
-            <h1 class="text-center mb-4"> Administracion Pacientes</h1>
+            <h1 class="text-center mb-4">Administracion Pacientes</h1>
 
             <!-- Buscador -->
             <div class="row mb-3">
@@ -51,7 +51,7 @@
                                 <asp:Button
                                     ID="btnEditar"
                                     runat="server"
-                                    CssClass="btn btn-primary btn-sm me-2"
+                                    CssClass="btn btn-warning btn-sm me-2"
                                     CommandArgument='<%# Eval("idPaciente") %>'
                                     CommandName="Editar"
                                     Text="Editar" />
