@@ -72,7 +72,7 @@
 
             <!-- TABLA DE PACIENTES -->
             <div class="table-responsive">
-    <asp:GridView ID="gvPacientesxMedicos" runat="server" AutoGenerateColumns="False" CssClass="custom-grid" OnSelectedIndexChanged="gvPacientesxMedicos_SelectedIndexChanged">
+    <asp:GridView ID="gvPacientesxMedicos" runat="server" AutoGenerateColumns="False" CssClass="custom-grid">
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
