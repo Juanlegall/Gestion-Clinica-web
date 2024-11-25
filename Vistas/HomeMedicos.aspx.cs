@@ -53,8 +53,8 @@ namespace Vistas
             DataSet ds = new DataSet();
             NegocioTurnos ng_Turnos = new NegocioTurnos();
             NegocioPacientes ng_Pacientes = new NegocioPacientes();
-            string desde =txtDesde.Text;
-            string hasta =txtHasta.Text;
+            string desde =txtDesde.Text.Trim();
+            string hasta =txtHasta.Text.Trim();
                 ds = ng_Pacientes.Filtros(dni, idUsuario, desde, hasta);
                 if (ds.Tables[0].Rows.Count > 0)
                 {

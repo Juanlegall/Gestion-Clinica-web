@@ -40,13 +40,13 @@
             <br />
             <br />
             <div class="form-group mb-3">
-            <asp:Button ID="btnAbmlMedicos" runat="server" Text="ABML MEDICOS" cssclass="rounded-button" Width="351px" CommandArgument="ABMLMedicos.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion" OnClick="btnAbmlMedicos_Click"  />
+            <asp:Button ID="btnAbmlMedicos" runat="server" Text="ABML MEDICOS" cssclass="rounded-button" Width="351px" CommandArgument="ABMLMedicos.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion" />
             <br />
             <br />
             <asp:Button ID="btnAbmlPacientes" runat="server" Text="ABML PACIENTES" cssclass="rounded-button" Width="351px" CommandArgument="ABMLPacientes.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion"  />
             <br />
             <br />
-            <asp:Button ID="btnInformes" runat="server" Text="INFORMES" cssclass="rounded-button" Width="351px" CommandArgument="Informes.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion" OnClick="btnInformes_Click" />
+            <asp:Button ID="btnInformes" runat="server" Text="INFORMES" cssclass="rounded-button" Width="351px" CommandArgument="Informes.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion"  />
             <br />
             <br />
             <asp:Button ID="btnTurnos" runat="server" Text="ASIGNACION DE TURNOS" cssclass="rounded-button" Width="351px" CommandArgument="AsignacionTurnos.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion" />
