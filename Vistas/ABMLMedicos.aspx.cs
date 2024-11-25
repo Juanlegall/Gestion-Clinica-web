@@ -185,6 +185,13 @@ namespace Vistas
         {
             Response.Redirect("HomeAdministradores.aspx");
         }
+
+        protected void grdAdministracionMedicos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdAdministracionMedicos.PageIndex = e.NewPageIndex;
+
+            RecargarDatosGridView();
+        }
     }
 
 }

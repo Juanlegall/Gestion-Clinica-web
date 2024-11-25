@@ -115,7 +115,12 @@ namespace Vistas
             lblMensaje.Text = "";
             RecargarDatosGridView();
         }
-        
 
+        protected void grdVPacientes_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdVPacientes.PageIndex = e.NewPageIndex;
+
+            RecargarDatosGridView();
+        }
     }
 }

@@ -43,7 +43,7 @@
             <div class="table-responsive">
                 <asp:GridView ID="grdAdministracionMedicos" runat="server" AutoGenerateColumns="False" 
                     CssClass="table table-bordered table-striped" DataKeyNames="idMedico"
-                    OnRowCommand="grdAdministracionMedicos_RowCommand" OnRowDataBound="grdAdministracionMedicos_RowDataBound">
+                    OnRowCommand="grdAdministracionMedicos_RowCommand" OnRowDataBound="grdAdministracionMedicos_RowDataBound" AllowPaging="True" OnPageIndexChanging="grdAdministracionMedicos_PageIndexChanging" PageSize="5">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>

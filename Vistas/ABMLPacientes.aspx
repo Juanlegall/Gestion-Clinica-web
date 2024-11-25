@@ -32,7 +32,7 @@
             <!-- GridView -->
             <asp:GridView ID="grdVPacientes" runat="server" AutoGenerateColumns="False"
                 CssClass="table table-bordered table-striped" DataKeyNames="idPaciente"
-                OnRowCommand="grdVPacientes_RowCommand">
+                OnRowCommand="grdVPacientes_RowCommand" AllowPaging="True" OnPageIndexChanging="grdVPacientes_PageIndexChanging" PageSize="5">
                 <Columns>
                     <asp:BoundField DataField="dni" HeaderText="DNI" />
                     <asp:BoundField DataField="nombre" HeaderText="Nombre" />
