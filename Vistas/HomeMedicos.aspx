@@ -36,20 +36,28 @@
     .hidden-column {
         display: none;
     }
-
+    .CerrarSesion{
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        z-index: 1000; /* Asegura que el botón esté por encima de otros elementos*/
+        border-radius: 15px;
+        border: none;
+        background-color: red;
+        color: aliceblue;
+    }
 </style>
 </head>
 <body class="bg-light">
     <form id="form1" runat="server">
         <div class="container mt-5">
             <!-- Encabezado -->
+            <asp:Button ID="btnCerrarsesion" runat="server" Text="CERRAR SESION" cssclass="CerrarSesion" OnClick="btnCerrarsesion_Click"/>           
             <div class="mb-4 text-center">
                 <h2 class="text-center text-decoration-underline">Pacientes del Médico</h2>
                 <asp:Label ID="lblBienvenido" runat="server" CssClass="d-block text-center mt-2 fs-4 fw-bold text-primary"></asp:Label>
                <asp:Label ID="lbl_especialidad" runat="server" CssClass="d-block text-center fs-5"></asp:Label>
             </div>
-
-
             <!-- Busqueda -->
             <div class="mb-4">
                 <asp:Label ID="lblBuscar" runat="server" Text="Buscar por DNI del paciente"></asp:Label>

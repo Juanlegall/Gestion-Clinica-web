@@ -50,6 +50,9 @@
             <br />
             <br />
             <asp:Button ID="btnTurnos" runat="server" Text="ASIGNACION DE TURNOS" cssclass="rounded-button" Width="351px" CommandArgument="AsignacionTurnos.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion" />
+                <br />
+                <br />
+                <asp:Button ID="btnCerrarsesion" runat="server" Text="CERRAR SESION" cssclass="rounded-button" Width="351px" backcolor="Red" ForeColor="AliceBlue" CommandArgument="Login.aspx" CommandName="cmdRedireccion"  OnCommand="cmdRedireccion"/>
           </div>
         </div>
     </div>

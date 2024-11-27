@@ -25,9 +25,17 @@ namespace Vistas
         }
         protected void cmdRedireccion(object sender, CommandEventArgs e)
         {
-            string ventana = e.CommandArgument.ToString();
-            //Agregarle al CommandArgument el nombre de la ventana que corresponde por ejemplo la ventana del abml de medicos ABMLmedicos.aspx o como le pongan jajaj
-            Response.Redirect(ventana);
+            if (!e.CommandArgument.Equals("Login.aspx"))
+            {
+                string ventana = e.CommandArgument.ToString();
+                //Agregarle al CommandArgument el nombre de la ventana que corresponde por ejemplo la ventana del abml de medicos ABMLmedicos.aspx o como le pongan jajaj
+                Response.Redirect(ventana);
+            }
+            else
+            {
+                Session["NombreUsuario"] = null;
+                Response.Redirect("Login.aspx");
+            }
 
         }
     }

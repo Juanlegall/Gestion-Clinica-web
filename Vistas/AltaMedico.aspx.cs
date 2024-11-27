@@ -142,7 +142,7 @@ namespace Vistas
 
 
             idMedico = ngMedico.AltaMedicos(idProvincia, idLocalidad, idEspecialidad, idRol, dni, nombre, apellido, sexo, nacionalidad, direccion, legajo, correo, telefono, nombre_usuario, contraseña);
-
+            
 
             if (idMedico != 0)
             {
@@ -179,7 +179,6 @@ namespace Vistas
 
         protected void btnCargarHorario_Click(object sender, EventArgs e)
         {
-
             List<HorariosMedicos> listaHorarios = new List<HorariosMedicos>();
             NegocioHorariosMedicos negocioHorario = new NegocioHorariosMedicos();
 

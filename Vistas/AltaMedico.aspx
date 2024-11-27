@@ -558,7 +558,7 @@
                                         </tbody>
                                     </table>
 
-                                    <asp:Button runat="server" ID="btnCargarHorario" OnClick="btnCargarHorario_Click" Text="Cargar" CssClass="btn btn-success"></asp:Button>
+                                    <asp:Button runat="server" ID="btnCargarHorario" OnClick="btnCargarHorario_Click" Text="Cargar" CssClass="btn btn-success" CausesValidation="False"></asp:Button>
 
                                     <button type="button" data-bs-dismiss="offcanvas" aria-label="Close" class="btn btn-danger">Cancelar</button>
                                 </div>

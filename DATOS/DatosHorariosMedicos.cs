@@ -14,7 +14,7 @@ namespace DATOS
     {
         Conexion con = new Conexion();
 
-        public int AgregarHorario(HorariosMedicos hm,int idMedico)
+        public void AgregarHorario(HorariosMedicos hm,int idMedico)
         {
             using (SqlConnection conexion = con.obtenerConexion())
             {   
@@ -23,10 +23,7 @@ namespace DATOS
                 {
                     comando.CommandType = CommandType.StoredProcedure;
                     ArmarParametrosHorarioAgregar(comando, hm,idMedico);
-
-                   comando.ExecuteNonQuery();
-
-                    return idMedico;
+                    comando.ExecuteNonQuery();
                 }
             }
         }

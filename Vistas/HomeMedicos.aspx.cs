@@ -111,6 +111,12 @@ namespace Vistas
             txtDescripcion.Text= "";
         }
 
+        protected void btnCerrarsesion_Click(object sender, EventArgs e)
+        {
+            Session["NombreUsuario"]=null;
+            Session["ID"] = null;
+            Response.Redirect("Login.aspx");
+        }
     }
 
 }
