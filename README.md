@@ -2,9 +2,9 @@ sistema web desarrollado como parte de un Trabajo Práctico (TP) integrador grup
 
 Tecnologías Utilizadas:
 
-Lenguaje de Programación: C#
+Lenguajes: C#, JavaScript, HTML, CSS
 
-Framework: ASP.NET
+Framework y Librerias: ASP.NET, Bootstrap
 
 Base de Datos: T-SQL
 
