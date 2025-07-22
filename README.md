@@ -36,10 +36,10 @@
      * Cancelación de turnos/citas.
      * Modificación de la información de turnos/citas.
      * Listado de turnos/citas por fecha, médico, paciente, etc.
- * **Gestión de Historias Clínicas (opcional):**
+ * **Gestión de Historias Clínicas:**
      * Creación y visualización de historias clínicas de pacientes.
      * Registro de consultas, diagnósticos y tratamientos.
- * **Gestión de Usuarios del Sistema (opcional):**
+ * **Gestión de Usuarios del Sistema:**
      * Creación y gestión de cuentas de usuario con diferentes roles.
      * Control de acceso a diferentes funcionalidades del sistema.
  * **Otras funcionalidades relevantes de tu sistema.**
@@ -52,7 +52,7 @@
  * **Framework Backend:** ASP.NET 
  * **Base de Datos:** SQL
  
- * **Frontend (si es relevante destacar alguna librería/framework):**
+ * **Frontend **
      * HTML
      * CSS
      * Boostrap
