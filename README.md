@@ -62,7 +62,7 @@
  
  Para obtener una copia del proyecto en tu máquina local, utiliza el siguiente comando:
  
- ```bash
+
  git clone [https://github.com/Juanlegall/Gestion-Clinica-web.git](https://github.com/Juanlegall/Gestion-Clinica-web.git)
 
 
