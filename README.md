@@ -14,12 +14,12 @@
      * [Clonado del Repositorio](#clonado-del-repositorio)
      * [Configuración de la Base de Datos](#configuración-de-la-base-de-datos)
      * [Configuración de la Aplicación](#configuración-de-la-aplicación)
- * [Ejecución de la Aplicación](#ejecución-de-la-aplicación)
+
 
  
  ## Características Principales
  
- Describe aquí las funcionalidades clave de tu sistema ABML para la clínica. Algunos ejemplos podrían ser:
+
  
  * **Gestión de Pacientes:**
      * Alta de nuevos pacientes (nombre, apellido, DNI, fecha de nacimiento, etc.).
@@ -46,7 +46,7 @@
  
  ## Tecnologías Utilizadas
  
- Enumera las principales tecnologías que utilizaste en el desarrollo de la aplicación:
+
  
  * **Lenguaje de Programación:** C#
  * **Framework Backend:** ASP.NET 
