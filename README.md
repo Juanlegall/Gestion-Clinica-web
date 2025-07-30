@@ -64,3 +64,31 @@
  
  ```bash
  git clone [https://github.com/Juanlegall/Gestion-Clinica-web.git](https://github.com/Juanlegall/Gestion-Clinica-web.git)
+
+
+### Configuración de la Base de Datos
+
+1. **Crear la Base de Datos:**
+   - Abrí SQL Server Management Studio (SSMS) u otro gestor compatible.
+   - Ejecutá el script `ScriptGestionClinica.sql`.
+
+2. **Verificá las tablas creadas:**
+   - Asegurate de que se hayan creado correctamente las tablas como `Pacientes`, `Medicos`, `Turnos`, `Usuarios`, etc.
+
+
+### Configuración de la Aplicación
+
+1. **Abrir el proyecto en Visual Studio:**
+   - Abrí el archivo de solución `.sln` con Visual Studio 2022 o superior.
+
+2. **Configurar la cadena de conexión:**
+   - Abrí el archivo `Web.config`.
+   - Buscá la sección `<connectionStrings>` y modificá la cadena con los valores de tu servidor, base de datos, usuario y contraseña.
+
+   ```xml
+   <connectionStrings>
+     <add name="ClinicaConnection" 
+          connectionString="Data Source=TU_SERVIDOR;Initial Catalog=NombreBaseDeDatos;User ID=usuario;Password=contraseña;" 
+          providerName="System.Data.SqlClient" />
+   </connectionStrings>
+
